@@ -386,9 +386,9 @@ main h2{
     <h2 data-split data-i18n="home.letter.h2"><span class="qo">¿</span>Todavía no? La carta de los lunes es gratis.</h2>
     <p class="lede" data-i18n="home.letter.body">Una carta corta cada lunes. Sin ruido, sin promesas — un recordatorio.</p>
     <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
-    <form class="letter__form" action="#" method="post">
+    <form class="letter__form" action="https://app.kit.com/forms/9803782/subscriptions" method="post" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
       <label class="sr-only" for="letter-email" data-i18n="home.letter.form.label">Tu correo</label>
-      <input type="email" id="letter-email" name="email" required autocomplete="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:home.letter.form.placeholder">
+      <input type="email" id="letter-email" name="email_address" required autocomplete="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:home.letter.form.placeholder">
       <button class="btn" type="submit" data-i18n="home.letter.form.button">Quiero la carta</button>
     </form>
     <p class="letter__privacy" data-i18n="home.letter.form.privacy">Te llegará un correo para confirmar tu suscripción. Un clic para salir, cuando quieras. <a href="privacidad.html">Más en la Política de Privacidad.</a></p>

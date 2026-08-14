@@ -121,3 +121,35 @@
   function init(){buildSplits();entrances();window.__pageMode='motion';}
   if(d.fonts&&d.fonts.ready){d.fonts.ready.then(init);}else{init();}
 })();
+
+/* Kit form wiring (pre-launch, 2026-08-14): AJAX submit to Kit, inline success.
+   Forms opt in with [data-kit]; per-form success copy in data-kit-success. */
+document.querySelectorAll("form[data-kit]").forEach(function(f){
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var btn = f.querySelector("button[type=submit],button:not([type])");
+    if (btn) { btn.disabled = true; btn.setAttribute("aria-busy","true"); }
+    fetch(f.action, { method:"POST", headers:{ "Accept":"application/json" }, body:new FormData(f) })
+      .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json().catch(function(){return {};}); })
+      .then(function(){
+        var p = document.createElement("p");
+        p.className = "kit-ok";
+        p.setAttribute("role","status");
+        p.style.cssText = "font-size:1rem;line-height:1.6;color:inherit;";
+        p.textContent = f.getAttribute("data-kit-success") || "Listo 🤍 Revisa tu correo.";
+        f.replaceChildren(p);
+      })
+      .catch(function(){
+        if (btn) { btn.disabled = false; btn.removeAttribute("aria-busy"); }
+        var err = f.querySelector(".kit-err");
+        if (!err) {
+          err = document.createElement("p");
+          err.className = "kit-err";
+          err.setAttribute("role","alert");
+          err.style.cssText = "font-size:.85rem;margin-top:.5rem;color:#FF5364;";
+          f.appendChild(err);
+        }
+        err.textContent = "Algo falló — inténtalo otra vez.";
+      });
+  });
+});

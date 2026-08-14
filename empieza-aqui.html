@@ -259,10 +259,10 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
       <p class="lede" data-i18n="start.capture.sub">Un recordatorio corto cada lunes, en tu correo.</p>
       <!-- FORM ENDPOINT: replace action="#" with the same Kit/ConvertKit or
            FormSubmit endpoint as carta.html before launch -->
-      <form class="start-form" method="post" action="#">
+      <form class="start-form" method="post" action="https://app.kit.com/forms/9803782/subscriptions" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
         <label class="start-form__label" for="start-email" data-i18n="start.form.label">Tu correo</label>
         <div class="start-form__row">
-          <input type="email" id="start-email" name="email" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:start.form.placeholder">
+          <input type="email" id="start-email" name="email_address" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:start.form.placeholder">
           <button type="submit" class="btn" data-i18n="start.form.button">Quiero la carta</button>
         </div>
         <!-- Success/error states are unhidden by the form wiring at launch (endpoint above). -->

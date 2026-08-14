@@ -515,9 +515,9 @@ main h3{font-family:var(--font-sans);}
     <div class="postfaq">
       <h3 data-i18n="vault.postfaq.h3">¿Todavía no? La carta de los lunes es gratis.</h3>
       <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
-      <form action="#" method="post">
+      <form action="https://app.kit.com/forms/9803782/subscriptions" method="post" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
         <label class="sr-only" for="postfaq-email" data-i18n="vault.postfaq.form.label">Tu correo</label>
-        <input type="email" id="postfaq-email" name="email" required placeholder="tu@correo.com" data-i18n-attr="placeholder:vault.postfaq.form.placeholder">
+        <input type="email" id="postfaq-email" name="email_address" required placeholder="tu@correo.com" data-i18n-attr="placeholder:vault.postfaq.form.placeholder">
         <button class="btn btn--small" type="submit" data-i18n="vault.postfaq.form.button">Quiero la carta</button>
       </form>
       <!-- LEGAL PAGE: privacidad.html is a pending build item (COMPLIANCE_AUDIT M5, entity name = Conrad decision C1) -->

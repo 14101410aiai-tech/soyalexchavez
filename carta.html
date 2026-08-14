@@ -275,10 +275,10 @@ html.fr .carta-hero{min-height:0;}
     <div class="carta-form-sec__grid">
       <div>
         <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
-        <form class="carta-form" method="post" action="#">
+        <form class="carta-form" method="post" action="https://app.kit.com/forms/9803782/subscriptions" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
           <label class="carta-form__label" for="carta-email" data-i18n="letter.form.label">Tu correo</label>
           <div class="carta-form__row">
-            <input type="email" id="carta-email" name="email" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:letter.form.placeholder">
+            <input type="email" id="carta-email" name="email_address" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:letter.form.placeholder">
             <button type="submit" class="btn" data-i18n="letter.form.button">Quiero la carta</button>
           </div>
           <!-- Success/error states are unhidden by the form wiring at launch (endpoint above). -->
@@ -296,13 +296,13 @@ html.fr .carta-hero{min-height:0;}
              vault launch window is real. No dates, no counts, no scarcity
              theatre. To activate: remove the hidden attribute and replace
              action="#" with the waitlist endpoint (separate Kit tag/segment). -->
-        <form class="carta-slot" id="lista-de-espera" method="post" action="#" data-waitlist-slot>
+        <form class="carta-slot" id="lista-de-espera" method="post" action="https://app.kit.com/forms/9803791/subscriptions" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma — cuando el Vault abra, entras primero." data-waitlist-slot>
           <p class="v31-tag" data-i18n="carta.wait.tag">la lista de espera</p>
           <h3 data-i18n="carta.wait.h3">El Vault, antes que nadie.</h3>
           <p data-i18n="carta.wait.line">Deja tu correo y, cuando el Vault abra, entras primero.</p>
           <label class="sr-only" for="wait-email" data-i18n="carta.wait.label">Tu correo</label>
           <div class="carta-form__row">
-            <input type="email" id="wait-email" name="email" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:letter.form.placeholder">
+            <input type="email" id="wait-email" name="email_address" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:letter.form.placeholder">
             <button type="submit" class="btn" data-i18n="carta.wait.cta">Quiero entrar primero</button>
           </div>
         </form>
