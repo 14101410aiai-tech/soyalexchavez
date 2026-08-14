@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandra Chávez — Recordatorios para escoger bien</title>
+<meta name="description" content="Recordatorios escritos para las mujeres que están aprendiendo a escoger — empezando por ellas mismas. La carta de los lunes, El Vault y el Club Recordatorio.">
+<link rel="canonical" href="https://soyalexchavez.com/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alexandra Chávez — Recordatorios para escoger bien">
+<meta property="og:description" content="Recordatorios escritos para las mujeres que están aprendiendo a escoger — empezando por ellas mismas. La carta de los lunes, El Vault y el Club Recordatorio.">
+<meta property="og:url" content="https://soyalexchavez.com/index.html">
+<meta property="og:image" content="https://soyalexchavez.com/assets/img/og_index.jpg">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#170F18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
+<!-- v3.1 weight lever (V31_STAGE1 §6): display duty moved to Anybody VF — Boska
+     preload dropped (Boska no longer renders on this page; it stays available
+     for the shared mobile menu, loading on demand). -->
+<link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/video/hero_DNt2entWkak_v_poster.jpg" as="image" media="(max-width:899px)">
+<link rel="preload" href="assets/video/hero_DNt2entWkak_p_poster.jpg" as="image" media="(min-width:900px)">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/v31.css">
+<style>
+/* ============ index.html page styles (page-scoped, composed from tokens) ============
+   v3.1 AMAZEMENT PASS (Stage 2): kinetic hero · marquee · blur-focus device ·
+   spotlight room (the three paths) · scrapbook flip chapter · mono apparatus.
+   Copy + i18n content unchanged — presentation layer only. */
+
+/* ---------- HERO — spotlight video + kinetic catchphrase ----------
+   v3.1 fix (Gate A #2 / brief pixelation cure "higher bitrate in a smaller
+   frame"): the desktop hero video is no longer full-bleed (a 720px-wide IG
+   reel stretched to 1280+ was the softest thing on the page). ≥900px the
+   re-cut native-resolution plate (720×832, ~1000kbps, zero upscale) sits in
+   the framed-plate grammar (membership-hero precedent) beside the kinetic
+   headline. <900px keeps the full-bleed room (720w source vs 390-430px
+   display — sharp), unchanged. */
+.hero{
+  min-height:92svh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding-block:7rem 5.5rem;
+  overflow:hidden;
+}
+.hero__media{position:absolute;inset:0;z-index:0;}
+.hero__plate{position:absolute;inset:0;border:0;border-radius:0;overflow:hidden;background:var(--night-deep);}
+.hero__plate::after{display:none;}                 /* no notification dot while full-bleed */
+.hero__plate video{width:100%;height:100%;object-fit:cover;display:block;}
+.hero__media::after{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(16,10,17,.66) 0%,rgba(16,10,17,.18) 60%,rgba(16,10,17,.42) 100%),
+    linear-gradient(180deg,rgba(16,10,17,.66) 0%,rgba(16,10,17,.3) 34%,rgba(16,10,17,.5) 62%,rgba(16,10,17,.96) 100%);
+}
+.hero__inner{position:relative;z-index:2;max-width:none;}
+.hero__inner h1{margin-top:1.1rem;}
+.hero .v31-kinetic{font-size:clamp(2.2rem,8.6vw,7.6rem);}   /* page-tuned giant (sized for the wdth-97 rest) */
+.hero .lede{color:var(--flash-90);margin-top:1.6rem;}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.3rem;align-items:center;}
+@media (min-width:900px){
+  .hero{
+    flex-direction:row;align-items:center;justify-content:space-between;
+    gap:clamp(2.5rem,5vw,5rem);padding-block:7rem 4.5rem;
+  }
+  .hero__media{position:relative;inset:auto;z-index:2;order:2;flex:0 0 clamp(19rem,26vw,22.5rem);}
+  .hero__media::after{display:none;}               /* the plate IS the light — no scrims */
+  .hero__plate{position:relative;inset:auto;border:1.5px solid var(--flash-90);aspect-ratio:720/832;}
+  .hero__plate::after{display:block;}              /* plate--frame guava dot returns */
+  .hero__plate video{filter:saturate(.94) contrast(1.05) brightness(.95);}
+  .hero__inner{flex:1 1 auto;min-width:0;}
+  .hero .v31-kinetic{font-size:clamp(3rem,5.6vw,5.9rem);}     /* fits the text column beside the plate */
+}
+.hero__hint{
+  position:absolute;left:50%;bottom:1.1rem;transform:translateX(-50%);z-index:2;
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:var(--text-micro);letter-spacing:var(--track-wide);
+  text-transform:lowercase;color:var(--flash-faint);white-space:nowrap;
+}
+html.fr .hero__hint{position:static;transform:none;margin-top:2rem;}
+
+/* ---------- v3.1 poster h2 voice (page-scoped display takeover) ---------- */
+main h2{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.7rem,5.4vw,2.9rem);
+  line-height:1;letter-spacing:var(--v31-rest-track);text-transform:uppercase;
+  max-width:24ch;
+}
+.chap{margin-bottom:var(--space-l);}
+
+/* ---------- BLUR-FOCUS RECORDATORIO DEVICE ---------- */
+.blur-sec{padding-block:var(--v31-stage-y);}
+
+/* ---------- THE THREE PATHS — spotlight room staging ---------- */
+.paths-intro{padding-bottom:clamp(1.6rem,4vh,2.6rem);}
+.paths__list{list-style:none;}
+.v31-room{padding-block:var(--section-y);}
+.v31-room .v31-room__counter{top:5rem;}   /* clear the fixed nav while the room is pinned */
+.v31-room h3{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.35rem,4.1vw,2rem);
+  line-height:1.04;letter-spacing:.025em;text-transform:uppercase;
+}
+.path__body{color:var(--flash-dim);max-width:44ch;}
+.path__price{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 500,'wdth' 88;
+  font-feature-settings:'tnum' 1;font-variant-numeric:tabular-nums;
+  font-size:var(--text-small);letter-spacing:.06em;color:var(--flash-dim);
+}
+.path__go{padding-top:.4rem;}
+
+/* ---------- DE SU CUADERNO — reminder rhythm + plate ---------- */
+.notebook__grid{display:grid;gap:var(--space-l);margin-top:var(--space-l);}
+.notebook__cards{display:flex;flex-direction:column;gap:1.5rem;}
+.notebook .reminder__body{max-width:34ch;}
+.notebook__plate{max-width:22rem;margin-inline:auto;width:100%;}
+.notebook__plate .plate{aspect-ratio:1080/1222;}
+@media (min-width:900px){
+  .notebook__grid{grid-template-columns:7fr 5fr;gap:var(--space-xl);align-items:center;}
+  .notebook__cards .reminder:nth-child(2){margin-left:3.5rem;}
+  .notebook__cards .reminder:nth-child(3){margin-left:1.25rem;}
+  .notebook__plate{margin-inline:0 auto;}
+}
+
+/* ---------- DEL ARCHIVO — scrapbook band on the light polarity ---------- */
+.scrapband{padding-block:var(--v31-stage-y);}
+.v31-flip .v31-scrap__tag{color:var(--v31-day-faint);}
+.v31-flip .plate--frame{border-color:var(--v31-day-ink);}
+.scrapband__sig{grid-column:1/-1;align-self:center;display:grid;gap:.6rem;justify-items:center;margin-top:.5rem;}
+.scrapband__sig .v31-sig{justify-self:center;}
+
+/* ---------- PROOF EPIGRAPH ---------- */
+.proof{text-align:center;}
+.proof .meta,.proof .chap{justify-content:center;}
+.proof__quote{margin:0;}
+.proof__quote p{
+  font-family:var(--font-serif);font-style:italic;font-weight:400;
+  font-size:var(--text-quote);line-height:var(--leading-snug);
+  color:var(--flash);max-width:24ch;margin:var(--space-m) auto 0;
+}
+.proof__quote .gloss{
+  display:block;margin-top:1.1rem;
+  font-size:var(--text-small);color:var(--flash-dim);
+}
+.proof__attr{
+  margin-top:var(--space-m);
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:var(--text-caption);letter-spacing:var(--track-caps);color:var(--rose-70);
+}
+
+/* ---------- LETTER CAPTURE (last) ---------- */
+.letter{border-top:1px solid var(--line-soft);}
+.letter .lede{margin-top:1.3rem;}
+.letter__form{display:flex;flex-direction:column;gap:.8rem;margin-top:var(--space-l);max-width:34rem;}
+.letter__form .btn{flex:0 0 auto;}
+.letter__privacy{margin-top:1.1rem;font-size:var(--text-caption);letter-spacing:.02em;color:var(--flash-dim);max-width:52ch;}
+@media (min-width:640px){
+  .letter__form{flex-direction:row;}
+  .letter__form input{flex:1 1 auto;}
+}
+</style>
+</head>
+<body data-v31-loader="un recordatorio">
+
+<a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ============ NAV — shared verbatim across all six pages.
+     aria-current="page" goes on THIS page's link (both menus). ============ -->
+<header class="site-head">
+  <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
+  <div class="site-head__right">
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html" aria-current="page" data-i18n="nav.inicio">Inicio</a>
+      <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+      <a href="membership.html" data-i18n="nav.club">El Club</a>
+      <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+      <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+      <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    </nav>
+    <div class="lang-pill" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" data-i18n-attr="aria-label:a11y.menu" aria-label="Menú">
+      <svg class="ic-open" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 6h18M2 11h18M2 16h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="ic-close" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu-panel" id="menu-panel" aria-label="Principal (móvil)">
+  <a href="index.html" aria-current="page" data-i18n="nav.inicio">Inicio</a>
+  <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+  <a href="membership.html" data-i18n="nav.club">El Club</a>
+  <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+  <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+  <a href="carta.html" data-i18n="nav.carta">La carta</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- ============ HERO · spotlight video (DNt2entWkak — night dinner satin)
+       v3.1: the existing hero line becomes the kinetic catchphrase (pattern #3).
+       Copy unchanged — presentation only. ============ -->
+  <section class="spot hero" data-spot="hero" data-hero style="--spot-y:38%;">
+    <div class="hero__media" aria-hidden="true">
+      <!-- desktop sources = the v3.1 re-cut: native 720×832 crop of the source
+           reel (caption band excluded), ~1000kbps — no upscale at any width -->
+      <div class="plate plate--frame hero__plate">
+        <video data-video muted loop playsinline autoplay preload="metadata"
+          poster="assets/video/hero_DNt2entWkak_v_poster.jpg" width="720" height="1080"
+          data-poster-m="assets/video/hero_DNt2entWkak_v_poster.jpg"
+          data-poster-d="assets/video/hero_DNt2entWkak_p_poster.jpg"
+          data-webm-m="assets/video/hero_DNt2entWkak_v.webm"
+          data-mp4-m="assets/video/hero_DNt2entWkak_v.mp4"
+          data-webm-d="assets/video/hero_DNt2entWkak_p.webm"
+          data-mp4-d="assets/video/hero_DNt2entWkak_p.mp4"></video>
+      </div>
+    </div>
+    <div class="hero__inner">
+      <p class="meta" data-i18n="home.hero.eyebrow">Amable recordatorio 🤍</p>
+      <h1 class="v31-kinetic" data-v31-kinetic="load" data-i18n="home.hero.h1"><span class="qo">¿</span>Y si lo único que te falta es recordarlo?</h1>
+      <p class="lede" data-i18n="home.hero.sub">Soy Alexandra. Escribo recordatorios para las mujeres que están aprendiendo a escoger — empezando por ellas mismas.</p>
+      <div class="hero__ctas">
+        <a class="btn" href="vault.html" data-i18n="home.hero.cta.primary">Quiero mi ejemplar</a>
+        <a class="btn btn--ghost" href="carta.html" data-i18n="home.hero.cta.secondary">Quiero la carta de los lunes — gratis</a>
+      </div>
+    </div>
+    <p class="hero__hint" data-i18n="home.hero.scrollhint">Baja despacio.</p>
+  </section>
+
+  <!-- ============ MARQUEE TICKER (pattern #11) — REAL facts only.
+       POLICY (Stage 2, per Stage-1 caveat §7): stays Spanish in both languages
+       as brand texture; decorative, aria-hidden. ============ -->
+  <div class="v31-marquee" aria-hidden="true">
+    <div class="v31-marquee__track">
+      <span>doce capítulos</span><span>una carta cada lunes</span><span>un recordatorio nuevo cada semana</span><span>el manifiesto y once guías</span>
+      <span>doce capítulos</span><span>una carta cada lunes</span><span>un recordatorio nuevo cada semana</span><span>el manifiesto y once guías</span>
+    </div>
+  </div>
+
+  <!-- ============ BLUR → FOCUS RECORDATORIO DEVICE (pattern #4) —
+       Stage-1 strings (blur.q / blur.a, fragments of the hero line). ============ -->
+  <section class="blur-sec">
+    <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
+    <div class="v31-blurpair" data-v31-blurpair>
+      <p class="v31-blurpair__q" data-i18n="home.blur.q">¿Y si lo único que te falta</p>
+      <p class="v31-blurpair__a" data-i18n="home.blur.a">…es <em class="v31-accent">recordarlo</em>?</p>
+    </div>
+  </section>
+
+  <!-- ============ THE THREE PATHS (free letter FIRST per funnel lock) —
+       v3.1: staged as the SPOTLIGHT ROOM (pattern #1). Same copy, links,
+       prices; the intro h2 keeps its own spot section so the pinned room
+       owns the full stage. ============ -->
+  <section class="spot paths-intro" data-spot style="--spot-y:32%;">
+    <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
+    <h2 data-split data-i18n="home.paths.h2">Tres formas de empezar.</h2>
+  </section>
+  <section class="v31-room">
+    <p class="v31-counter v31-room__counter" data-v31-room-counter aria-hidden="true">1/3</p>
+    <ol class="v31-room__stage paths__list">
+      <li class="v31-room__item">
+        <p class="v31-tag">01</p>
+        <h3 data-i18n="home.paths.card1.title">La carta de los lunes</h3>
+        <p class="path__body" data-i18n="home.paths.card1.body">Una carta corta cada lunes, gratis. Un recordatorio para empezar la semana escogiendo mejor.</p>
+        <p class="path__go"><a class="v31-room__cue" href="carta.html" data-i18n="home.paths.card1.cta">Quiero la carta</a></p>
+      </li>
+      <li class="v31-room__item">
+        <p class="v31-tag">02</p>
+        <h3 data-i18n="home.paths.card2.title">El Vault</h3>
+        <p class="path__body" data-i18n="home.paths.card2.body">La colección completa: doce capítulos — el Manifiesto y once guías — escritos para quedarse contigo. Se lee en tu teléfono. Es tuyo para siempre.</p>
+        <p class="path__price" data-i18n="home.paths.card2.price">$97 fundador · o en 3&nbsp;cuotas</p>
+        <p class="path__go"><a class="v31-room__cue" href="vault.html" data-i18n="home.paths.card2.cta">Quiero mi ejemplar</a></p>
+      </li>
+      <li class="v31-room__item">
+        <p class="v31-tag">03</p>
+        <h3 data-i18n="home.paths.card3.title">El Club Recordatorio</h3>
+        <p class="path__body" data-i18n="home.paths.card3.body">Un recordatorio nuevo cada semana, el archivo completo y un círculo de mujeres en el mismo proceso.</p>
+        <p class="path__price" data-i18n="home.paths.card3.price">Desde $27/mes</p>
+        <p class="path__go"><a class="v31-room__cue" href="membership.html" data-i18n="home.paths.card3.cta">Empiezo hoy</a></p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- (roses divider removed 2026-07-30 — Conrad ruling: "useless and tacky".
+       Room → notebook both sit on the dark polarity; the section paddings
+       carry the rhythm without a divider. Asset files stay on disk.) -->
+
+  <!-- ============ DE SU CUADERNO — reminder-card rhythm (verified caption lines;
+       labels 01/02/03 per copy — NO invented dates or times) + spotlight plate 05 ============ -->
+  <section class="spot notebook" data-spot style="--spot-x:38%;--spot-y:36%;">
+    <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
+    <p class="meta" data-i18n="home.reminders.eyebrow">De su cuaderno</p>
+    <div class="notebook__grid">
+      <div class="notebook__cards">
+        <article class="reminder">
+          <p class="reminder__meta"><span data-i18n="home.reminders.card1.label">Recordatorio · 01</span></p>
+          <p class="reminder__body" data-i18n="home.reminders.card1.text">Tienes que ser paciente cuando te estás convirtiendo en la mujer que nunca fuiste antes.</p>
+        </article>
+        <article class="reminder">
+          <p class="reminder__meta"><span data-i18n="home.reminders.card2.label">Recordatorio · 02</span></p>
+          <p class="reminder__body" data-i18n="home.reminders.card2.text">El respeto por ti misma debe ser más fuerte que tu deseo por sentirte amada.</p>
+        </article>
+        <article class="reminder">
+          <p class="reminder__meta"><span data-i18n="home.reminders.card3.label">Recordatorio · 03</span></p>
+          <p class="reminder__body" data-i18n="home.reminders.card3.text">Por suerte, siempre me tengo a mi. Nunca pierdo, gano o aprendo.</p>
+        </article>
+      </div>
+      <figure class="notebook__plate" data-rise>
+        <div class="plate plate--vignette">
+          <picture>
+            <source type="image/webp" srcset="assets/img/05_DEpq1lIJYKL_640.webp 640w, assets/img/05_DEpq1lIJYKL_1080.webp 1080w" sizes="(min-width:900px) 22rem, 86vw">
+            <img src="assets/img/05_DEpq1lIJYKL_1080x1222.jpg" alt="Alexandra de pie dentro de un círculo de luz blanca, vestido rojo sobre fondo oscuro" width="1080" height="1222" loading="lazy" data-i18n-attr="alt:home.notebook.plate.alt">
+          </picture>
+          <div class="veil"></div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ DEL ARCHIVO — scrapbook band (pattern #5) on the light
+       polarity (pattern #8). Real photos only. Archive tags carry HONEST
+       per-photo descriptors sourced from _intel/IMAGE_INVENTORY.md (staircase /
+       crescent-moon lounge / rooftop terrace — nothing invented); alts reused
+       verbatim from their home pages.
+       Flourish = abstract stroke, NEVER a fake handwriting signature. ============ -->
+  <section class="v31-flip scrapband">
+    <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
+    <h2 class="sr-only" data-i18n="home.scrap.sr">Del archivo</h2>
+    <div class="v31-scrap">
+      <figure class="v31-scrap__item" style="--tilt:-2.1deg">
+        <div class="plate plate--frame" style="aspect-ratio:720/917">
+          <picture>
+            <source type="image/webp" srcset="assets/img/vault_stairs_480.webp 480w, assets/img/vault_stairs_720.webp 720w" sizes="(min-width:760px) 21rem, 44vw">
+            <img src="assets/img/vault_stairs_720.jpg" alt="Alexandra bajando una escalera de mármol con barandas doradas, vestido de satén marrón" loading="lazy" width="720" height="917" data-i18n-attr="alt:home.scrap.alt1">
+          </picture>
+        </div>
+        <figcaption class="v31-scrap__tag" data-i18n="home.scrap.tag1">del archivo ·&nbsp;la escalera</figcaption>
+      </figure>
+      <figure class="v31-scrap__item" style="--tilt:1.6deg">
+        <div class="plate plate--print" style="aspect-ratio:720/723">
+          <picture>
+            <source type="image/webp" srcset="assets/img/carta_08_720.webp 720w" sizes="(min-width:760px) 21rem, 44vw">
+            <img src="assets/img/carta_08_1080.jpg" alt="Alexandra con vestido blanco bajo una luna creciente dorada, entre cojines de seda" loading="lazy" width="720" height="723" data-i18n-attr="alt:home.scrap.alt2">
+          </picture>
+        </div>
+        <figcaption class="v31-scrap__tag" data-i18n="home.scrap.tag2">del archivo ·&nbsp;bajo la luna</figcaption>
+      </figure>
+      <figure class="v31-scrap__item" style="--tilt:-1.4deg">
+        <div class="plate" style="aspect-ratio:720/879">
+          <picture>
+            <source type="image/webp" srcset="assets/img/club_11_480.webp 480w, assets/img/club_11_720.webp 720w" sizes="(min-width:760px) 21rem, 44vw">
+            <img src="assets/img/club_11_720.jpg" alt="Alexandra de noche en una terraza, vestido de satén rosa y aretes de perla" loading="lazy" width="720" height="879" data-i18n-attr="alt:home.scrap.alt3">
+          </picture>
+        </div>
+        <figcaption class="v31-scrap__tag" data-i18n="home.scrap.tag3">del archivo ·&nbsp;la terraza</figcaption>
+      </figure>
+      <div class="v31-scrap__item scrapband__sig" style="--tilt:0deg">
+        <svg class="v31-sig" viewBox="0 0 400 70" aria-hidden="true">
+          <path d="M10,52 C70,12 150,4 222,20 C266,30 268,54 230,58 C204,60 200,40 228,33 C282,20 340,28 390,18"/>
+        </svg>
+        <p class="v31-scrap__tag" data-i18n="home.scrap.sig">— Alexandra</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROOF EPIGRAPH (VERBATIM — do not touch a character) ============ -->
+  <section class="spot proof" data-spot style="--spot-y:44%;">
+    <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
+    <p class="meta" data-i18n="home.proof.eyebrow">Lo que ellas escriben</p>
+    <blockquote class="proof__quote">
+      <p data-split data-i18n="home.proof.quote">“Yo si te hice caso hermosa, me caso mañana 🙊🙊❤️‍🩹”</p>
+      <footer class="proof__attr" data-i18n="home.proof.attribution">— seguidora, 733 ❤</footer>
+    </blockquote>
+  </section>
+
+  <!-- ============ LETTER CAPTURE — LAST section before footer (playbook §5: quiet,
+       below every purchase prompt; no popups anywhere) ============ -->
+  <section class="spot letter" data-spot style="--spot-y:30%;">
+    <p class="v31-chapter chap" aria-hidden="true">( 06 )</p>
+    <h2 data-split data-i18n="home.letter.h2"><span class="qo">¿</span>Todavía no? La carta de los lunes es gratis.</h2>
+    <p class="lede" data-i18n="home.letter.body">Una carta corta cada lunes. Sin ruido, sin promesas — un recordatorio.</p>
+    <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
+    <form class="letter__form" action="#" method="post">
+      <label class="sr-only" for="letter-email" data-i18n="home.letter.form.label">Tu correo</label>
+      <input type="email" id="letter-email" name="email" required autocomplete="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:home.letter.form.placeholder">
+      <button class="btn" type="submit" data-i18n="home.letter.form.button">Quiero la carta</button>
+    </form>
+    <p class="letter__privacy" data-i18n="home.letter.form.privacy">Te llegará un correo para confirmar tu suscripción. Un clic para salir, cuando quieras. <a href="privacidad.html">Más en la Política de Privacidad.</a></p>
+    <!-- Success/error strings for the wiring day — shown/hidden by the form endpoint integration -->
+    <p class="letter__privacy" hidden data-form-success data-i18n="home.letter.form.success">Revisa tu correo — hay una confirmación esperándote. 🤍</p>
+    <p class="letter__privacy" hidden data-form-error data-i18n="home.letter.form.error">Revisa el correo — algo no cuadra.</p>
+  </section>
+
+</main>
+
+<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+<div class="cta-bar" data-cta-bar>
+  <p class="cta-bar__line" data-i18n="ctabar.line">El Vault abre a su ritmo, no al tuyo.</p>
+  <a class="btn btn--small" href="vault.html" data-i18n="ctabar.btn">Quiero mi ejemplar</a>
+</div>
+
+<!-- ============ FOOTER — shared verbatim + compliance M3/M5 legal links
+     (terms + privacy pages are build items; targets pending site integration) ============ -->
+<footer class="site-foot">
+  <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
+  <nav aria-label="Redes y páginas">
+    <a href="https://instagram.com/alexchavez.23" rel="noopener">@alexchavez.23</a>
+    <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+    <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    <a href="terminos.html" data-i18n="footer.legal.terms">Términos y garantía</a>
+    <a href="privacidad.html" data-i18n="footer.legal.privacy">Privacidad</a>
+  </nav>
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+
+<!-- video source picker: mobile _v / desktop _d; reduced-motion = poster only.
+     Not an animation system — a one-shot source/poster selector. -->
+<script>
+(function(){
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var desk=window.matchMedia('(min-width:900px)').matches;
+  document.querySelectorAll('video[data-video]').forEach(function(v){
+    var k=(desk&&v.getAttribute('data-webm-d'))?'d':'m';
+    var poster=v.getAttribute('data-poster-'+k);
+    if(poster){v.setAttribute('poster',poster);}
+    if(reduced){v.removeAttribute('autoplay');return;}
+    ['webm','mp4'].forEach(function(t){
+      var src=v.getAttribute('data-'+t+'-'+k)||v.getAttribute('data-'+t+'-m');
+      if(src){var s=document.createElement('source');s.src=src;s.type='video/'+t;v.appendChild(s);}
+    });
+    v.load();
+    var p=v.play();if(p&&p.catch){p.catch(function(){});}
+  });
+})();
+</script>
+
+<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
+     ES here MUST equal the ES text in the markup above (no-JS parity).
+     EN is written fresh in her voice, never machine-translated. ============ -->
+<script type="application/json" id="i18n">
+{
+  "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
+  "a11y.menu":  {"es":"Menú","en":"Menu"},
+  "nav.inicio": {"es":"Inicio","en":"Home"},
+  "nav.vault":  {"es":"El Vault","en":"The Vault"},
+  "nav.club":   {"es":"El Club","en":"The Club"},
+  "nav.sobre":  {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "nav.empieza":{"es":"Empieza aquí","en":"Start here"},
+  "nav.carta":  {"es":"La carta","en":"The letter"},
+  "home.hero.eyebrow": {"es":"Amable recordatorio 🤍","en":"A friendly reminder 🤍"},
+  "home.hero.h1": {"es":"<span class=\"qo\">¿</span>Y si lo único que te falta es recordarlo?","en":"What if you already know — and only needed reminding?"},
+  "home.hero.sub": {"es":"Soy Alexandra. Escribo recordatorios para las mujeres que están aprendiendo a escoger — empezando por ellas mismas.","en":"I'm Alexandra. I write reminders for women who are learning to choose — starting with themselves."},
+  "home.hero.cta.primary": {"es":"Quiero mi ejemplar","en":"I want my copy"},
+  "home.hero.cta.secondary": {"es":"Quiero la carta de los lunes — gratis","en":"I want the Monday letter — free"},
+  "home.hero.scrollhint": {"es":"Baja despacio.","en":"Scroll slowly."},
+  "home.blur.q": {"es":"¿Y si lo único que te falta","en":"What if you already know"},
+  "home.blur.a": {"es":"…es <em class=\"v31-accent\">recordarlo</em>?","en":"…and only needed <em class=\"v31-accent\">reminding</em>?"},
+  "home.paths.h2": {"es":"Tres formas de empezar.","en":"Three ways to begin."},
+  "home.paths.card1.title": {"es":"La carta de los lunes","en":"The Monday letter"},
+  "home.paths.card1.body": {"es":"Una carta corta cada lunes, gratis. Un recordatorio para empezar la semana escogiendo mejor.","en":"A short letter every Monday, free. One reminder to start the week choosing better."},
+  "home.paths.card1.cta": {"es":"Quiero la carta","en":"I want the letter"},
+  "home.paths.card2.title": {"es":"El Vault","en":"The Vault"},
+  "home.paths.card2.body": {"es":"La colección completa: doce capítulos — el Manifiesto y once guías — escritos para quedarse contigo. Se lee en tu teléfono. Es tuyo para siempre.","en":"The complete collection: twelve chapters — the Manifesto and eleven guides — written to stay with you. Read it on your phone. Yours for good."},
+  "home.paths.card2.price": {"es":"$97 fundador · o en 3&nbsp;cuotas","en":"$97 founder · or in 3&nbsp;payments"},
+  "home.paths.card2.cta": {"es":"Quiero mi ejemplar","en":"I want my copy"},
+  "home.paths.card3.title": {"es":"El Club Recordatorio","en":"The Club Recordatorio"},
+  "home.paths.card3.body": {"es":"Un recordatorio nuevo cada semana, el archivo completo y un círculo de mujeres en el mismo proceso.","en":"A new reminder every week, the full archive, and a circle of women in the same process."},
+  "home.paths.card3.price": {"es":"Desde $27/mes","en":"From $27/month"},
+  "home.paths.card3.cta": {"es":"Empiezo hoy","en":"I start today"},
+  "home.reminders.eyebrow": {"es":"De su cuaderno","en":"From her notebook"},
+  "home.reminders.card1.label": {"es":"Recordatorio · 01","en":"Reminder · 01"},
+  "home.reminders.card1.text": {"es":"Tienes que ser paciente cuando te estás convirtiendo en la mujer que nunca fuiste antes.","en":"You have to be patient while you become the woman you have never been."},
+  "home.reminders.card2.label": {"es":"Recordatorio · 02","en":"Reminder · 02"},
+  "home.reminders.card2.text": {"es":"El respeto por ti misma debe ser más fuerte que tu deseo por sentirte amada.","en":"Your respect for yourself must be stronger than your desire to feel loved."},
+  "home.reminders.card3.label": {"es":"Recordatorio · 03","en":"Reminder · 03"},
+  "home.reminders.card3.text": {"es":"Por suerte, siempre me tengo a mi. Nunca pierdo, gano o aprendo.","en":"Luckily, I always have myself. I never lose — I win or I learn."},
+  "home.notebook.plate.alt": {"es":"Alexandra de pie dentro de un círculo de luz blanca, vestido rojo sobre fondo oscuro","en":"Alexandra standing inside a circle of white light, red dress against the dark"},
+  "home.scrap.sr": {"es":"Del archivo","en":"From the archive"},
+  "home.scrap.tag1": {"es":"del archivo ·&nbsp;la escalera","en":"from the archive ·&nbsp;the staircase"},
+  "home.scrap.tag2": {"es":"del archivo ·&nbsp;bajo la luna","en":"from the archive ·&nbsp;under the moon"},
+  "home.scrap.tag3": {"es":"del archivo ·&nbsp;la terraza","en":"from the archive ·&nbsp;the terrace"},
+  "home.scrap.sig": {"es":"— Alexandra","en":"— Alexandra"},
+  "home.scrap.alt1": {"es":"Alexandra bajando una escalera de mármol con barandas doradas, vestido de satén marrón","en":"Alexandra descending a marble staircase with gold rails, brown satin dress"},
+  "home.scrap.alt2": {"es":"Alexandra con vestido blanco bajo una luna creciente dorada, entre cojines de seda","en":"Alexandra in a white dress beneath a golden crescent moon, among silk pillows"},
+  "home.scrap.alt3": {"es":"Alexandra de noche en una terraza, vestido de satén rosa y aretes de perla","en":"Alexandra at night on a rooftop terrace, blush satin dress and pearl earrings"},
+  "home.proof.eyebrow": {"es":"Lo que ellas escriben","en":"What they write"},
+  "home.proof.quote": {"es":"“Yo si te hice caso hermosa, me caso mañana 🙊🙊❤️‍🩹”","en":"“Yo si te hice caso hermosa, me caso mañana 🙊🙊❤️‍🩹” <span class=\"gloss\">(translation: “I did listen to you, beautiful — I'm getting married tomorrow”)</span>"},
+  "home.proof.attribution": {"es":"— seguidora, 733 ❤","en":"— a follower, 733 ❤"},
+  "home.letter.h2": {"es":"<span class=\"qo\">¿</span>Todavía no? La carta de los lunes es gratis.","en":"Not yet? The Monday letter is free."},
+  "home.letter.body": {"es":"Una carta corta cada lunes. Sin ruido, sin promesas — un recordatorio.","en":"A short letter every Monday. No noise, no promises — a reminder."},
+  "home.letter.form.label": {"es":"Tu correo","en":"Your email"},
+  "home.letter.form.placeholder": {"es":"tu@correo.com","en":"you@email.com"},
+  "home.letter.form.button": {"es":"Quiero la carta","en":"I want the letter"},
+  "home.letter.form.privacy": {"es":"Te llegará un correo para confirmar tu suscripción. Un clic para salir, cuando quieras. <a href=\"privacidad.html\">Más en la Política de Privacidad.</a>","en":"You'll get one email to confirm your subscription. One click to leave, whenever you want. <a href=\"privacidad.html\">More in the Privacy Policy.</a>"},
+  "home.letter.form.success": {"es":"Revisa tu correo — hay una confirmación esperándote. 🤍","en":"Check your inbox — a confirmation is waiting for you. 🤍"},
+  "home.letter.form.error": {"es":"Revisa el correo — algo no cuadra.","en":"Check the address — something doesn't look right."},
+  "footer.legal.terms": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "footer.legal.privacy": {"es":"Privacidad","en":"Privacy"},
+  "ctabar.line": {"es":"El Vault abre a su ritmo, no al tuyo.","en":"The Vault opens at her pace, not yours."},
+  "ctabar.btn":  {"es":"Quiero mi ejemplar","en":"I want my copy"}
+}
+</script>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/CustomEase.min.js"></script>
+<script src="assets/js/DrawSVGPlugin.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/v31.js"></script>
+</body>
+</html>

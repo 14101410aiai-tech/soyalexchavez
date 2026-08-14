@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- carta — the capture ENGINE (v3.1 AMAZEMENT PASS, Stage 4).
+     Kinetic hero on the existing h1 · the Sunday-letter promise restyled with
+     the week-strip motif from membership (lunes cell only — consistent values)
+     as the light polarity chapter (#8) · blur-focus device (#4) built from the
+     hero line's OWN words · the existing form + GDPR microcopy kept VERBATIM ·
+     two hidden launch slots: WAITLIST-SLOT (systems #1, launch-cohort capture
+     variant) + TRAINING-SLOT (systems #2, free 2-part training + cuaderno) —
+     both designed, both hidden until real, no dates/counts invented.
+     Bodoni ITALIC only on this page (blur answer + the three truths + accent);
+     the roman never downloads — per-page roman-or-italic rule. Boska preload
+     dropped (display duty on Anybody). -->
+<title data-i18n="letter.meta.title">La carta de los lunes — Alexandra Chávez</title>
+<meta name="description" content="Una carta corta cada lunes, gratis: un recordatorio para empezar la semana escogiendo mejor. Sin ruido. Un clic para salir cuando quieras." data-i18n-attr="content:letter.meta.description">
+<link rel="canonical" href="https://soyalexchavez.com/carta.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="La carta de los lunes — Alexandra Chávez">
+<meta property="og:description" content="Una carta corta cada lunes, gratis: un recordatorio para empezar la semana escogiendo mejor. Sin ruido. Un clic para salir cuando quieras.">
+<meta property="og:url" content="https://soyalexchavez.com/carta.html">
+<meta property="og:image" content="https://soyalexchavez.com/assets/img/og_carta.jpg">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#170F18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/v31.css">
+<style>
+/* ============ carta — page-scoped rules (v3.1 AMAZEMENT PASS, Stage 4) ============ */
+.plate picture{display:contents;}
+
+/* v3.1 poster h2 voice (page-scoped display takeover) */
+main h2{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.7rem,5.4vw,2.9rem);
+  line-height:1;letter-spacing:var(--v31-rest-track);text-transform:uppercase;
+  max-width:24ch;
+}
+.chap{margin-bottom:var(--space-l);}
+
+/* Boska must not render on a v3.1 page (weight lever): every h3 falls back
+   to the sans voice; specific components re-voice on top. */
+main h3{font-family:var(--font-sans);}
+
+/* ---- hero: kinetic question + the sunday-evening plate (photo 07) ---- */
+.carta-hero{min-height:88svh;display:flex;align-items:center;padding-top:6.5rem;}
+.carta-hero__grid{display:grid;gap:var(--space-xl) var(--space-l);width:100%;align-items:center;}
+.carta-hero .v31-kinetic{font-size:clamp(1.7rem,5.1vw,3.7rem);margin-top:var(--space-s);}
+.carta-hero__copy .lede{margin-top:var(--space-m);}
+.carta-hero__fig{max-width:22rem;}
+@media (min-width:900px){
+  .carta-hero__grid{grid-template-columns:minmax(0,1fr) minmax(0,400px);}
+  .carta-hero__fig{max-width:none;justify-self:end;width:100%;}
+}
+
+/* ---- the three quiet truths — the letter's own voice (Bodoni italic) ---- */
+.carta-what__list{list-style:none;max-width:44rem;}
+.carta-what__list li{
+  font-family:var(--v31-serif);font-style:italic;
+  font-variation-settings:'wght' 500,'opsz' 60;
+  font-size:clamp(1.35rem,4.6vw,2rem);line-height:1.32;color:var(--flash);
+  padding-block:var(--space-m);border-top:1px solid var(--line-soft);max-width:32ch;
+}
+.carta-what__list li:last-child{border-bottom:1px solid var(--line-soft);}
+@media (min-width:900px){.carta-what__list{margin-inline:auto;}}
+
+/* ---- the promise chapter — week-strip motif on the light polarity (#8) ----
+   Strip grammar identical to membership (mobile-first agenda <640px, the
+   printed seven-column week ≥640px), re-inked for the day ground. Only the
+   lunes cell carries a label — consistent with membership's lunes cell. */
+.carta-week{padding-block:var(--v31-stage-y);}
+.week{margin-top:var(--space-l);max-width:44rem;}
+.week__strip{list-style:none;display:grid;grid-template-columns:1fr;gap:.3rem;}
+.week__day{
+  border:1px solid var(--v31-day-line);border-radius:var(--radius);
+  padding:.55rem .85rem;position:relative;
+  display:flex;align-items:baseline;gap:.9rem;
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--v31-day-faint);
+}
+.week__day--on{border-color:rgba(26,16,22,.32);color:var(--v31-day-ink);background:rgba(26,16,22,.05);}
+.week__day--on::before{
+  content:'';position:absolute;top:.55rem;right:.55rem;width:5px;height:5px;
+  border-radius:var(--radius-round);background:var(--guava);
+  box-shadow:0 0 8px var(--guava-glow),0 0 3px var(--guava);
+}
+.week__what{
+  font-variation-settings:'wght' 440,'wdth' 82;
+  font-size:.6rem;letter-spacing:.04em;line-height:1.45;
+  text-transform:lowercase;color:var(--v31-day-dim);
+}
+@media (min-width:640px){
+  .week__strip{grid-template-columns:repeat(7,minmax(0,1fr));gap:.35rem;}
+  .week__day{display:block;text-align:center;padding:.65rem .3rem 3.4rem;}
+  .week__what{
+    position:absolute;left:.35rem;right:.35rem;bottom:.55rem;
+    font-size:.56rem;
+  }
+}
+
+/* ---- blur-focus beat (#4) — the hero question resolves ---- */
+.carta-blur{padding-block:var(--v31-stage-y);}
+
+/* ---- capture ---- */
+.carta-form-sec__grid{display:grid;gap:var(--space-xl) var(--space-xl);align-items:start;}
+@media (min-width:900px){
+  .carta-form-sec__grid{grid-template-columns:minmax(0,1fr) minmax(0,420px);}
+}
+.carta-form{max-width:34rem;}
+.carta-form__label{
+  display:block;font-family:var(--v31-mono);font-variation-settings:'wght' 460,'wdth' 100;
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--flash-dim);margin-bottom:var(--space-xs);
+}
+.carta-form__row{display:flex;flex-direction:column;gap:var(--space-xs);}
+@media (min-width:640px){
+  .carta-form__row{flex-direction:row;}
+  .carta-form__row input{flex:1 1 auto;}
+  .carta-form__row .btn{flex:0 0 auto;}
+}
+.carta-form__msg{margin-top:var(--space-s);font-size:var(--text-small);color:var(--rose);}
+.carta-form__msg--err{color:var(--guava-bright);}
+.carta-form__note{
+  /* gate fix (FB_GATE_carta): legally load-bearing microcopy must clear AA — dim, not faint */
+  margin-top:var(--space-s);font-size:var(--text-small);
+  color:var(--flash-dim);max-width:var(--measure-lede);
+}
+.carta-form__note:first-of-type{margin-top:var(--space-m);}
+.carta-form-sec__fig{max-width:22rem;}
+@media (min-width:900px){.carta-form-sec__fig{max-width:none;justify-self:end;width:100%;position:sticky;top:6.5rem;}}
+
+/* ---- hidden launch slots (designed, off until real) ---- */
+.carta-slot{
+  margin-top:var(--space-l);max-width:34rem;
+  background:var(--night-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.5rem 1.4rem 1.6rem;box-shadow:var(--shadow-plate);
+  display:grid;gap:.6rem;justify-items:start;
+}
+.carta-slot[hidden]{display:none;}   /* any display on the component must not defeat hidden */
+.carta-slot h3{font-weight:600;font-size:1.02rem;letter-spacing:.01em;color:var(--flash);max-width:none;}
+.carta-slot p{font-size:var(--text-small);line-height:1.6;color:var(--flash-dim);max-width:44ch;}
+.carta-slot .carta-form__row{width:100%;margin-top:.3rem;}
+.carta-slot .btn,.carta-slot .btn--ghost{margin-top:.5rem;}
+
+/* ---- close ---- */
+.carta-close{display:flex;flex-direction:column;align-items:center;text-align:center;}
+.carta-close .reminder{text-align:left;}
+.carta-close .reminder__body{max-width:30ch;}
+.carta-close__heart{margin-top:var(--space-l);font-size:1.35rem;line-height:1;}
+.carta-crosslink{margin-top:var(--space-l);font-size:var(--text-small);color:var(--flash-faint);}
+
+/* harness neutralisers */
+html.fr .carta-hero{min-height:0;}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ============ NAV — shared verbatim across all six pages. ============ -->
+<header class="site-head">
+  <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
+  <div class="site-head__right">
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+      <a href="membership.html" data-i18n="nav.club">El Club</a>
+      <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+      <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+      <a href="carta.html" data-i18n="nav.carta" aria-current="page">La carta</a>
+    </nav>
+    <div class="lang-pill" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" data-i18n-attr="aria-label:a11y.menu" aria-label="Menú">
+      <svg class="ic-open" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 6h18M2 11h18M2 16h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="ic-close" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu-panel" id="menu-panel" aria-label="Principal (móvil)">
+  <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+  <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+  <a href="membership.html" data-i18n="nav.club">El Club</a>
+  <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+  <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+  <a href="carta.html" data-i18n="nav.carta" aria-current="page">La carta</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- ============ HERO · the question as kinetic catchphrase (pattern #3)
+       + the sunday-evening plate (photo 07). Copy unchanged. ============ -->
+  <section class="spot carta-hero" data-spot="hero" data-hero style="--spot-y:38%;">
+    <div class="carta-hero__grid">
+      <div class="carta-hero__copy">
+        <p class="v31-tag" data-i18n="letter.hero.eyebrow">Amable recordatorio 🤍</p>
+        <h1 class="v31-kinetic" data-v31-kinetic="load" data-i18n="letter.hero.h1"><span class="qo">¿</span>Y si el lunes llegara con un recordatorio esperándote?</h1>
+        <p class="lede" data-i18n="letter.hero.sub">Cada lunes, una carta corta. Un solo recordatorio, escrito con calma, para trabajarse toda la semana. Gratis, y así se queda.</p>
+      </div>
+      <figure class="carta-hero__fig">
+        <div class="plate plate--vignette" style="aspect-ratio:4/5;">
+          <picture>
+            <!-- v3.1 fix lane: 480w candidate added so throttled phones fetch ~40KB
+                 for the LCP plate instead of the 720w file (display ≈343px at 390) -->
+            <source type="image/webp" srcset="assets/img/carta_07_480.webp 480w, assets/img/carta_07_720.webp 720w, assets/img/carta_07_1080.webp 1080w" sizes="(min-width:900px) 400px, 88vw">
+            <img src="assets/img/carta_07_1080.jpg" alt="Alexandra en una cena al aire libre de noche, vestido floral, luz de vela y la ciudad de fondo" width="1080" height="1254" fetchpriority="high" data-i18n-attr="alt:letter.plate1.alt">
+          </picture>
+          <div class="veil"></div>
+        </div>
+        <figcaption data-i18n="letter.plate1.cap">domingo por la noche · de su galería</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ WHAT IT IS / IS NOT · three quiet truths, in the letter's
+       own voice (Bodoni italic — the page's serif stays italic-only) ============ -->
+  <section class="spot carta-what" data-spot style="border-top:1px solid var(--line);">
+    <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
+    <ul class="carta-what__list">
+      <li data-split data-i18n="letter.what.item1">Es corta. Se lee en lo que tarda tu&nbsp;café.</li>
+      <li data-split data-i18n="letter.what.item2">Es un recordatorio, no una promesa. Nada de fórmulas, nada de gritos.</li>
+      <li data-split data-i18n="letter.what.item3">Es tuya. Si un día no quieres más, un clic y sales. Sin dramas.</li>
+    </ul>
+  </section>
+
+  <!-- ============ THE PROMISE · the Sunday-letter rhythm made visible —
+       week-strip motif from membership (lunes cell ONLY, values consistent
+       with membership's lunes cell) on the light polarity chapter (#8).
+       Heading is a VERBATIM fragment of the hero sub — no new claims. ============ -->
+  <section class="v31-flip carta-week">
+    <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
+    <h2 data-i18n="carta.week.h2">Cada lunes, una carta corta.</h2>
+    <div class="week">
+      <h3 class="sr-only" data-i18n="carta.week.sr">El ritmo de la carta</h3>
+      <ul class="week__strip">
+        <li class="week__day week__day--on"><span data-i18n="carta.week.d1">lun</span><span class="week__what" data-i18n="carta.week.lun">la carta · gratis</span></li>
+        <li class="week__day"><span data-i18n="carta.week.d2">mar</span></li>
+        <li class="week__day"><span data-i18n="carta.week.d3">mié</span></li>
+        <li class="week__day"><span data-i18n="carta.week.d4">jue</span></li>
+        <li class="week__day"><span data-i18n="carta.week.d5">vie</span></li>
+        <li class="week__day"><span data-i18n="carta.week.d6">sáb</span></li>
+        <li class="week__day"><span data-i18n="carta.week.d7">dom</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ THE QUESTION, RESOLVED · blur-focus device (pattern #4) —
+       both fragments are the hero line's OWN words, verbatim. ============ -->
+  <section class="carta-blur">
+    <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
+    <div class="v31-blurpair" data-v31-blurpair>
+      <p class="v31-blurpair__q" data-i18n="carta.blur.q">¿Y si el lunes</p>
+      <p class="v31-blurpair__a" data-i18n="carta.blur.a">llegara con un recordatorio <em class="v31-accent">esperándote</em>?</p>
+    </div>
+  </section>
+
+  <!-- ============ CAPTURE · the form + the sunday moon (photo 08) ============
+       Compliance microcopy below is BINDING (copy/COMPLIANCE_AUDIT.md P5 + M5):
+       double-opt-in stated plainly; privacy line carries the Privacy Policy link.
+       Microcopy is deliberately static — information does not perform.
+       Below the form: the two HIDDEN launch slots (waitlist + training). ============ -->
+  <section class="spot carta-form-sec" data-spot id="carta-form" style="--spot-x:38%;--spot-y:42%;border-top:1px solid var(--line);">
+    <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
+    <div class="carta-form-sec__grid">
+      <div>
+        <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
+        <form class="carta-form" method="post" action="#">
+          <label class="carta-form__label" for="carta-email" data-i18n="letter.form.label">Tu correo</label>
+          <div class="carta-form__row">
+            <input type="email" id="carta-email" name="email" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:letter.form.placeholder">
+            <button type="submit" class="btn" data-i18n="letter.form.button">Quiero la carta</button>
+          </div>
+          <!-- Success/error states are unhidden by the form wiring at launch (endpoint above). -->
+          <div aria-live="polite">
+            <p class="carta-form__msg" hidden data-i18n="letter.form.success">Revisa tu correo — hay una confirmación esperándote. Nos vemos el lunes. 🤍</p>
+            <p class="carta-form__msg carta-form__msg--err" hidden data-i18n="letter.form.error">Revisa el correo — algo no cuadra.</p>
+          </div>
+          <p class="carta-form__note" data-i18n="letter.form.doubleoptin">Te llegará un correo para confirmar tu suscripción — es la única forma de saber que eres tú. Nada llega hasta que confirmes.</p>
+          <!-- LEGAL PAGE: privacidad.html is a site build item (COMPLIANCE_AUDIT M3/M5); controller name pending C1. -->
+          <p class="carta-form__note" data-i18n="letter.form.privacy">Tu correo se usa para la carta y nada más. Un clic para salir, cuando quieras. <a href="privacidad.html">Más en la Política de Privacidad.</a></p>
+        </form>
+
+        <!-- WAITLIST-SLOT: launch-cohort capture variant (systems teardown #1,
+             Rhode waitlist mechanic) — designed placeholder, HIDDEN until the
+             vault launch window is real. No dates, no counts, no scarcity
+             theatre. To activate: remove the hidden attribute and replace
+             action="#" with the waitlist endpoint (separate Kit tag/segment). -->
+        <form class="carta-slot" id="lista-de-espera" method="post" action="#" data-waitlist-slot>
+          <p class="v31-tag" data-i18n="carta.wait.tag">la lista de espera</p>
+          <h3 data-i18n="carta.wait.h3">El Vault, antes que nadie.</h3>
+          <p data-i18n="carta.wait.line">Deja tu correo y, cuando el Vault abra, entras primero.</p>
+          <label class="sr-only" for="wait-email" data-i18n="carta.wait.label">Tu correo</label>
+          <div class="carta-form__row">
+            <input type="email" id="wait-email" name="email" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:letter.form.placeholder">
+            <button type="submit" class="btn" data-i18n="carta.wait.cta">Quiero entrar primero</button>
+          </div>
+        </form>
+
+        <!-- TRAINING-SLOT: the free 2-part training + cuaderno capture spike
+             (systems teardown #2, Mel Robbins mechanic) — designed placeholder,
+             HIDDEN until the training genuinely exists. Nothing here renders
+             today; no claim that it exists is made anywhere visible. To
+             activate: remove the hidden attribute and point the CTA at the
+             training signup (separate Kit tag/segment). -->
+        <aside class="carta-slot" hidden data-training-slot>
+          <p class="v31-tag" data-i18n="carta.training.tag">entrenamiento gratuito</p>
+          <h3 data-i18n="carta.training.h3">Un entrenamiento gratuito en dos partes, con su cuaderno.</h3>
+          <p data-i18n="carta.training.line">Dos videos cortos y un cuaderno PDF para trabajarlos, directo a tu correo.</p>
+          <!-- SIGNUP ENDPOINT: replace #kit-training-form with the live training signup URL/anchor at activation -->
+          <a class="btn btn--ghost" href="#kit-training-form" data-i18n="carta.training.cta">Quiero el entrenamiento</a>
+        </aside>
+      </div>
+
+      <figure class="carta-form-sec__fig" data-rise>
+        <div class="plate plate--vignette" style="aspect-ratio:1;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/carta_08_720.webp 720w, assets/img/carta_08_1080.webp 1080w" sizes="(min-width:900px) 420px, 88vw">
+            <img src="assets/img/carta_08_1080.jpg" alt="Alexandra con vestido blanco bajo una luna creciente dorada, entre cojines de seda" width="1080" height="1085" loading="lazy" data-i18n-attr="alt:letter.plate2.alt">
+          </picture>
+          <div class="veil"></div>
+        </div>
+        <figcaption data-i18n="letter.plate2.cap">la luna de los domingos · de su galería</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ CLOSE · one reminder-card, then quiet ============ -->
+  <section class="spot carta-close" data-spot style="--spot-y:32%;border-top:1px solid var(--line);">
+    <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
+    <article class="reminder">
+      <p class="reminder__meta"><span data-i18n="letter.reminder.meta">un recordatorio</span>&nbsp;·&nbsp;<span class="reminder__time" data-i18n="letter.reminder.when">los lunes</span></p>
+      <p class="reminder__body" data-i18n="letter.reminder.text">Cuando una mujer se escribe a sí misma con respeto, aprende a exigir que le hablen igual.</p>
+      <p class="reminder__sig" data-i18n="letter.reminder.sig">— Alexandra</p>
+    </article>
+    <p class="carta-close__heart" aria-hidden="true" data-i18n="letter.reminder.close">🩷</p>
+    <p class="carta-crosslink" data-i18n="letter.crosslink">¿Buscas la colección completa? <a href="vault.html">El Vault →</a></p>
+  </section>
+
+</main>
+
+<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+<div class="cta-bar" data-cta-bar>
+  <p class="cta-bar__line" data-i18n="ctabar.line">La carta de los lunes es gratis.</p>
+  <a class="btn btn--small" href="#carta-form" data-i18n="ctabar.btn">Quiero la carta</a>
+</div>
+
+<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+<footer class="site-foot">
+  <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
+  <nav aria-label="Redes y páginas">
+    <a href="https://instagram.com/alexchavez.23" rel="noopener">@alexchavez.23</a>
+    <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+    <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    <a href="terminos.html" data-i18n="footer.legal.terms">Términos y garantía</a>
+    <a href="privacidad.html" data-i18n="footer.legal.privacy">Privacidad</a>
+  </nav>
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+
+<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
+     ES here MUST equal the ES text in the markup above (no-JS parity).
+     EN is written fresh in her voice, never machine-translated.
+     carta.week.* day values are IDENTICAL to membership's club.week.* values;
+     carta.week.h2 + carta.blur.* are VERBATIM fragments of this page's own
+     hero strings. ============ -->
+<script type="application/json" id="i18n">
+{
+  "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
+  "a11y.menu":  {"es":"Menú","en":"Menu"},
+  "nav.inicio": {"es":"Inicio","en":"Home"},
+  "nav.vault":  {"es":"El Vault","en":"The Vault"},
+  "nav.club":   {"es":"El Club","en":"The Club"},
+  "nav.sobre":  {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "nav.empieza":{"es":"Empieza aquí","en":"Start here"},
+  "nav.carta":  {"es":"La carta","en":"The letter"},
+  "letter.meta.title": {"es":"La carta de los lunes — Alexandra Chávez","en":"The Monday letter — Alexandra Chávez"},
+  "letter.meta.description": {"es":"Una carta corta cada lunes, gratis: un recordatorio para empezar la semana escogiendo mejor. Sin ruido. Un clic para salir cuando quieras.","en":"A short letter every Monday, free: one reminder to start the week choosing better. No noise. One click to leave whenever you want."},
+  "letter.hero.eyebrow": {"es":"Amable recordatorio 🤍","en":"A friendly reminder 🤍"},
+  "letter.hero.h1": {"es":"<span class=\"qo\">¿</span>Y si el lunes llegara con un recordatorio esperándote?","en":"What if Monday arrived with a reminder waiting for&nbsp;you?"},
+  "letter.hero.sub": {"es":"Cada lunes, una carta corta. Un solo recordatorio, escrito con calma, para trabajarse toda la semana. Gratis, y así se queda.","en":"Every Monday, a short letter. One reminder, written calmly, to practice all week. Free — and it stays that way."},
+  "letter.plate1.alt": {"es":"Alexandra en una cena al aire libre de noche, vestido floral, luz de vela y la ciudad de fondo","en":"Alexandra at an open-air dinner at night, floral dress, candlelight, the city behind her"},
+  "letter.plate1.cap": {"es":"domingo por la noche · de su galería","en":"sunday evening · from her gallery"},
+  "letter.what.item1": {"es":"Es corta. Se lee en lo que tarda tu&nbsp;café.","en":"It's short. It takes as long as your coffee."},
+  "letter.what.item2": {"es":"Es un recordatorio, no una promesa. Nada de fórmulas, nada de gritos.","en":"It's a reminder, not a promise. No formulas, no shouting."},
+  "letter.what.item3": {"es":"Es tuya. Si un día no quieres más, un clic y sales. Sin dramas.","en":"It's yours. If one day you want out, one click and you're gone. No drama."},
+  "carta.week.h2": {"es":"Cada lunes, una carta corta.","en":"Every Monday, a short letter."},
+  "carta.week.sr": {"es":"El ritmo de la carta","en":"The rhythm of the letter"},
+  "carta.week.d1": {"es":"lun","en":"mon"},
+  "carta.week.d2": {"es":"mar","en":"tue"},
+  "carta.week.d3": {"es":"mié","en":"wed"},
+  "carta.week.d4": {"es":"jue","en":"thu"},
+  "carta.week.d5": {"es":"vie","en":"fri"},
+  "carta.week.d6": {"es":"sáb","en":"sat"},
+  "carta.week.d7": {"es":"dom","en":"sun"},
+  "carta.week.lun": {"es":"la carta · gratis","en":"the letter · free"},
+  "carta.blur.q": {"es":"¿Y si el lunes","en":"What if Monday"},
+  "carta.blur.a": {"es":"llegara con un recordatorio <em class=\"v31-accent\">esperándote</em>?","en":"arrived with a reminder <em class=\"v31-accent\">waiting</em> for&nbsp;you?"},
+  "letter.form.label": {"es":"Tu correo","en":"Your email"},
+  "letter.form.placeholder": {"es":"tu@correo.com","en":"you@email.com"},
+  "letter.form.button": {"es":"Quiero la carta","en":"I want the letter"},
+  "letter.form.doubleoptin": {"es":"Te llegará un correo para confirmar tu suscripción — es la única forma de saber que eres tú. Nada llega hasta que confirmes.","en":"You'll receive one email to confirm your subscription — it's the only way we know it's really you. Nothing arrives until you confirm."},
+  "letter.form.privacy": {"es":"Tu correo se usa para la carta y nada más. Un clic para salir, cuando quieras. <a href=\"privacidad.html\">Más en la Política de Privacidad.</a>","en":"Your email is used for the letter and nothing else. One click to leave, whenever you want. <a href=\"privacidad.html\">More in the Privacy Policy.</a>"},
+  "letter.form.success": {"es":"Revisa tu correo — hay una confirmación esperándote. Nos vemos el lunes. 🤍","en":"Check your inbox — a confirmation is waiting for you. See you Monday. 🤍"},
+  "letter.form.error": {"es":"Revisa el correo — algo no cuadra.","en":"Check the address — something doesn't look right."},
+  "carta.wait.tag": {"es":"la lista de espera","en":"the waitlist"},
+  "carta.wait.h3": {"es":"El Vault, antes que nadie.","en":"The Vault, before anyone else."},
+  "carta.wait.line": {"es":"Deja tu correo y, cuando el Vault abra, entras primero.","en":"Leave your email and, when the Vault opens, you go in first."},
+  "carta.wait.label": {"es":"Tu correo","en":"Your email"},
+  "carta.wait.cta": {"es":"Quiero entrar primero","en":"I want in first"},
+  "carta.training.tag": {"es":"entrenamiento gratuito","en":"free training"},
+  "carta.training.h3": {"es":"Un entrenamiento gratuito en dos partes, con su cuaderno.","en":"A free training in two parts, with its own workbook."},
+  "carta.training.line": {"es":"Dos videos cortos y un cuaderno PDF para trabajarlos, directo a tu correo.","en":"Two short videos and a PDF workbook to practice them, straight to your inbox."},
+  "carta.training.cta": {"es":"Quiero el entrenamiento","en":"I want the training"},
+  "letter.plate2.alt": {"es":"Alexandra con vestido blanco bajo una luna creciente dorada, entre cojines de seda","en":"Alexandra in a white dress beneath a golden crescent moon, among silk pillows"},
+  "letter.plate2.cap": {"es":"la luna de los domingos · de su galería","en":"the sunday moon · from her gallery"},
+  "letter.reminder.meta": {"es":"un recordatorio","en":"a reminder"},
+  "letter.reminder.when": {"es":"los lunes","en":"on Mondays"},
+  "letter.reminder.text": {"es":"Cuando una mujer se escribe a sí misma con respeto, aprende a exigir que le hablen igual.","en":"When a woman writes to herself with respect, she learns to require the same in return."},
+  "letter.reminder.sig": {"es":"— Alexandra","en":"— Alexandra"},
+  "letter.reminder.close": {"es":"🩷","en":"🩷"},
+  "letter.crosslink": {"es":"¿Buscas la colección completa? <a href=\"vault.html\">El Vault →</a>","en":"Looking for the complete collection? <a href=\"vault.html\">The Vault →</a>"},
+  "footer.legal.terms": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "footer.legal.privacy": {"es":"Privacidad","en":"Privacy"},
+  "ctabar.line": {"es":"La carta de los lunes es gratis.","en":"The Monday letter is free."},
+  "ctabar.btn":  {"es":"Quiero la carta","en":"I want the letter"}
+}
+</script>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/CustomEase.min.js"></script>
+<script src="assets/js/DrawSVGPlugin.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/v31.js"></script>
+</body>
+</html>

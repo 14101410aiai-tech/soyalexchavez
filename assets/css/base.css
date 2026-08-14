@@ -1,0 +1,393 @@
+/* ============================================================
+   ALEX v3 — BASE + SHARED COMPONENTS (shared foundation)
+   Requires tokens.css loaded first. See SYSTEM_NOTES.md.
+   Components: nav · spotlight primitive · reminder-card ·
+   portrait-plate · sticky quiet CTA bar · footer · skip-link.
+   Progressive: every final state lives in CSS; JS only animates.
+   ============================================================ */
+
+/* ============ FONTS (self-hosted, licensed-free faces) ============ */
+@font-face{font-family:'Boska';src:url('../fonts/Boska-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'Boska';src:url('../fonts/Boska-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Boska';src:url('../fonts/Boska-Italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'General Sans';src:url('../fonts/GeneralSans-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'General Sans';src:url('../fonts/GeneralSans-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'General Sans';src:url('../fonts/GeneralSans-Semibold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('../fonts/Switzer-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('../fonts/switzer-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('../fonts/switzer-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Gambetta';src:url('../fonts/gambetta-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Gambetta';src:url('../fonts/gambetta-400i.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Gambetta';src:url('../fonts/gambetta-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Gambetta';src:url('../fonts/gambetta-500i.woff2') format('woff2');font-weight:500;font-style:italic;font-display:swap;}
+
+/* ============ RESET / BASE ============ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--night);
+  color:var(--flash-90);
+  font-family:var(--font-body);
+  font-weight:400;
+  font-size:var(--text-body);
+  line-height:var(--leading-body);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;}
+p a,li a{color:var(--peri);text-decoration-color:var(--peri-dim);text-underline-offset:3px;}
+p a:hover,li a:hover{text-decoration-color:var(--peri);}
+button{font:inherit;color:inherit;}
+::selection{background:var(--guava);color:var(--night-deep);}
+:focus-visible{outline:2px solid var(--peri);outline-offset:4px;border-radius:var(--radius);}
+main{display:block;}
+section{padding-inline:var(--pad);padding-block:var(--section-y);}
+
+/* film grain — one static data-URI, very quiet (from both comps) */
+body::after{
+  content:'';position:fixed;inset:0;z-index:var(--z-grain);pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0;}
+
+/* ============ TYPOGRAPHY ============ */
+h1,h2,h3{font-family:var(--font-display);font-weight:400;color:var(--flash);letter-spacing:var(--track-tight);}
+h1{font-size:var(--text-display);line-height:var(--leading-tight);max-width:16ch;}
+h2{font-size:var(--text-h2);line-height:1.12;max-width:19ch;}
+h3{font-size:var(--text-h3);line-height:1.2;max-width:26ch;}
+.lede{font-size:var(--text-lead);color:var(--flash-dim);max-width:var(--measure-lede);}
+.small{font-size:var(--text-small);}
+.intimate{font-family:var(--font-serif);font-style:italic;color:var(--rose);}     /* her voice */
+.meta{
+  font-family:var(--font-sans);font-weight:500;
+  font-size:var(--text-caption);letter-spacing:var(--track-caps);
+  color:var(--rose-70);text-transform:lowercase;
+}
+.ts,.tnum{
+  font-family:var(--font-body);
+  font-feature-settings:'tnum' 1;font-variant-numeric:tabular-nums;
+  letter-spacing:.04em;
+}
+.qo{color:var(--guava);font-size:.82em;line-height:0;}   /* the opening ¿ = notification light */
+.live-dot{
+  display:inline-block;width:6px;height:6px;border-radius:var(--radius-round);
+  background:var(--guava);vertical-align:2px;
+  box-shadow:0 0 10px var(--guava-glow),0 0 4px var(--guava);
+}
+html.motion .live-dot{animation:pulse 3.4s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:.4;}50%{opacity:1;}}
+
+/* ============ BUTTONS / LINKS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;
+  min-height:54px;padding:.95rem 1.9rem;border:0;border-radius:var(--radius);cursor:pointer;
+  background:var(--guava);color:var(--night-deep);
+  font-family:var(--font-sans);font-weight:600;font-size:1rem;letter-spacing:.01em;line-height:1;
+  text-decoration:none;box-shadow:var(--shadow-glow);
+  transition:background var(--dur-1),transform .15s;
+}
+.btn:hover{background:var(--guava-bright);}
+.btn:active{transform:translateY(1px);}
+.btn--small{min-height:44px;padding:.7rem 1.25rem;font-size:.92rem;}
+.btn--ghost{
+  background:transparent;color:var(--rose);box-shadow:none;
+  border:1px solid var(--peri-dim);font-weight:500;
+}
+.btn--ghost:hover{background:transparent;color:var(--peri);border-color:var(--peri);}
+.link-quiet{
+  font-family:var(--font-sans);font-weight:500;font-size:.98rem;
+  color:var(--flash);text-decoration:none;
+  border-bottom:1px solid var(--peri-dim);padding:.55rem 0 .3rem;
+  transition:color var(--dur-1),border-color var(--dur-1);
+}
+.link-quiet:hover{color:var(--peri);border-color:var(--peri);}
+
+/* ============ FORMS (baseline; pages compose) ============ */
+input[type=email],input[type=text]{
+  min-height:52px;padding:.9rem 1.05rem;border-radius:var(--radius);
+  background:transparent;border:1px solid rgba(255,248,245,.28);color:var(--flash);
+  font-family:var(--font-body);font-weight:400;font-size:1rem;width:100%;
+  transition:border-color var(--dur-1);
+}
+input::placeholder{color:var(--flash-faint);}
+input:focus{outline:2px solid var(--peri);outline-offset:2px;border-color:transparent;}
+
+/* ============ SKIP LINK ============ */
+.skip-link{
+  position:fixed;top:.6rem;left:.6rem;z-index:var(--z-skip);
+  background:var(--guava);color:var(--night-deep);
+  font-family:var(--font-sans);font-weight:600;font-size:.9rem;
+  padding:.7rem 1.1rem;border-radius:var(--radius);text-decoration:none;
+  transform:translateY(-160%);transition:transform .2s;
+}
+.skip-link:focus-visible{transform:none;outline-offset:2px;}
+
+/* ============ NAV — minimal: wordmark · 6 links · ES/EN pill ============ */
+.site-head{
+  position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:1rem var(--pad);
+  transition:background var(--dur-2);
+}
+.site-head.scrolled,
+html.static .site-head{background:linear-gradient(180deg,rgba(16,10,17,.94) 55%,rgba(16,10,17,0));}
+.wordmark{
+  font-family:var(--font-sans);font-weight:600;
+  font-size:.98rem;letter-spacing:.02em;color:var(--flash);
+  text-decoration:none;padding:.5rem 0;white-space:nowrap;
+}
+/* wordmark + footer name (final-fix adjudication 2026-07-17): visible text
+   reads "Chávez" — the á's own acute accent stands alone. The floating guava
+   .adot device was REMOVED site-wide (it read as a stray pixel above the
+   already-accented á). The notification-dot device lives ONLY in
+   reminder-card timestamps — do not re-add it to the wordmark. */
+.site-head__right{display:flex;align-items:center;gap:.4rem;}
+.nav-links{display:none;}
+.nav-links a{
+  font-family:var(--font-sans);font-weight:500;font-size:.88rem;letter-spacing:.04em;
+  color:var(--flash-dim);text-decoration:none;padding:.65rem .7rem;
+  transition:color var(--dur-1);
+}
+.nav-links a:hover{color:var(--flash);}
+.nav-links a[aria-current=page]{color:var(--guava);}
+
+/* language pill — two halves, one control (mechanism from v2 app.js) */
+.lang-pill{
+  display:inline-flex;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+}
+.lang-pill button{
+  background:transparent;border:0;cursor:pointer;
+  font-family:var(--font-sans);font-weight:600;font-size:.72rem;letter-spacing:.1em;
+  color:var(--flash-faint);padding:.62rem .7rem;min-width:44px;min-height:40px;
+  transition:color var(--dur-1),background var(--dur-1);
+}
+.lang-pill button.is-on{background:var(--flash);color:var(--night-deep);cursor:default;}
+.lang-pill button:not(.is-on):hover{color:var(--flash);}
+
+/* mobile menu */
+.nav-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;background:transparent;border:0;cursor:pointer;color:var(--flash);
+}
+.nav-toggle svg{width:22px;height:22px;display:block;}
+.nav-toggle .ic-close{display:none;}
+body.nav-open .nav-toggle .ic-open{display:none;}
+body.nav-open .nav-toggle .ic-close{display:block;}
+.menu-panel{
+  position:fixed;inset:0;z-index:var(--z-menu);
+  background:rgba(16,10,17,.97);
+  display:none;flex-direction:column;justify-content:center;gap:.4rem;
+  padding:5.5rem var(--pad) 3rem;
+}
+body.nav-open .menu-panel{display:flex;}
+body.nav-open{overflow:hidden;}
+.menu-panel a{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.7rem,7vw,2.4rem);line-height:1.25;letter-spacing:var(--track-tight);
+  color:var(--flash);text-decoration:none;padding:.45rem 0;
+}
+.menu-panel a:hover{color:var(--rose);}
+.menu-panel a[aria-current=page]{color:var(--guava);}
+
+@media (min-width:900px){
+  .nav-toggle,.menu-panel{display:none !important;}
+  .nav-links{display:flex;align-items:center;gap:.1rem;margin-right:.6rem;}
+}
+
+/* ============ SPOTLIGHT PRIMITIVE — "la única luz encendida" ============
+   Usage: <section class="spot" data-spot [data-spot-start data-spot-end]
+                   [style="--spot-x:…;--spot-y:…"]>
+   A darkness veil sits over the whole section; site.js scrubs --spot
+   from 0→1 with ScrollTrigger, so scrolling ILLUMINATES the content.
+   Default --spot:1 (tokens.css) → no-JS / static / harness = fully lit.
+   data-spot="hero" → timed lift on load instead of scroll scrub.
+   RULE: never style ::after on a .spot section — the veil owns it.   */
+.spot{position:relative;}
+.spot::after{
+  content:'';position:absolute;inset:0;z-index:6;pointer-events:none;
+  background:radial-gradient(ellipse 75% 62% at var(--spot-x) var(--spot-y),
+    var(--spot-veil-core) 0%,
+    rgba(16,10,17,.86) 46%,
+    var(--spot-veil-edge) 82%);
+  opacity:calc(1 - var(--spot));
+  /* v3.1 fix (Gate A #3): feather the veil at section boundaries so adjacent
+     spot sections read as ONE dark room, not separately-lit boxes. The fade
+     lives inside the section's own block padding, so no content is revealed. */
+  -webkit-mask:linear-gradient(180deg,transparent 0,
+    #000 clamp(2.5rem,7vh,4.5rem),
+    #000 calc(100% - clamp(2.5rem,7vh,4.5rem)),transparent 100%);
+  mask:linear-gradient(180deg,transparent 0,
+    #000 clamp(2.5rem,7vh,4.5rem),
+    #000 calc(100% - clamp(2.5rem,7vh,4.5rem)),transparent 100%);
+}
+html.static .spot::after,
+html.fr .spot::after{opacity:0;}
+
+/* ============ REMINDER CARD — the timestamped note (comp A rhythm,
+   comp D panel grammar). A precious object, set on the lifted ground.
+   Entrance animated by site.js automatically (no data-attr needed). */
+.reminder{
+  position:relative;max-width:34rem;
+  background:var(--night-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.35rem 1.5rem 1.45rem;
+  box-shadow:var(--shadow-plate);
+}
+.reminder__meta{
+  display:flex;align-items:center;gap:.6rem;
+  font-family:var(--font-sans);font-weight:500;
+  font-size:var(--text-micro);letter-spacing:var(--track-caps);
+  color:var(--flash-faint);text-transform:lowercase;
+  margin-bottom:1rem;
+}
+.reminder__meta::before{
+  content:'';flex:0 0 auto;width:6px;height:6px;border-radius:var(--radius-round);
+  background:var(--guava);box-shadow:0 0 10px var(--guava-glow),0 0 4px var(--guava);
+}
+html.motion .reminder__meta::before{animation:pulse 3.4s ease-in-out infinite;}
+.reminder__time{color:var(--guava);}  /* pair with .ts for tabular digits */
+.reminder__body{
+  font-family:var(--font-serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.15rem,3.6vw,1.4rem);line-height:1.5;
+  color:var(--rose);max-width:var(--measure-quote);
+}
+.reminder__sig{
+  margin-top:1rem;
+  font-family:var(--font-sans);font-weight:500;
+  font-size:var(--text-micro);letter-spacing:var(--track-caps);color:var(--rose-70);
+}
+
+/* ============ PORTRAIT PLATE — photo treatment grammar ============
+   .plate           base dark plate
+   .plate--frame    comp D: 1.5px flash frame + guava notification dot
+   .plate--print    comp A: flash-white mounted print, brighter grade
+   .plate--vignette comp A: room edges stay plum-dark (needs .veil child)
+   .plate--disc     comp A hero: circle mask + permanent plum grade
+   Give the plate an aspect-ratio per use. figcaption styled below.   */
+.plate{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--night-deep);}
+.plate img{width:100%;height:100%;object-fit:cover;filter:saturate(.94) contrast(1.05) brightness(.97);}
+.plate--frame{border:1.5px solid var(--flash-90);border-radius:0;}
+.plate--frame::after{
+  content:'';position:absolute;top:10px;right:10px;width:7px;height:7px;z-index:3;
+  border-radius:var(--radius-round);background:var(--guava);
+  box-shadow:0 0 12px var(--guava-glow),0 0 5px var(--guava);
+}
+.plate--print{padding:10px;background:var(--flash);box-shadow:var(--shadow-plate);}
+.plate--print img{filter:saturate(1.02) brightness(1.01) contrast(1.02);}
+.plate--vignette img{filter:saturate(.9) brightness(.9) contrast(1.06);}
+.plate--vignette .veil{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:radial-gradient(ellipse 95% 82% at 50% 36%,transparent 26%,rgba(16,10,17,.96) 100%);
+  opacity:.42;
+}
+.plate--disc{
+  aspect-ratio:1;border-radius:0;background:transparent;
+  -webkit-mask-image:radial-gradient(circle at 50% 46%,#000 62%,transparent 88%);
+  mask-image:radial-gradient(circle at 50% 46%,#000 62%,transparent 88%);
+}
+.plate--disc::before{
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:radial-gradient(circle at 50% 44%,transparent 38%,rgba(23,15,24,.5) 72%,rgba(23,15,24,.95) 100%);
+}
+figure>figcaption{
+  margin-top:.75rem;
+  font-family:var(--font-sans);font-weight:500;
+  font-size:var(--text-caption);letter-spacing:.1em;color:var(--rose-70);
+}
+
+/* ============ STICKY QUIET CTA BAR (mobile) ============
+   <div class="cta-bar" data-cta-bar> — site.js shows it after the
+   [data-hero] section scrolls past. Static mode: always visible.
+   Quiet by design: one line + one small button, translucent night. */
+.cta-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:var(--z-ctabar);
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.7rem var(--pad) calc(.7rem + env(safe-area-inset-bottom,0px));
+  background:rgba(16,10,17,.88);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  transform:translateY(110%);
+  transition:transform .45s var(--ease-out);
+}
+.cta-bar.is-shown,
+html.static .cta-bar,
+html.fr .cta-bar{transform:none;}
+.cta-bar__line{
+  font-family:var(--font-sans);font-weight:500;
+  font-size:.82rem;line-height:1.35;color:var(--flash-dim);
+  max-width:24ch;
+}
+/* W_SITE_REGATE D1: hold the button to ONE line on phones. Was a page-scoped
+   fix on index only, scoped max-width:389px — it missed 390 (the most common
+   phone width) and the other bar pages entirely. Now sitewide, <=430px.
+   COPY_MASTER offers no shorter ctabar.btn variant, so size/tracking nudge only. */
+.cta-bar .btn--small{white-space:nowrap;}
+@media (max-width:430px){
+  .cta-bar{gap:.75rem;}
+  .cta-bar .btn--small{font-size:.84rem;letter-spacing:0;padding:.7rem .95rem;}
+}
+@media (min-width:900px){.cta-bar{display:none;}}
+body{padding-bottom:0;} /* pages with the bar may add scroll-margin as needed */
+
+/* ============ FOOTER ============ */
+.site-foot{
+  border-top:1px solid var(--line-soft);
+  padding:2.4rem var(--pad) calc(2.8rem + 64px); /* clears the mobile CTA bar */
+  display:flex;flex-direction:column;gap:1.1rem;
+  font-family:var(--font-sans);
+  font-size:var(--text-caption);letter-spacing:.08em;color:var(--rose-70);
+}
+.site-foot .f-name{
+  font-family:var(--font-sans);font-weight:600;font-size:.95rem;
+  letter-spacing:.02em;color:var(--flash-dim);
+}
+.site-foot nav{display:flex;flex-wrap:wrap;gap:.2rem 1.6rem;}
+.site-foot a{text-decoration:none;color:var(--flash-dim);padding:.4rem 0;transition:color var(--dur-1);}
+.site-foot a:hover{color:var(--peri);}
+/* W_SITE_REGATE D2: 64px was not enough — at full scroll the fixed CTA bar
+   sat over the footer's first link row on mobile. On pages that carry the bar,
+   reserve enough for the whole bar (≈66px + safe-area) plus margin so every
+   footer link stays tappable at full scroll. Legal pages (no bar) keep 64px. */
+body:has(.cta-bar) .site-foot{padding-bottom:calc(2.8rem + 160px);}
+@media (min-width:900px){
+  .site-foot{flex-direction:row;justify-content:space-between;align-items:baseline;padding-bottom:2.8rem;}
+  body:has(.cta-bar) .site-foot{padding-bottom:2.8rem;} /* bar hidden on desktop */
+}
+
+/* ============ GENERIC ENTRANCE HOOKS (site.js drives) ============
+   [data-split]        display text → SplitText masked line rise
+   [data-split="load"] same, but on page load (hero) not on scroll
+   [data-rise]         quiet fade-rise on scroll into view
+   .reminder           automatic entrance (rise + blur resolve)
+   Final states are the CSS you see — JS only animates FROM.        */
+
+/* ============ VIEW TRANSITIONS (MPA) ============ */
+@view-transition{navigation:auto;}
+::view-transition-old(root){animation-duration:.28s;}
+::view-transition-new(root){animation-duration:.28s;}
+
+/* ============ FORCE-REVEAL (render harness) ============
+   html.fr neutralises viewport-dependent sizing so full-page
+   captures are stable (svh inflates when the harness resizes the
+   viewport to full page height). Pages add their own html.fr rules
+   for any svh / sticky / pinned stage they build.
+   site.js also goes static under #force-reveal. */
+html.fr{scroll-behavior:auto;}
+html.fr [data-spot="hero"]{min-height:0 !important;padding-block:6.5rem 5rem !important;}
+/* Full-page captures: position:fixed pins the CTA bar to the harness viewport,
+   which sits above the true page bottom by the vh-clamp inflation (page grows
+   after the viewport resize). Absolute-to-body puts the bar at the REAL page
+   bottom — the exact full-scroll state a phone shows (W_SITE_REGATE D2). */
+html.fr body{position:relative;}
+html.fr .cta-bar{position:absolute;}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  html.motion .live-dot,
+  html.motion .reminder__meta::before{animation:none;}
+  ::view-transition-old(root),
+  ::view-transition-new(root){animation:none;}
+  .cta-bar{transition:none;}
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- empieza-aqui — bio-link router (v3.1 AMAZEMENT PASS, Stage 4).
+     THE FASTEST page of the six: it takes viral-spike traffic straight from the
+     bio link. Budget ≤250KB initial code+fonts — Bodoni is dropped ENTIRELY on
+     this page (no serif element renders, neither VF downloads), Boska preload
+     dropped (display duty on Anybody), Gambetta re-voiced out (the eyebrow is
+     mono apparatus here, so no serif file downloads at all). Loader-signature
+     deliberately SKIPPED (spike traffic gets content immediately); blur-focus
+     skipped (it would pull Bodoni — not free). v3.1 fix lane: CustomEase /
+     DrawSVG / Lenis script tags dropped too (v31.js soft-requires them);
+     JS on this page = gsap + ScrollTrigger + SplitText + lang/site/v31 only.
+     Router copy/order UNCHANGED.
+     Title/description verbatim from copy/COPY_MASTER.md §start.meta.
+     Keep soyalexchavez.com EXACTLY (post-launch swap token). -->
+<title data-i18n="start.meta.title">Empieza aquí — Alexandra Chávez</title>
+<meta name="description" data-i18n-attr="content:start.meta.description" content="La carta de los lunes, El Vault y el Club Recordatorio — todo lo de Alexandra Chávez, en un solo lugar.">
+<link rel="canonical" href="https://soyalexchavez.com/empieza-aqui.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Empieza aquí — Alexandra Chávez">
+<meta property="og:description" content="La carta de los lunes, El Vault y el Club Recordatorio — todo lo de Alexandra Chávez, en un solo lugar.">
+<meta property="og:url" content="https://soyalexchavez.com/empieza-aqui.html">
+<meta property="og:image" content="https://soyalexchavez.com/assets/img/og_empieza-aqui.jpg">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#170F18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/v31.css">
+<style>
+/* ==== empieza-aqui page styles (page-scoped, composed from tokens + v31) ==== */
+/* Boska must not render on a v3.1 page (weight lever): h2/h3 fall out of the
+   Boska default; specific voices are set below. */
+main h2{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.45rem,4.2vw,2.2rem);
+  line-height:1.04;letter-spacing:var(--v31-rest-track);text-transform:uppercase;
+  max-width:16ch;
+}
+main h3{font-family:var(--font-sans);}
+.chap{margin-bottom:var(--space-l);}
+
+/* ---- hero: kinetic catchphrase on the existing h1 ---- */
+.start-hero{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding-top:clamp(6.5rem,16vh,9.5rem);padding-bottom:1.25rem;
+}
+.start-avatar{width:clamp(9.75rem,30vw,12.5rem);margin-bottom:1.7rem;}
+.start-avatar .plate--disc{aspect-ratio:1;}
+.start-hero .v31-tag{margin-bottom:.4rem;}
+.start-hero .v31-kinetic{font-size:clamp(2.2rem,9vw,5.5rem);margin-top:.7rem;margin-inline:auto;}
+.start-hero .lede{margin-top:1.05rem;margin-inline:auto;}
+
+/* ---- router: the sorting apparatus (mono numbering + spotlight cues) ---- */
+.start-router{padding-top:2.6rem;}
+.start-router .chap{text-align:center;margin-bottom:var(--space-m);}
+.router{
+  counter-reset:rl;
+  display:flex;flex-direction:column;gap:.9rem;width:100%;max-width:30rem;margin-inline:auto;
+}
+.rlink{
+  position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:1rem;
+  background:var(--night-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.05rem 1.2rem 1.1rem;text-align:left;text-decoration:none;
+  box-shadow:var(--shadow-plate);
+  transition:border-color var(--dur-1),transform .15s;
+}
+.rlink[hidden]{display:none;}   /* brand-code slot stays off until authorised */
+.rlink:not([hidden]){counter-increment:rl;}
+.rlink::before{                 /* the sorting index — pure CSS, skips hidden slots */
+  content:counter(rl,decimal-leading-zero);
+  font-family:var(--v31-mono);font-variation-settings:'wght' 380,'wdth' 100;
+  font-size:.68rem;letter-spacing:.14em;color:var(--flash-faint);
+  font-feature-settings:'tnum' 1;
+}
+.rlink:hover{border-color:var(--peri-dim);}
+.rlink:active{transform:translateY(1px);}
+.rlink__copy{display:block;min-width:0;}
+.rlink__title{
+  display:block;font-family:var(--font-sans);font-weight:600;
+  font-size:1rem;line-height:1.3;letter-spacing:.01em;color:var(--flash);
+}
+.rlink__sub{
+  display:block;margin-top:.35rem;
+  font-family:var(--font-body);font-size:var(--text-small);line-height:1.45;color:var(--flash-dim);
+}
+/* the arrow speaks in the spotlight-cue voice (reuses the sanctioned
+   .v31-room__cue selector — no sixth --alex selector is created) */
+.rlink .v31-room__cue{padding:0;font-size:.95rem;letter-spacing:0;transition:transform var(--dur-1);}
+.rlink:hover .v31-room__cue{transform:translateX(3px);}
+/* the notification light marks the Vault card (plate--frame dot grammar) */
+.rlink--vault::after{
+  content:'';position:absolute;top:12px;right:12px;width:7px;height:7px;
+  border-radius:var(--radius-round);background:var(--guava);
+  box-shadow:0 0 12px var(--guava-glow),0 0 5px var(--guava);
+}
+html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
+.start-close{margin-top:2.6rem;text-align:center;font-size:1.15rem;}
+
+/* ---- capture, last-but-present (systems #6): the letter form, quiet ---- */
+.start-capture__inner{max-width:30rem;margin-inline:auto;}
+.start-capture .lede{margin-top:var(--space-s);}
+.start-form{margin-top:var(--space-l);}
+.start-form__label{
+  display:block;font-family:var(--v31-mono);font-variation-settings:'wght' 460,'wdth' 100;
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--flash-dim);margin-bottom:var(--space-xs);
+}
+.start-form__row{display:flex;flex-direction:column;gap:var(--space-xs);}
+@media (min-width:640px){
+  .start-form__row{flex-direction:row;}
+  .start-form__row input{flex:1 1 auto;}
+  .start-form__row .btn{flex:0 0 auto;}
+}
+.start-form__msg{margin-top:var(--space-s);font-size:var(--text-small);color:var(--rose);}
+.start-form__msg--err{color:var(--guava-bright);}
+.start-form__note{
+  /* legally load-bearing microcopy must clear AA — dim, not faint (FB_GATE_carta rule) */
+  margin-top:var(--space-s);font-size:var(--text-small);
+  color:var(--flash-dim);max-width:var(--measure-lede);
+}
+.start-form__note:first-of-type{margin-top:var(--space-m);}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ============ NAV — shared verbatim across all six pages.
+     aria-current="page" goes on THIS page's link (both menus). ============ -->
+<header class="site-head">
+  <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
+  <div class="site-head__right">
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+      <a href="membership.html" data-i18n="nav.club">El Club</a>
+      <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+      <a href="empieza-aqui.html" data-i18n="nav.empieza" aria-current="page">Empieza aquí</a>
+      <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    </nav>
+    <div class="lang-pill" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" data-i18n-attr="aria-label:a11y.menu" aria-label="Menú">
+      <svg class="ic-open" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 6h18M2 11h18M2 16h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="ic-close" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu-panel" id="menu-panel" aria-label="Principal (móvil)">
+  <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+  <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+  <a href="membership.html" data-i18n="nav.club">El Club</a>
+  <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+  <a href="empieza-aqui.html" data-i18n="nav.empieza" aria-current="page">Empieza aquí</a>
+  <a href="carta.html" data-i18n="nav.carta">La carta</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- ============ HERO — the light lifts on load; compact, no video.
+       Kinetic catchphrase (pattern #3) on the EXISTING h1; eyebrow re-voiced
+       to mono apparatus (copy unchanged) so no serif file downloads. ============ -->
+  <section class="spot start-hero" data-spot="hero" data-hero style="--spot-y:30%;">
+    <div class="start-avatar" data-rise>
+      <div class="plate plate--disc">
+        <picture>
+          <source type="image/webp" srcset="assets/img/empieza_09_400.webp 400w, assets/img/empieza_09_640.webp 640w" sizes="(min-width:900px) 200px, 30vw">
+          <img src="assets/img/empieza_09_640.jpg" srcset="assets/img/empieza_09_400.jpg 400w, assets/img/empieza_09_640.jpg 640w" sizes="(min-width:900px) 200px, 30vw" width="640" height="640" fetchpriority="high" alt="Alexandra en una cena de noche, vestido crema, con una copa de vino." data-i18n-attr="alt:start.hero.imgalt">
+        </picture>
+      </div>
+    </div>
+    <p class="v31-tag" data-rise data-i18n="start.hero.eyebrow">Amable recordatorio 🤍</p>
+    <h1 class="v31-kinetic" data-v31-kinetic="load" data-i18n="start.hero.h1">Empieza aquí.</h1>
+    <p class="lede" data-rise data-i18n="start.hero.sub">Todo lo que buscabas del video, en un solo lugar.</p>
+  </section>
+
+  <!-- ============ ROUTER — locked order: carta · vault · club · DM keyword ·
+       [brand-code slot, hidden until a deal is authorised] · sobre.
+       Copy + hrefs UNCHANGED; the sorting is strengthened visually only:
+       CSS-counter mono index per card (skips hidden slots automatically)
+       + arrows in the spotlight-cue voice. ============ -->
+  <section class="spot start-router" data-spot data-spot-start="top 98%" data-spot-end="top 72%" style="--spot-y:30%;">
+    <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
+    <nav class="router" aria-label="Caminos" data-i18n-attr="aria-label:start.router.a11y">
+
+      <a class="rlink" href="carta.html" data-rise>
+        <span class="rlink__copy">
+          <span class="rlink__title" data-i18n="start.router.btn1">La carta de los lunes — gratis</span>
+          <span class="rlink__sub" data-i18n="start.router.btn1.sub">Un recordatorio corto cada lunes, en tu correo.</span>
+        </span>
+        <span class="rlink__arrow v31-room__cue" aria-hidden="true">→</span>
+      </a>
+
+      <a class="rlink rlink--vault" href="vault.html" data-rise>
+        <span class="rlink__copy">
+          <span class="rlink__title" data-i18n="start.router.btn2">El Vault — $97 fundador</span>
+          <span class="rlink__sub" data-i18n="start.router.btn2.sub">12 capítulos: el Manifiesto + 11 guías. O en 3 cuotas.</span>
+        </span>
+        <span class="rlink__arrow v31-room__cue" aria-hidden="true">→</span>
+      </a>
+
+      <a class="rlink" href="membership.html" data-rise>
+        <span class="rlink__copy">
+          <span class="rlink__title" data-i18n="start.router.btn3">El Club Recordatorio — desde $27/mes</span>
+          <span class="rlink__sub" data-i18n="start.router.btn3.sub">Un recordatorio nuevo cada semana + el círculo.</span>
+        </span>
+        <span class="rlink__arrow v31-room__cue" aria-hidden="true">→</span>
+      </a>
+
+      <a class="rlink" href="https://instagram.com/alexchavez.23" rel="noopener" data-rise>
+        <span class="rlink__copy">
+          <span class="rlink__title" data-i18n="start.router.btn4">El recordatorio gratuito</span>
+          <span class="rlink__sub" data-i18n="start.router.btn4.sub">Comenta RECORDATORIO en el último video y te llega por DM.</span>
+        </span>
+        <span class="rlink__arrow v31-room__cue" aria-hidden="true">↗</span>
+      </a>
+
+      <!-- Rotating brand-code slot (COPY_MASTER start.router.btn5) — stays
+           hidden until a real deal is authorised; swap href for the real
+           brand URL and remove [CODE]/@[brand] tokens at activation. -->
+      <a class="rlink" href="#" hidden data-rise>
+        <span class="rlink__copy">
+          <span class="rlink__title" data-i18n="start.router.btn5">Con mi código [CODE] @[brand]</span>
+        </span>
+        <span class="rlink__arrow v31-room__cue" aria-hidden="true">↗</span>
+      </a>
+
+      <a class="rlink" href="sobre-alex.html" data-rise>
+        <span class="rlink__copy">
+          <span class="rlink__title" data-i18n="start.router.btn6">Sobre Alexandra</span>
+        </span>
+        <span class="rlink__arrow v31-room__cue" aria-hidden="true">→</span>
+      </a>
+
+    </nav>
+    <p class="start-close" data-i18n="start.footer.line">🤍</p>
+  </section>
+
+  <!-- ============ CAPTURE — last-but-present (systems #6, Mel Robbins routing
+       pattern): the letter form at the end of the page. Heading + sub reuse
+       the router card's own strings VERBATIM (no new claims); form microcopy
+       verbatim from carta.html (double opt-in + privacy are BINDING,
+       COMPLIANCE_AUDIT P5+M5). Information does not perform. ============ -->
+  <section class="spot start-capture" data-spot style="--spot-y:34%;border-top:1px solid var(--line);">
+    <div class="start-capture__inner">
+      <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
+      <h2 data-i18n="start.capture.h2">La carta de los lunes — gratis</h2>
+      <p class="lede" data-i18n="start.capture.sub">Un recordatorio corto cada lunes, en tu correo.</p>
+      <!-- FORM ENDPOINT: replace action="#" with the same Kit/ConvertKit or
+           FormSubmit endpoint as carta.html before launch -->
+      <form class="start-form" method="post" action="#">
+        <label class="start-form__label" for="start-email" data-i18n="start.form.label">Tu correo</label>
+        <div class="start-form__row">
+          <input type="email" id="start-email" name="email" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:start.form.placeholder">
+          <button type="submit" class="btn" data-i18n="start.form.button">Quiero la carta</button>
+        </div>
+        <!-- Success/error states are unhidden by the form wiring at launch (endpoint above). -->
+        <div aria-live="polite">
+          <p class="start-form__msg" hidden data-i18n="start.form.success">Revisa tu correo — hay una confirmación esperándote. Nos vemos el lunes. 🤍</p>
+          <p class="start-form__msg start-form__msg--err" hidden data-i18n="start.form.error">Revisa el correo — algo no cuadra.</p>
+        </div>
+        <p class="start-form__note" data-i18n="start.form.doubleoptin">Te llegará un correo para confirmar tu suscripción — es la única forma de saber que eres tú. Nada llega hasta que confirmes.</p>
+        <p class="start-form__note" data-i18n="start.form.privacy">Tu correo se usa para la carta y nada más. Un clic para salir, cuando quieras. <a href="privacidad.html">Más en la Política de Privacidad.</a></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+<div class="cta-bar" data-cta-bar>
+  <p class="cta-bar__line" data-i18n="ctabar.line">El Vault abre a su ritmo, no al tuyo.</p>
+  <a class="btn btn--small" href="vault.html" data-i18n="ctabar.btn">Quiero mi ejemplar</a>
+</div>
+
+<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+<footer class="site-foot">
+  <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
+  <nav aria-label="Redes y páginas">
+    <a href="https://instagram.com/alexchavez.23" rel="noopener">@alexchavez.23</a>
+    <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+    <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    <a href="terminos.html" data-i18n="footer.legal.terms">Términos y garantía</a>
+    <a href="privacidad.html" data-i18n="footer.legal.privacy">Privacidad</a>
+  </nav>
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+
+<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
+     ES here MUST equal the ES text in the markup above (no-JS parity).
+     EN verbatim from copy/COPY_MASTER.md §PAGE 5 (written fresh, never
+     machine-translated). start.capture.* reuses the btn1 strings VERBATIM;
+     start.form.* reuses carta's letter.form.* strings VERBATIM. ============ -->
+<script type="application/json" id="i18n">
+{
+  "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
+  "a11y.menu":  {"es":"Menú","en":"Menu"},
+  "nav.inicio": {"es":"Inicio","en":"Home"},
+  "nav.vault":  {"es":"El Vault","en":"The Vault"},
+  "nav.club":   {"es":"El Club","en":"The Club"},
+  "nav.sobre":  {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "nav.empieza":{"es":"Empieza aquí","en":"Start here"},
+  "nav.carta":  {"es":"La carta","en":"The letter"},
+  "start.meta.title": {"es":"Empieza aquí — Alexandra Chávez","en":"Start here — Alexandra Chávez"},
+  "start.meta.description": {"es":"La carta de los lunes, El Vault y el Club Recordatorio — todo lo de Alexandra Chávez, en un solo lugar.","en":"The Monday letter, The Vault and the Club Recordatorio — everything from Alexandra Chávez, in one place."},
+  "start.hero.eyebrow": {"es":"Amable recordatorio 🤍","en":"A friendly reminder 🤍"},
+  "start.hero.h1": {"es":"Empieza aquí.","en":"Start here."},
+  "start.hero.sub": {"es":"Todo lo que buscabas del video, en un solo lugar.","en":"Everything you came here from the video to find, in one place."},
+  "start.hero.imgalt": {"es":"Alexandra en una cena de noche, vestido crema, con una copa de vino.","en":"Alexandra at a night-time dinner, cream dress, with a glass of wine."},
+  "start.router.a11y": {"es":"Caminos","en":"Paths"},
+  "start.router.btn1": {"es":"La carta de los lunes — gratis","en":"The Monday letter — free"},
+  "start.router.btn1.sub": {"es":"Un recordatorio corto cada lunes, en tu correo.","en":"A short reminder every Monday, in your inbox."},
+  "start.router.btn2": {"es":"El Vault — $97 fundador","en":"The Vault — $97 founder"},
+  "start.router.btn2.sub": {"es":"12 capítulos: el Manifiesto + 11 guías. O en 3 cuotas.","en":"12 chapters: the Manifesto + 11 guides. Or in 3 payments."},
+  "start.router.btn3": {"es":"El Club Recordatorio — desde $27/mes","en":"The Club Recordatorio — from $27/month"},
+  "start.router.btn3.sub": {"es":"Un recordatorio nuevo cada semana + el círculo.","en":"A new reminder every week + the circle."},
+  "start.router.btn4": {"es":"El recordatorio gratuito","en":"The free reminder"},
+  "start.router.btn4.sub": {"es":"Comenta RECORDATORIO en el último video y te llega por DM.","en":"Comment RECORDATORIO on the latest video and it arrives by DM."},
+  "start.router.btn5": {"es":"Con mi código [CODE] @[brand]","en":"With my code [CODE] @[brand]"},
+  "start.router.btn6": {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "start.footer.line": {"es":"🤍","en":"🤍"},
+  "start.capture.h2": {"es":"La carta de los lunes — gratis","en":"The Monday letter — free"},
+  "start.capture.sub": {"es":"Un recordatorio corto cada lunes, en tu correo.","en":"A short reminder every Monday, in your inbox."},
+  "start.form.label": {"es":"Tu correo","en":"Your email"},
+  "start.form.placeholder": {"es":"tu@correo.com","en":"you@email.com"},
+  "start.form.button": {"es":"Quiero la carta","en":"I want the letter"},
+  "start.form.doubleoptin": {"es":"Te llegará un correo para confirmar tu suscripción — es la única forma de saber que eres tú. Nada llega hasta que confirmes.","en":"You'll receive one email to confirm your subscription — it's the only way we know it's really you. Nothing arrives until you confirm."},
+  "start.form.privacy": {"es":"Tu correo se usa para la carta y nada más. Un clic para salir, cuando quieras. <a href=\"privacidad.html\">Más en la Política de Privacidad.</a>","en":"Your email is used for the letter and nothing else. One click to leave, whenever you want. <a href=\"privacidad.html\">More in the Privacy Policy.</a>"},
+  "start.form.success": {"es":"Revisa tu correo — hay una confirmación esperándote. Nos vemos el lunes. 🤍","en":"Check your inbox — a confirmation is waiting for you. See you Monday. 🤍"},
+  "start.form.error": {"es":"Revisa el correo — algo no cuadra.","en":"Check the address — something doesn't look right."},
+  "footer.legal.terms": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "footer.legal.privacy": {"es":"Privacidad","en":"Privacy"},
+  "ctabar.line": {"es":"El Vault abre a su ritmo, no al tuyo.","en":"The Vault opens at her pace, not yours."},
+  "ctabar.btn":  {"es":"Quiero mi ejemplar","en":"I want my copy"}
+}
+</script>
+
+<!-- v3.1 fix lane (Gate C #1): the optional plugins are NOT shipped on the
+     fastest page — v31.js soft-requires them (ease falls back to a stock warm
+     arrival, no flourish exists here, native scroll). Kinetic h1 + spotlight
+     scrubs need only gsap + ScrollTrigger + SplitText. -->
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/v31.js"></script>
+</body>
+</html>

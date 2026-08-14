@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandra Chávez · El Club Recordatorio — un recordatorio nuevo cada semana</title>
+<meta name="description" content="Alexandra en vivo cada semana, un recordatorio nuevo, el archivo completo y un círculo cerrado de mujeres en el mismo proceso. Desde $27/mes, precio fundador.">
+<link rel="canonical" href="https://soyalexchavez.com/membership.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Alexandra Chávez · El Club Recordatorio">
+<meta property="og:description" content="Alexandra en vivo cada semana, un recordatorio nuevo, el archivo completo y un círculo cerrado de mujeres en el mismo proceso. Desde $27/mes, precio fundador.">
+<meta property="og:url" content="https://soyalexchavez.com/membership.html">
+<meta property="og:image" content="https://soyalexchavez.com/assets/img/og_membership.jpg">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#170F18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
+<!-- v3.1 weight lever (V31_STAGE1 §6): display duty moved to Anybody VF — Boska
+     preload dropped (Boska no longer renders on this page; the shared mobile
+     menu loads it on demand). Bodoni ITALIC only on this page (the blur-focus
+     answer); the roman never downloads here — per-page roman-or-italic rule. -->
+<link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/video/hero_DXcgyKfCKTv_v_poster.jpg" as="image">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/v31.css">
+<style>
+/* ============ membership — page-scoped styles (v3.1 AMAZEMENT PASS, Stage 3)
+   Kinetic hero · the fixed-day rhythm made VISIBLE (week-strip apparatus:
+   lunes = la carta per site copy · miércoles = el recordatorio per the
+   Master Index truth "cada miércoles"; the WEEKLY live with Alexandra as a
+   full-width strip cell per Conrad's 2026-07-30 ruling — no fixed day is
+   named for it; monthly audio per this page's own copy — no invented
+   days) · scrapbook flip chapter with
+   photo 01 (pattern #5+#8) · blur-focus device from the hero's own words
+   (pattern #4) · Osmo-plain tiers + hidden ANNUAL-SLOT · mono apparatus.
+   Copy + i18n content unchanged — presentation layer only. ============ */
+.plate picture{display:contents;}
+
+/* v3.1 poster h2 voice (page-scoped display takeover) */
+main h2{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.7rem,5.4vw,2.9rem);
+  line-height:1;letter-spacing:var(--v31-rest-track);text-transform:uppercase;
+  max-width:24ch;
+}
+.chap{margin-bottom:var(--space-l);}
+
+/* Boska must not render on a v3.1 page (weight lever): every h3 falls back
+   to the sans voice; specific components re-voice on top. */
+main h3{font-family:var(--font-sans);}
+
+/* ---- hero ---- */
+.club-hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;}
+.club-hero__grid{display:grid;gap:2.6rem;align-items:center;padding-block:5.5rem 1rem;}
+.club-hero .v31-kinetic{font-size:clamp(2rem,6.3vw,5rem);}
+.club-hero__media{max-width:17rem;width:100%;}
+.club-hero__media video{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.94) contrast(1.05) brightness(.97);}
+@media (min-width:900px){
+  .club-hero__grid{grid-template-columns:1.15fr .85fr;gap:3.5rem;padding-block:6rem 2rem;}
+  .club-hero__media{max-width:21rem;justify-self:end;}
+}
+
+/* ---- the week, made visible (fixed-day rhythm apparatus) ---- */
+.week{margin-top:2.6rem;max-width:44rem;}
+/* mobile-first: the week reads as an agenda (one row per day) */
+.week__strip{list-style:none;display:grid;grid-template-columns:1fr;gap:.3rem;}
+.week__day{
+  border:1px solid var(--line-soft);border-radius:var(--radius);
+  padding:.55rem .85rem;position:relative;
+  display:flex;align-items:baseline;gap:.9rem;
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--flash-faint);
+}
+.week__day--on{border-color:var(--line);color:var(--flash);background:var(--night-2);}
+.week__day--on::before{
+  content:'';position:absolute;top:.55rem;right:.55rem;width:5px;height:5px;
+  border-radius:var(--radius-round);background:var(--guava);
+  box-shadow:0 0 8px var(--guava-glow),0 0 3px var(--guava);
+}
+.week__what{
+  font-variation-settings:'wght' 440,'wdth' 82;
+  font-size:.6rem;letter-spacing:.04em;line-height:1.45;
+  text-transform:lowercase;color:var(--flash-dim);
+}
+.week__notes{display:flex;flex-wrap:wrap;gap:.8rem 2rem;margin-top:1rem;}
+/* the weekly live (Conrad ruling 2026-07-30): a real cell of the apparatus,
+   full-width because it has NO fixed day — it belongs to the whole week */
+.week__live{border-color:var(--guava);}
+/* wide: the seven columns of the printed week */
+@media (min-width:640px){
+  .week__strip{grid-template-columns:repeat(7,minmax(0,1fr));gap:.35rem;}
+  .week__day{display:block;text-align:center;padding:.65rem .3rem 3.4rem;}
+  .week__what{
+    position:absolute;left:.35rem;right:.35rem;bottom:.55rem;
+    font-size:.56rem;
+  }
+  .week__live{
+    grid-column:1/-1;display:flex;align-items:baseline;justify-content:center;
+    gap:.9rem;text-align:left;padding:.65rem .85rem;
+  }
+  .week__live .week__what{position:static;font-size:.6rem;}
+}
+
+/* ---- rhythm list (reminder-card sequence grammar) ---- */
+.club-value__grid{display:grid;gap:3rem;align-items:start;}
+@media (min-width:900px){.club-value__grid{grid-template-columns:1.1fr .9fr;gap:4rem;}}
+.rhythm{list-style:none;position:relative;max-width:34rem;display:flex;flex-direction:column;gap:1.15rem;margin-top:2.6rem;padding-left:1.7rem;}
+.rhythm::before{content:'';position:absolute;left:0;top:.9rem;bottom:.9rem;width:1px;background:var(--line);}
+.rhythm__item{position:relative;background:var(--night-2);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem 1.4rem 1.35rem;box-shadow:var(--shadow-plate);}
+.rhythm__item::before{content:'';position:absolute;left:calc(-1.7rem - 2.5px);top:1.55rem;width:6px;height:6px;border-radius:var(--radius-round);background:var(--guava);box-shadow:0 0 10px var(--guava-glow),0 0 4px var(--guava);}
+.rhythm__title{font-family:var(--font-sans);font-weight:600;font-size:1.02rem;letter-spacing:.01em;color:var(--flash);max-width:none;}
+.rhythm__body{margin-top:.45rem;font-size:var(--text-small);line-height:1.6;color:var(--flash-dim);max-width:44ch;}
+.club-value__plate{max-width:22rem;}
+@media (min-width:900px){.club-value__plate{justify-self:end;position:sticky;top:6.5rem;}}
+
+/* ---- del archivo — scrapbook flip chapter (photo 01 + the reminder) ---- */
+.club-scrap{padding-block:var(--v31-stage-y);}
+.club-scrap .v31-scrap{grid-template-columns:1fr;max-width:56rem;}
+.club-scrap .v31-scrap__item:nth-child(even){margin-top:0;}
+.club-scrap__photo{max-width:19rem;justify-self:center;}
+.club-scrap__note{align-self:center;display:grid;gap:.6rem;justify-items:start;}
+.club-scrap .v31-scrap__tag{color:var(--v31-day-faint);}
+.club-scrap .reminder{max-width:30rem;}
+.club-scrap .v31-sig{justify-self:end;width:min(260px,60%);}
+@media (min-width:760px){
+  .club-scrap .v31-scrap{grid-template-columns:1fr 1.2fr;align-items:center;}
+  .club-scrap .v31-scrap__item:nth-child(3n+2){margin-top:2.2rem;}
+  .club-scrap__photo{justify-self:end;}
+}
+
+/* ---- blur-focus beat ---- */
+.club-blur{padding-block:var(--v31-stage-y);}
+
+/* ---- price — Osmo-plain: mono numerals, quiet cards, information does not perform ---- */
+#precio{scroll-margin-top:5rem;}
+.tiers{display:grid;gap:1.25rem;max-width:58rem;margin-top:2.6rem;}
+@media (min-width:900px){.tiers{grid-template-columns:1fr 1fr;}}
+.tier{display:flex;flex-direction:column;gap:.6rem;background:var(--night-2);border:1px solid var(--line);border-radius:var(--radius);padding:1.7rem 1.5rem 1.7rem;}
+.tier[hidden]{display:none;}   /* the ANNUAL-SLOT stays invisible until wired */
+.tier--founder{border-color:var(--guava);box-shadow:var(--shadow-glow);}
+.tier__name{font-family:var(--v31-mono);font-variation-settings:'wght' 460,'wdth' 96;font-size:.74rem;letter-spacing:.15em;line-height:1.8;text-transform:uppercase;color:var(--flash-dim);}  /* Gate B D3: narrower mono + real line rhythm — the compound name now fits one line or breaks cleanly at the separator */
+.tier--founder .tier__name{color:var(--guava);}
+.tier__price{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 640,'wdth' 80;
+  font-feature-settings:'tnum' 1;font-size:clamp(2rem,6vw,2.7rem);
+  line-height:1.05;color:var(--flash);
+}
+.tier__line{font-size:var(--text-small);line-height:1.55;color:var(--flash-dim);}
+.tier .btn,.tier .btn--ghost{margin-top:1.1rem;align-self:flex-start;}
+.fineprint{margin-top:1.6rem;font-size:var(--text-small);line-height:1.6;color:var(--flash-dim);max-width:var(--measure);}
+.fineprint--sure{color:var(--flash-90);}
+
+/* ---- quiet close ---- */
+.club-final__grid{display:grid;gap:2.8rem;align-items:center;}
+@media (min-width:900px){.club-final__grid{grid-template-columns:1.1fr .9fr;gap:4rem;}}
+.club-final__plate{max-width:20rem;}
+@media (min-width:900px){.club-final__plate{justify-self:end;}}
+.club-final__ctas{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:2.2rem;}
+
+/* harness neutralisers */
+html.fr .club-hero{min-height:0;}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ============ NAV — shared verbatim across all six pages.
+     aria-current="page" goes on THIS page's link (both menus). ============ -->
+<header class="site-head">
+  <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
+  <div class="site-head__right">
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+      <a href="membership.html" aria-current="page" data-i18n="nav.club">El Club</a>
+      <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+      <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+      <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    </nav>
+    <div class="lang-pill" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" data-i18n-attr="aria-label:a11y.menu" aria-label="Menú">
+      <svg class="ic-open" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 6h18M2 11h18M2 16h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="ic-close" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu-panel" id="menu-panel" aria-label="Principal (móvil)">
+  <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+  <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+  <a href="membership.html" aria-current="page" data-i18n="nav.club">El Club</a>
+  <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+  <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+  <a href="carta.html" data-i18n="nav.carta">La carta</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- ============ HERO · the question as kinetic catchphrase (pattern #3)
+       + the red-mirror loop. Copy unchanged. ============ -->
+  <section class="spot club-hero" data-spot="hero" data-hero style="--spot-y:36%;">
+    <div class="club-hero__grid">
+      <div>
+        <p class="v31-tag" data-i18n="club.hero.eyebrow">El Club Recordatorio</p>
+        <h1 class="v31-kinetic" data-v31-kinetic="load" data-i18n="club.hero.h1" style="margin-top:1rem;"><span class="qo">¿</span>Qué cambia cuando no lo haces sola?</h1>
+        <p class="lede" data-i18n="club.hero.sub" style="margin-top:1.6rem;">Hay una diferencia entre escuchar un recordatorio y vivirlo. El Club existe para la segunda parte: un ritmo semanal, un archivo al que volver, y mujeres caminando el mismo proceso.</p>
+        <p style="margin-top:2.2rem;"><a class="btn" href="#precio" data-i18n="club.hero.cta">Avísame cuando abra</a></p>
+      </div>
+      <figure class="club-hero__media" data-rise>
+        <div class="plate plate--frame" style="aspect-ratio:2/3;">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/video/hero_DXcgyKfCKTv_v_poster.jpg" width="720" height="1080" data-i18n-attr="aria-label:club.hero.media.label" aria-label="Alexandra en vestido rojo, frente al espejo">
+            <source src="assets/video/hero_DXcgyKfCKTv_v.webm" type="video/webm">
+            <source src="assets/video/hero_DXcgyKfCKTv_v.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption data-i18n="club.hero.media.cap">de su galería</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ WHAT ARRIVES, WHEN · the fixed-day rhythm made VISIBLE.
+       Week-strip apparatus (systems teardown #3): lunes = la carta (site
+       copy: "la carta de los lunes") · miércoles = el recordatorio (Master
+       Index truth: "un recordatorio nuevo cada miércoles") · the WEEKLY
+       live with Alexandra (Conrad ruling 2026-07-30) as a full-width cell —
+       it has NO fixed day, so it spans the week rather than sitting on an
+       invented one. The monthly audio keeps its note line — labelled by
+       real cadence only, no invented days. ============ -->
+  <section class="spot" data-spot style="--spot-y:30%;border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
+    <div class="club-value__grid">
+      <div>
+        <h2 data-split data-i18n="club.value.h2">Qué llega, y cuándo.</h2>
+        <div class="week">
+          <h3 class="sr-only" data-i18n="club.week.sr">El ritmo de la semana</h3>
+          <ul class="week__strip">
+            <li class="week__day week__day--on"><span data-i18n="club.week.d1">lun</span><span class="week__what" data-i18n="club.week.lun">la carta · gratis</span></li>
+            <li class="week__day"><span data-i18n="club.week.d2">mar</span></li>
+            <li class="week__day week__day--on"><span data-i18n="club.week.d3">mié</span><span class="week__what" data-i18n="club.week.mie">el recordatorio</span></li>
+            <li class="week__day"><span data-i18n="club.week.d4">jue</span></li>
+            <li class="week__day"><span data-i18n="club.week.d5">vie</span></li>
+            <li class="week__day"><span data-i18n="club.week.d6">sáb</span></li>
+            <li class="week__day"><span data-i18n="club.week.d7">dom</span></li>
+            <li class="week__day week__day--on week__live"><span data-i18n="club.week.live1">en vivo</span><span class="week__what" data-i18n="club.week.live2">cada semana</span></li>
+          </ul>
+          <div class="week__notes">
+            <p class="v31-note" data-i18n="club.week.note1">cada mes · el audio</p>
+          </div>
+        </div>
+        <ol class="rhythm">
+          <li class="rhythm__item" data-rise>
+            <h3 class="rhythm__title" data-i18n="club.value.live.title">En vivo con Alexandra, cada semana</h3>
+            <p class="rhythm__body" data-i18n="club.value.live.body">Una vez a la semana, Alexandra se conecta en vivo con todo el círculo — para conversar, responder preguntas y caminar el proceso juntas.</p>
+          </li>
+          <li class="rhythm__item" data-rise>
+            <h3 class="rhythm__title" data-i18n="club.value.item1.title">El recordatorio semanal</h3>
+            <p class="rhythm__body" data-i18n="club.value.item1.body">Cada semana, un recordatorio nuevo — escrito, corto, para leerse en cinco minutos y trabajarse toda la semana.</p>
+          </li>
+          <li class="rhythm__item" data-rise>
+            <h3 class="rhythm__title" data-i18n="club.value.item2.title">El archivo</h3>
+            <p class="rhythm__body" data-i18n="club.value.item2.body">Todos los recordatorios anteriores, ordenados por tema. Volver a uno es tan fácil como abrir un libro por el capítulo que necesitas.</p>
+          </li>
+          <li class="rhythm__item" data-rise>
+            <h3 class="rhythm__title" data-i18n="club.value.item3.title">El círculo</h3>
+            <p class="rhythm__body" data-i18n="club.value.item3.body">Un grupo cerrado, sin algoritmo y sin scroll infinito. Hermanas en el mismo proceso, conversando.</p>
+          </li>
+          <li class="rhythm__item" data-rise>
+            <h3 class="rhythm__title" data-i18n="club.value.item4.title">El audio mensual</h3>
+            <p class="rhythm__body" data-i18n="club.value.item4.body">Una vez al mes, Alexandra responde en audio las preguntas más enviadas de las últimas cuatro semanas. Sin guion.</p>
+          </li>
+        </ol>
+      </div>
+      <figure class="club-value__plate" data-rise>
+        <div class="plate plate--frame" style="aspect-ratio:1;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/club_06_480.webp 480w, assets/img/club_06_720.webp 720w, assets/img/club_06_1080.webp 1080w" sizes="(min-width:900px) 352px, 88vw">
+            <img src="assets/img/club_06_720.jpg" alt="Alexandra con copa de champaña junto a un oso de rosas rojas" width="720" height="720" loading="lazy" data-i18n-attr="alt:club.plate06.alt">
+          </picture>
+        </div>
+        <figcaption data-i18n="club.plate06.cap">de su galería</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ DEL ARCHIVO · scrapbook flip chapter (patterns #5+#8):
+       photo 01 (red satin, mirror selfie — her real archive) + the
+       reminder note + abstract flourish (NEVER a fake handwriting
+       signature). Reminder copy unchanged. ============ -->
+  <section class="v31-flip club-scrap">
+    <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
+    <h2 class="sr-only" data-i18n="club.scrap.sr">Del archivo</h2>
+    <div class="v31-scrap">
+      <figure class="v31-scrap__item club-scrap__photo" style="--tilt:-2deg">
+        <div class="plate plate--print" style="aspect-ratio:4/5;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/club_01_480.webp 480w, assets/img/club_01_720.webp 720w" sizes="(min-width:760px) 19rem, 76vw">
+            <img src="assets/img/club_01_720.jpg" alt="Alexandra en vestido rojo de satén, selfie frente al espejo" loading="lazy" width="720" height="900" data-i18n-attr="alt:club.scrap.alt">
+          </picture>
+        </div>
+        <figcaption class="v31-scrap__tag" data-i18n="club.scrap.tag">del archivo ·&nbsp;el espejo</figcaption>
+      </figure>
+      <div class="v31-scrap__item club-scrap__note" style="--tilt:.8deg">
+        <article class="reminder">
+          <p class="reminder__meta"><span data-i18n="club.reminder.eyebrow">Un recordatorio</span></p>
+          <p class="reminder__body" data-i18n="club.reminder.text">Una hermana sola es valiente; acompañada llega más lejos.</p>
+          <p class="reminder__sig" data-i18n="club.reminder.attribution">— Alexandra</p>
+        </article>
+        <!-- flourish: abstract stroke, NEVER a fake handwriting signature (V31_BRIEF rule) -->
+        <svg class="v31-sig" viewBox="0 0 400 70" aria-hidden="true">
+          <path d="M10,52 C70,12 150,4 222,20 C266,30 268,54 230,58 C204,60 200,40 228,33 C282,20 340,28 390,18"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE QUESTION, RESOLVED · blur-focus device (pattern #4)
+       — both fragments are the hero line's own words. ============ -->
+  <section class="club-blur">
+    <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
+    <div class="v31-blurpair" data-v31-blurpair>
+      <p class="v31-blurpair__q" data-i18n="club.blur.q">¿Qué cambia</p>
+      <p class="v31-blurpair__a" data-i18n="club.blur.a">cuando no lo haces <em class="v31-accent">sola</em>?</p>
+    </div>
+  </section>
+
+  <!-- ============ PRICE · two tiers, founder highlighted — Osmo-plain.
+       Buying information does not perform: no split/rise on tiers,
+       rails, guarantee or founder-close (comp gate rule). ============ -->
+  <section class="spot" data-spot id="precio" style="--spot-y:26%;border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
+    <p class="v31-tag" data-i18n="club.price.eyebrow">Precio fundador · primeras 100</p>
+    <h2 data-i18n="club.price.h2" style="margin-top:1rem;">Tu precio fundador queda contigo.</h2>
+
+    <div class="tiers">
+      <article class="tier tier--founder">
+        <h3 class="tier__name" data-i18n="club.price.tier1.name">Fundadora ·&nbsp;con&nbsp;el&nbsp;Vault</h3>
+        <p class="tier__price" data-i18n="club.price.tier1.price">$27 / mes</p>
+        <p class="tier__line" data-i18n="club.price.tier1.line1">Para compradoras del Vault.</p>
+        <p class="tier__line" data-i18n="club.price.tier1.line2">En vivo con Alexandra cada semana · recordatorio semanal · archivo completo · círculo · audio mensual.</p>
+        <p class="tier__line" data-i18n="club.price.tier1.line3">Tu precio queda contigo mientras sigas dentro.</p>
+        <!-- HOTMART URL: replace #hotmart-membership-founder with the live Hotmart checkout URL for the FOUNDER tier ($27/mes, con el Vault) -->
+        <a class="btn" href="carta.html" data-i18n="club.price.tier1.cta">Avísame cuando abra</a>
+      </article>
+      <article class="tier">
+        <h3 class="tier__name" data-i18n="club.price.tier2.name">Círculo Cercano</h3>
+        <p class="tier__price" data-i18n="club.price.tier2.price">$47 / mes</p>
+        <p class="tier__line" data-i18n="club.price.tier2.line1">Para hermanas que aún no tienen el Vault.</p>
+        <p class="tier__line" data-i18n="club.price.tier2.line2">El mismo acceso a los recordatorios y al círculo.</p>
+        <p class="tier__line" data-i18n="club.price.tier2.line3">El Vault se compra aparte, cuando tú quieras.</p>
+        <!-- HOTMART URL: replace #hotmart-membership-circulo with the live Hotmart checkout URL for the CÍRCULO CERCANO tier ($47/mes, sin el Vault) -->
+        <a class="btn btn--ghost" href="carta.html" data-i18n="club.price.tier2.cta">Avísame cuando abra</a>
+      </article>
+      <!-- ANNUAL-SLOT: annual plan anchor (systems teardown #4, CHANI/Molly Baz pattern) —
+           designed placeholder, HIDDEN until Conrad decides annual pricing. No invented
+           annual price is rendered anywhere. To activate: remove the hidden attribute
+           and add the price line. -->
+      <article class="tier" hidden data-annual-slot>
+        <h3 class="tier__name" data-i18n="club.annual.name">El año completo</h3>
+        <p class="tier__line" data-i18n="club.annual.line">Doce meses del Club, juntos.</p>
+        <!-- HOTMART URL: replace #hotmart-membership-annual with the live Hotmart checkout URL for the annual plan -->
+        <a class="btn btn--ghost" href="carta.html" data-i18n="club.annual.cta">Lo quiero</a>
+      </article>
+    </div>
+
+    <p class="fineprint" data-i18n="club.price.rails">Pagas mes a mes — tarjeta, Pix, OXXO o Mercado Pago, vía Hotmart. Sin permanencia; cancelas cuando quieras, con un clic. ¿El Vault? Ese sí va en 3 cuotas, si lo prefieres. Precios en dólares (USD). El total final, con impuestos, se muestra en tu moneda antes de pagar.</p>
+    <p class="fineprint fineprint--sure" data-i18n="club.price.guarantee">Garantía de 7 días en tu primer mes (15 si estás en Europa). Si no es tu lugar, se te devuelve. Sin preguntas.</p>
+    <p class="fineprint" data-i18n="club.price.founderclose">Cuando se cierren las primeras 100 plazas, el Club pasa al precio regular. Las que ya están dentro no se mueven.</p>
+  </section>
+
+  <!-- ============ QUIET CLOSE · letter bridge ============ -->
+  <section class="spot" data-spot style="--spot-y:38%;border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
+    <div class="club-final__grid">
+      <div>
+        <h2 data-split data-i18n="club.final.h2"><span class="qo">¿</span>Este momento es para&nbsp;ti?</h2>
+        <p class="lede" data-i18n="club.final.body" style="margin-top:1.6rem;">Si todavía no, está bien. La carta de los lunes es gratis — empieza por ahí. 🤍</p>
+        <div class="club-final__ctas">
+          <a class="btn" href="#precio" data-i18n="club.final.cta.primary">Avísame cuando abra</a>
+          <a class="btn btn--ghost" href="carta.html" data-i18n="club.final.cta.secondary">Quiero la carta</a>
+        </div>
+      </div>
+      <figure class="club-final__plate" data-rise>
+        <div class="plate plate--vignette" style="aspect-ratio:4/5;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/club_11_480.webp 480w, assets/img/club_11_720.webp 720w, assets/img/club_11_1080.webp 1080w" sizes="(min-width:900px) 320px, 88vw">
+            <img src="assets/img/club_11_720.jpg" alt="Alexandra de noche en una terraza, vestido de satén rosa y aretes de perla" width="720" height="879" loading="lazy" data-i18n-attr="alt:club.plate11.alt">
+          </picture>
+          <div class="veil"></div>
+        </div>
+        <figcaption data-i18n="club.plate11.cap">de su galería</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+<div class="cta-bar" data-cta-bar>
+  <p class="cta-bar__line" data-i18n="ctabar.line">El Club · abre después del Vault</p>
+  <a class="btn btn--small" href="carta.html" data-i18n="ctabar.btn">Avísame</a>
+</div>
+
+<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+<footer class="site-foot">
+  <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
+  <nav aria-label="Redes y páginas">
+    <a href="https://instagram.com/alexchavez.23" rel="noopener">@alexchavez.23</a>
+    <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+    <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    <a href="terminos.html" data-i18n="footer.legal.terms">Términos y garantía</a>
+    <a href="privacidad.html" data-i18n="footer.legal.privacy">Privacidad</a>
+  </nav>
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+
+<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
+     ES here MUST equal the ES text in the markup above (no-JS parity).
+     EN is written fresh in her voice, never machine-translated. ============ -->
+<script type="application/json" id="i18n">
+{
+  "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
+  "a11y.menu":  {"es":"Menú","en":"Menu"},
+  "nav.inicio": {"es":"Inicio","en":"Home"},
+  "nav.vault":  {"es":"El Vault","en":"The Vault"},
+  "nav.club":   {"es":"El Club","en":"The Club"},
+  "nav.sobre":  {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "nav.empieza":{"es":"Empieza aquí","en":"Start here"},
+  "nav.carta":  {"es":"La carta","en":"The letter"},
+
+  "club.hero.eyebrow": {"es":"El Club Recordatorio","en":"The Club Recordatorio"},
+  "club.hero.h1":      {"es":"<span class=\"qo\">¿</span>Qué cambia cuando no lo haces sola?","en":"What changes when you stop doing this alone?"},
+  "club.hero.sub":     {"es":"Hay una diferencia entre escuchar un recordatorio y vivirlo. El Club existe para la segunda parte: un ritmo semanal, un archivo al que volver, y mujeres caminando el mismo proceso.","en":"There is a difference between hearing a reminder and living it. The Club exists for the second part: a weekly rhythm, an archive to return to, and women walking the same process."},
+  "club.hero.cta":     {"es":"Avísame cuando abra","en":"Tell me when it opens"},
+  "club.hero.media.label": {"es":"Alexandra en vestido rojo, frente al espejo","en":"Alexandra in a red dress, at the mirror"},
+  "club.hero.media.cap":   {"es":"de su galería","en":"from her gallery"},
+
+  "club.week.sr": {"es":"El ritmo de la semana","en":"The rhythm of the week"},
+  "club.week.d1": {"es":"lun","en":"mon"},
+  "club.week.d2": {"es":"mar","en":"tue"},
+  "club.week.d3": {"es":"mié","en":"wed"},
+  "club.week.d4": {"es":"jue","en":"thu"},
+  "club.week.d5": {"es":"vie","en":"fri"},
+  "club.week.d6": {"es":"sáb","en":"sat"},
+  "club.week.d7": {"es":"dom","en":"sun"},
+  "club.week.lun": {"es":"la carta · gratis","en":"the letter · free"},
+  "club.week.mie": {"es":"el recordatorio","en":"the reminder"},
+  "club.week.live1": {"es":"en vivo","en":"live"},
+  "club.week.live2": {"es":"cada semana","en":"every week"},
+  "club.week.note1": {"es":"cada mes · el audio","en":"every month · the audio"},
+
+  "club.value.h2":         {"es":"Qué llega, y cuándo.","en":"What arrives, and when."},
+  "club.value.live.title": {"es":"En vivo con Alexandra, cada semana","en":"Live with Alexandra, every week"},
+  "club.value.live.body":  {"es":"Una vez a la semana, Alexandra se conecta en vivo con todo el círculo — para conversar, responder preguntas y caminar el proceso juntas.","en":"Once a week, Alexandra goes live with the whole circle — to talk, answer questions, and walk the process together."},
+  "club.value.item1.title":{"es":"El recordatorio semanal","en":"The weekly reminder"},
+  "club.value.item1.body": {"es":"Cada semana, un recordatorio nuevo — escrito, corto, para leerse en cinco minutos y trabajarse toda la semana.","en":"Every week, a new reminder — written, short, five minutes to read and a whole week to practice."},
+  "club.value.item2.title":{"es":"El archivo","en":"The archive"},
+  "club.value.item2.body": {"es":"Todos los recordatorios anteriores, ordenados por tema. Volver a uno es tan fácil como abrir un libro por el capítulo que necesitas.","en":"Every reminder that came before, indexed by theme. Returning to one is as simple as opening a book at the chapter you need."},
+  "club.value.item3.title":{"es":"El círculo","en":"The circle"},
+  "club.value.item3.body": {"es":"Un grupo cerrado, sin algoritmo y sin scroll infinito. Hermanas en el mismo proceso, conversando.","en":"A closed group — no algorithm, no endless scroll. Sisters in the same process, in conversation."},
+  "club.value.item4.title":{"es":"El audio mensual","en":"The monthly audio"},
+  "club.value.item4.body": {"es":"Una vez al mes, Alexandra responde en audio las preguntas más enviadas de las últimas cuatro semanas. Sin guion.","en":"Once a month, Alexandra answers the most-asked questions of the past four weeks in audio. Unscripted."},
+  "club.plate06.alt": {"es":"Alexandra con copa de champaña junto a un oso de rosas rojas","en":"Alexandra with a glass of champagne beside a bear made of red roses"},
+  "club.plate06.cap": {"es":"de su galería","en":"from her gallery"},
+
+  "club.scrap.sr":  {"es":"Del archivo","en":"From the archive"},
+  "club.scrap.tag": {"es":"del archivo ·&nbsp;el espejo","en":"from the archive ·&nbsp;the mirror"},
+  "club.scrap.alt": {"es":"Alexandra en vestido rojo de satén, selfie frente al espejo","en":"Alexandra in a red satin dress, a mirror selfie"},
+
+  "club.reminder.eyebrow":     {"es":"Un recordatorio","en":"A reminder"},
+  "club.reminder.text":        {"es":"Una hermana sola es valiente; acompañada llega más lejos.","en":"A sister alone is brave; accompanied, she goes further."},
+  "club.reminder.attribution": {"es":"— Alexandra","en":"— Alexandra"},
+
+  "club.blur.q": {"es":"¿Qué cambia","en":"What changes"},
+  "club.blur.a": {"es":"cuando no lo haces <em class=\"v31-accent\">sola</em>?","en":"when you stop doing this <em class=\"v31-accent\">alone</em>?"},
+
+  "club.price.eyebrow":    {"es":"Precio fundador · primeras 100","en":"Founder price · first 100"},
+  "club.price.h2":         {"es":"Tu precio fundador queda contigo.","en":"Your founder price stays with you."},
+  "club.price.tier1.name": {"es":"Fundadora ·&nbsp;con&nbsp;el&nbsp;Vault","en":"Founder ·&nbsp;with&nbsp;the&nbsp;Vault"},
+  "club.price.tier1.price":{"es":"$27 / mes","en":"$27 / month"},
+  "club.price.tier1.line1":{"es":"Para compradoras del Vault.","en":"For Vault buyers."},
+  "club.price.tier1.line2":{"es":"En vivo con Alexandra cada semana · recordatorio semanal · archivo completo · círculo · audio mensual.","en":"Live with Alexandra every week · weekly reminder · full archive · circle · monthly audio."},
+  "club.price.tier1.line3":{"es":"Tu precio queda contigo mientras sigas dentro.","en":"Your price stays with you for as long as you stay."},
+  "club.price.tier1.cta":  {"es":"Avísame cuando abra","en":"Tell me when it opens"},
+  "club.price.tier2.name": {"es":"Círculo Cercano","en":"Círculo Cercano"},
+  "club.price.tier2.price":{"es":"$47 / mes","en":"$47 / month"},
+  "club.price.tier2.line1":{"es":"Para hermanas que aún no tienen el Vault.","en":"For sisters who don't have the Vault yet."},
+  "club.price.tier2.line2":{"es":"El mismo acceso a los recordatorios y al círculo.","en":"The same access to the reminders and the circle."},
+  "club.price.tier2.line3":{"es":"El Vault se compra aparte, cuando tú quieras.","en":"The Vault is bought separately, whenever you want it."},
+  "club.price.tier2.cta":  {"es":"Avísame cuando abra","en":"Tell me when it opens"},
+  "club.annual.name": {"es":"El año completo","en":"The full year"},
+  "club.annual.line": {"es":"Doce meses del Club, juntos.","en":"Twelve months of the Club, together."},
+  "club.annual.cta":  {"es":"Lo quiero","en":"I want it"},
+  "club.price.rails":      {"es":"Pagas mes a mes — tarjeta, Pix, OXXO o Mercado Pago, vía Hotmart. Sin permanencia; cancelas cuando quieras, con un clic. ¿El Vault? Ese sí va en 3 cuotas, si lo prefieres. Precios en dólares (USD). El total final, con impuestos, se muestra en tu moneda antes de pagar.","en":"You pay month to month — card, Pix, OXXO or Mercado Pago, via Hotmart. No commitment; cancel whenever you want, in one click. The Vault? That one can be split into 3 payments, if you prefer. Prices in US dollars (USD). Your final total, including any taxes, is shown in your currency before you pay."},
+  "club.price.guarantee":  {"es":"Garantía de 7 días en tu primer mes (15 si estás en Europa). Si no es tu lugar, se te devuelve. Sin preguntas.","en":"7-day guarantee on your first month (15 if you're in Europe). If it isn't your place, your money comes back. No questions."},
+  "club.price.founderclose":{"es":"Cuando se cierren las primeras 100 plazas, el Club pasa al precio regular. Las que ya están dentro no se mueven.","en":"Once the first 100 places close, the Club moves to its regular price. The women already inside don't move."},
+
+  "club.final.h2":            {"es":"<span class=\"qo\">¿</span>Este momento es para&nbsp;ti?","en":"Is this your moment?"},
+  "club.final.body":          {"es":"Si todavía no, está bien. La carta de los lunes es gratis — empieza por ahí. 🤍","en":"If not yet, that's fine. The Monday letter is free — start there. 🤍"},
+  "club.final.cta.primary":   {"es":"Avísame cuando abra","en":"Tell me when it opens"},
+  "club.final.cta.secondary": {"es":"Quiero la carta","en":"I want the letter"},
+  "club.plate11.alt": {"es":"Alexandra de noche en una terraza, vestido de satén rosa y aretes de perla","en":"Alexandra at night on a rooftop terrace, blush satin dress and pearl earrings"},
+  "club.plate11.cap": {"es":"de su galería","en":"from her gallery"},
+
+  "footer.legal.terms": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "footer.legal.privacy": {"es":"Privacidad","en":"Privacy"},
+  "ctabar.line": {"es":"El Club · abre después del Vault","en":"The Club · opens after the Vault"},
+  "ctabar.btn":  {"es":"Avísame","en":"Tell me"}
+}
+</script>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/CustomEase.min.js"></script>
+<script src="assets/js/DrawSVGPlugin.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/v31.js"></script>
+<script>
+/* page-scoped: honour prefers-reduced-motion / harness for the hero loop — static poster */
+(function(){
+  var v=document.querySelector('.club-hero__media video');
+  if(!v){return;}
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches||location.hash.indexOf('force-reveal')!==-1){
+    v.removeAttribute('autoplay');
+    try{v.pause();}catch(e){}
+  }
+})();
+</script>
+</body>
+</html>

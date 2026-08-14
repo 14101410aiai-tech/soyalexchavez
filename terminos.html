@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandra Chávez · Términos y garantía</title>
+<meta name="description" content="Términos de compra y garantía de El Vault y El Club Recordatorio.">
+<!-- Legal stub page: noindex until the seller entity (C1) is confirmed and the
+     page graduates from summary to full terms. No og block by design. -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#170F18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
+<!-- v3.1 token coherence (Stage 4, LIGHT TOUCH): display duty on Anybody
+     (Boska preload dropped, Boska no longer renders), section headers in the
+     Martian mono apparatus voice with auto-numbered ( 0N ) marks (pure CSS —
+     no copy changes, no motion, no patterns). Everything else untouched. -->
+<link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/v31.css">
+<style>
+/* ============ legal pages (terminos / privacidad) — quiet typographic,
+   v3.1 token coherence (identical block on both legal pages) ============ */
+.legal{padding-top:9.5rem;padding-bottom:var(--section-y);}
+.legal__inner{max-width:var(--measure);counter-reset:lg;}
+.legal h1{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.55rem,4.3vw,2.4rem);line-height:1.04;
+  letter-spacing:var(--v31-rest-track);text-transform:uppercase;max-width:none;
+}
+.legal h2{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 460,'wdth' 100;
+  font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--flash);max-width:none;margin-top:var(--space-xl);
+  display:flex;gap:.8rem;align-items:baseline;counter-increment:lg;
+}
+.legal h2::before{
+  content:"( 0" counter(lg) " )";
+  font-variation-settings:'wght' 380,'wdth' 100;
+  letter-spacing:.22em;color:var(--flash-faint);
+  white-space:nowrap;flex:none;   /* the mark itself must never wrap */
+}
+.legal p{color:var(--flash-90);margin-top:var(--space-s);max-width:var(--measure);}
+.legal .intimate{font-size:1.05rem;margin-bottom:1rem;}
+.legal__updated{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--rose-70);margin-top:var(--space-m);
+}
+/* pending-value marker: quietly but visibly unresolved */
+.tbc{color:var(--peri);border-bottom:1px dashed var(--peri-dim);}
+/* v3.1 fix (Gate C #3): <strong> must use a REAL weight — Switzer has no 600
+   file, so the browser was synthesising bold (smeared glyphs at 2x zoom).
+   Switzer-500 exists as a real file; use it. */
+.legal strong{font-weight:500;}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ============ NAV — shared verbatim across all pages (legal pages carry no
+     aria-current: they are footer pages, not nav destinations). ============ -->
+<header class="site-head">
+  <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
+  <div class="site-head__right">
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+      <a href="membership.html" data-i18n="nav.club">El Club</a>
+      <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+      <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+      <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    </nav>
+    <div class="lang-pill" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" data-i18n-attr="aria-label:a11y.menu" aria-label="Menú">
+      <svg class="ic-open" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 6h18M2 11h18M2 16h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="ic-close" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu-panel" id="menu-panel" aria-label="Principal (móvil)">
+  <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+  <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+  <a href="membership.html" data-i18n="nav.club">El Club</a>
+  <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+  <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+  <a href="carta.html" data-i18n="nav.carta">La carta</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- Quiet typographic page: no spotlight sections, no CTA bar, no media.
+       Content = ONLY what COMPLIANCE_AUDIT lets us state today (M1/M2/M3/M4 + P12).
+       ⚠ C1 — LAUNCH-BLOCKING (Conrad decision): the seller legal entity, its
+       geographical address and the contact email are NOT yet decided (brand name
+       unlocked, 50/50 contract unsigned). Every "[ … por confirmar]" span below
+       must be replaced before launch; CCR 2013 reg 13 + Sch 2 requires trader
+       identity + address pre-contract. Do not launch this site while they remain. -->
+  <section class="legal">
+    <div class="legal__inner">
+      <p class="intimate" data-i18n="legal.eyebrow">lo importante, claro</p>
+      <h1 data-i18n="legal.h1">Términos y garantía</h1>
+      <p class="legal__updated" data-i18n="legal.updated">Resumen · se completará antes del lanzamiento</p>
+
+      <h2 data-i18n="legal.seller.h2">Quién vende</h2>
+      <p data-i18n="legal.seller.body">El Vault y El Club Recordatorio se venden por <span class="tbc">[Entidad vendedora — por confirmar]</span>, con domicilio en <span class="tbc">[Dirección — por confirmar]</span>. Contacto: <span class="tbc">[Correo de contacto — por confirmar]</span>.</p>
+
+      <h2 data-i18n="legal.guarantee.h2">La garantía</h2>
+      <p data-i18n="legal.guarantee.vault"><strong>El Vault:</strong> Garantía de 7 días. Si no es para ti, escribes y se te devuelve el dinero. Sin preguntas. Si compras desde Europa, tu garantía es de 15 días — y esta garantía nunca reduce los derechos que te da la ley de tu país.</p>
+      <p data-i18n="legal.guarantee.club"><strong>El Club Recordatorio:</strong> Garantía de 7 días en tu primer mes (15 si estás en Europa). Si no es tu lugar, se te devuelve. Sin preguntas.</p>
+
+      <h2 data-i18n="legal.access.h2">Acceso inmediato</h2>
+      <p data-i18n="legal.access.body">El acceso es inmediato: al confirmar tu compra aceptas recibir el contenido digital al instante. Al aceptar la entrega inmediata, el periodo legal de cancelación de 14 días para contenido digital termina cuando empieza la entrega — la garantía de arriba sigue aplicando igual.</p>
+
+      <h2 data-i18n="legal.prices.h2">Precios</h2>
+      <p data-i18n="legal.prices.body">Precios en dólares (USD). El total final, con impuestos, se muestra en tu moneda antes de pagar.</p>
+
+      <h2 data-i18n="legal.payment.h2">El pago</h2>
+      <p data-i18n="legal.payment.body">Las compras se procesan en Hotmart, la plataforma de pago. Nosotras nunca vemos ni guardamos tus datos de pago.</p>
+
+      <h2 data-i18n="legal.files.h2">Los archivos</h2>
+      <p data-i18n="legal.files.body">El Vault son trece archivos PDF — doce capítulos (el Manifiesto y once guías) y un índice maestro. Se leen en cualquier teléfono, tablet o computadora, sin aplicaciones especiales.</p>
+
+      <p data-i18n="legal.privacylink">Sobre tus datos: <a href="privacidad.html">Política de Privacidad</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER — shared verbatim across all pages ============ -->
+<footer class="site-foot">
+  <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
+  <nav aria-label="Redes y páginas">
+    <a href="https://instagram.com/alexchavez.23" rel="noopener">@alexchavez.23</a>
+    <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+    <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    <a href="terminos.html" data-i18n="footer.legal.terms">Términos y garantía</a>
+    <a href="privacidad.html" data-i18n="footer.legal.privacy">Privacidad</a>
+  </nav>
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+
+<!-- ============ i18n DICTIONARY ============ -->
+<script type="application/json" id="i18n">
+{
+  "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
+  "a11y.menu":  {"es":"Menú","en":"Menu"},
+  "nav.inicio": {"es":"Inicio","en":"Home"},
+  "nav.vault":  {"es":"El Vault","en":"The Vault"},
+  "nav.club":   {"es":"El Club","en":"The Club"},
+  "nav.sobre":  {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "nav.empieza":{"es":"Empieza aquí","en":"Start here"},
+  "nav.carta":  {"es":"La carta","en":"The letter"},
+  "legal.eyebrow": {"es":"lo importante, claro","en":"the important part, plainly"},
+  "legal.h1": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "legal.updated": {"es":"Resumen · se completará antes del lanzamiento","en":"Summary · to be completed before launch"},
+  "legal.seller.h2": {"es":"Quién vende","en":"Who is selling"},
+  "legal.seller.body": {"es":"El Vault y El Club Recordatorio se venden por <span class=\"tbc\">[Entidad vendedora — por confirmar]</span>, con domicilio en <span class=\"tbc\">[Dirección — por confirmar]</span>. Contacto: <span class=\"tbc\">[Correo de contacto — por confirmar]</span>.","en":"The Vault and the Club Recordatorio are sold by <span class=\"tbc\">[Selling entity — to be confirmed]</span>, with its address at <span class=\"tbc\">[Address — to be confirmed]</span>. Contact: <span class=\"tbc\">[Contact email — to be confirmed]</span>."},
+  "legal.guarantee.h2": {"es":"La garantía","en":"The guarantee"},
+  "legal.guarantee.vault": {"es":"<strong>El Vault:</strong> Garantía de 7 días. Si no es para ti, escribes y se te devuelve el dinero. Sin preguntas. Si compras desde Europa, tu garantía es de 15 días — y esta garantía nunca reduce los derechos que te da la ley de tu país.","en":"<strong>The Vault:</strong> 7-day guarantee. If it isn't for you, write to us and your money comes back. No questions. Buying from Europe? Your guarantee is 15 days — and this guarantee never reduces your statutory rights."},
+  "legal.guarantee.club": {"es":"<strong>El Club Recordatorio:</strong> Garantía de 7 días en tu primer mes (15 si estás en Europa). Si no es tu lugar, se te devuelve. Sin preguntas.","en":"<strong>The Club Recordatorio:</strong> 7-day guarantee on your first month (15 if you're in Europe). If it isn't your place, your money comes back. No questions."},
+  "legal.access.h2": {"es":"Acceso inmediato","en":"Immediate access"},
+  "legal.access.body": {"es":"El acceso es inmediato: al confirmar tu compra aceptas recibir el contenido digital al instante. Al aceptar la entrega inmediata, el periodo legal de cancelación de 14 días para contenido digital termina cuando empieza la entrega — la garantía de arriba sigue aplicando igual.","en":"Access is immediate: by confirming your purchase you agree to receive the digital content straight away. By agreeing to immediate delivery, the statutory 14-day cancellation period for digital content ends once delivery begins — the guarantee above still applies in full."},
+  "legal.prices.h2": {"es":"Precios","en":"Prices"},
+  "legal.prices.body": {"es":"Precios en dólares (USD). El total final, con impuestos, se muestra en tu moneda antes de pagar.","en":"Prices in US dollars (USD). Your final total, including any taxes, is shown in your currency before you pay."},
+  "legal.payment.h2": {"es":"El pago","en":"Payment"},
+  "legal.payment.body": {"es":"Las compras se procesan en Hotmart, la plataforma de pago. Nosotras nunca vemos ni guardamos tus datos de pago.","en":"Purchases are processed by Hotmart, the payment platform. We never see or store your payment details."},
+  "legal.files.h2": {"es":"Los archivos","en":"The files"},
+  "legal.files.body": {"es":"El Vault son trece archivos PDF — doce capítulos (el Manifiesto y once guías) y un índice maestro. Se leen en cualquier teléfono, tablet o computadora, sin aplicaciones especiales.","en":"The Vault is thirteen PDF files — twelve chapters (the Manifesto and eleven guides) and a master index. They read on any phone, tablet or computer, no special apps."},
+  "legal.privacylink": {"es":"Sobre tus datos: <a href=\"privacidad.html\">Política de Privacidad</a>.","en":"About your data: <a href=\"privacidad.html\">Privacy Policy</a>."},
+  "footer.legal.terms": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "footer.legal.privacy": {"es":"Privacidad","en":"Privacy"}
+}
+</script>
+
+<!-- v3.1 fix lane (Gate C #6): zero motion on legal pages, so the GSAP stack
+     is not shipped at all — site.js detects the absence and runs static mode
+     (mobile menu + language toggle work in every mode). -->
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Vault — la colección completa de Alexandra Chávez</title>
+<meta name="description" content="Doce capítulos — el Manifiesto y once guías — para escoger bien, con cuaderno de trabajo y bibliografía real. $97 precio fundador, o en 3 cuotas. Garantía de 7 días.">
+<link rel="canonical" href="https://soyalexchavez.com/vault.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="El Vault — la colección completa de Alexandra Chávez">
+<meta property="og:description" content="Doce capítulos — el Manifiesto y once guías — para escoger bien, con cuaderno de trabajo y bibliografía real. $97 precio fundador, o en 3 cuotas. Garantía de 7 días.">
+<meta property="og:url" content="https://soyalexchavez.com/vault.html">
+<meta property="og:image" content="https://soyalexchavez.com/assets/img/og_vault.jpg">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#170F18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
+<!-- v3.1 weight lever (V31_STAGE1 §6): display duty moved to Anybody VF — Boska
+     preload dropped (Boska no longer renders on this page; the shared mobile
+     menu loads it on demand). Bodoni ITALIC only on this page (the blur-focus
+     answer); the roman never downloads here — per-page roman-or-italic rule. -->
+<link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/v31.css">
+<style>
+/* ============ vault.html — page-scoped styles (v3.1 AMAZEMENT PASS, Stage 3)
+   Kinetic fold · interior preview deck (card fan of REAL pages, pattern #7) ·
+   giant-numeral collection facts + chapter index on the light polarity
+   (patterns #8+#13, REAL numbers only) · blur-focus device from the guide's
+   own words (pattern #4) · Osmo-plain price + hidden BUNDLE-SLOT · mono
+   apparatus. Copy + i18n content unchanged — presentation layer only. ============ */
+.plate picture{display:contents;}
+
+/* v3.1 poster h2 voice (page-scoped display takeover) */
+main h2{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.7rem,5.4vw,2.9rem);
+  line-height:1;letter-spacing:var(--v31-rest-track);text-transform:uppercase;
+  max-width:24ch;
+}
+.chap{margin-bottom:var(--space-l);}
+
+/* ---- fold ---- */
+.fold{min-height:92svh;display:flex;align-items:center;padding-top:6.5rem;}
+.fold__grid{display:grid;grid-template-columns:1fr;gap:2.8rem;align-items:center;width:100%;}
+.fold .v31-kinetic{font-size:clamp(1.6rem,4.5vw,3.6rem);line-height:1.04;}
+.fold__price{margin-top:1.7rem;font-family:var(--font-body);font-size:.98rem;color:var(--flash);}
+.fold__cta{margin-top:1.15rem;}
+.fold__sub{margin-top:1.5rem;}
+.epigraph{margin-top:2.4rem;}
+.epigraph blockquote{font-size:1.12rem;line-height:1.5;max-width:34ch;}
+.epigraph figcaption{margin-top:.55rem;}
+.fold__plate{max-width:21rem;}
+@media (min-width:900px){
+  .fold__grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:4rem;}
+  .fold__plate{max-width:26rem;justify-self:end;}
+}
+
+/* ---- interior deck: framed stage + card fan (pattern #7) ---- */
+.anatomy-grid{display:grid;grid-template-columns:1fr;gap:1.9rem;margin-top:2.6rem;max-width:34rem;}
+.anatomy-grid h3{font-family:var(--font-sans);font-weight:600;font-size:1.02rem;color:var(--flash);letter-spacing:.01em;}
+.anatomy-grid p{margin-top:.4rem;color:var(--flash-dim);max-width:var(--measure);}
+.deck{margin-top:3.2rem;}
+.deck__stage{
+  position:relative;border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(2.4rem,6vw,3.6rem) clamp(.8rem,3vw,2rem) clamp(2rem,5vw,3rem);
+}
+.deck__corner{position:absolute;top:.85rem;}
+.deck__corner--l{left:1rem;}
+.deck__corner--r{right:1rem;text-align:right;}
+.deck__cap{margin-top:1.4rem;max-width:none;text-align:center;}
+@media (min-width:900px){
+  .anatomy-cols{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:4rem;align-items:center;}
+  .anatomy-grid{margin-top:2.2rem;}
+  .deck{margin-top:0;}
+}
+
+/* ---- collection facts + chapter index — light polarity chapter ---- */
+.vault-flip{padding-block:var(--v31-stage-y);}
+.vault-nums{display:grid;gap:var(--space-l);align-items:end;margin-bottom:clamp(3rem,8vh,5rem);}
+.vault-nums__cap{margin-top:.6rem;max-width:26ch;}
+@media (min-width:760px){
+  .vault-nums{grid-template-columns:auto auto auto;justify-content:space-between;gap:3rem;}
+}
+.g-index{list-style:none;margin-top:2.6rem;}
+.g-index li{border-top:1px solid var(--v31-day-line);padding:1.05rem 0 1.1rem;}
+.g-index li:last-child{border-bottom:1px solid var(--v31-day-line);}
+.g-title{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 520,'wdth' 96;
+  font-feature-settings:'tnum' 1;font-size:.95rem;letter-spacing:.02em;
+  color:var(--v31-day-ink);
+}
+.g-line{margin-top:.3rem;font-size:var(--text-small);color:var(--v31-day-dim);}
+.g-foot{margin-top:1.4rem;color:var(--v31-day-dim) !important;}
+@media (min-width:900px){
+  .g-index{display:grid;grid-template-columns:1fr 1fr;column-gap:3.5rem;}
+  .g-index li:nth-child(2){border-top:1px solid var(--v31-day-line);}
+}
+
+/* ---- one page, quoted: blur-focus device + the printed sheet ---- */
+.vault-blur{margin-bottom:clamp(2.6rem,7vh,4.4rem);}
+.vault-blur .v31-blurpair__q{font-size:clamp(1.5rem,5.5vw,3.9rem);}
+.vault-blur .v31-blurpair__a{font-size:clamp(1.35rem,4.2vw,2.9rem);max-width:26ch;}
+.sheet{
+  background:var(--flash);color:var(--ink);border-radius:var(--radius);
+  padding:clamp(1.6rem,5vw,2.7rem);max-width:36rem;margin-top:2.2rem;
+  box-shadow:var(--shadow-page);transform:rotate(-.5deg);
+}
+.sheet p{
+  font-family:var(--font-serif);font-weight:400;font-size:1.04rem;line-height:1.72;
+}
+.excerpt-cite{margin-top:1.5rem;}
+
+/* ---- author ---- */
+.author-cols{display:grid;grid-template-columns:1fr;gap:2.6rem;align-items:center;}
+.author-cols .lede{margin-top:1.6rem;max-width:var(--measure);}
+.author-link{margin-top:1.6rem;}
+.author-plate{max-width:17rem;}
+@media (min-width:900px){
+  .author-cols{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:4rem;}
+  .author-plate{max-width:21rem;justify-self:end;}
+}
+
+/* ---- proof ---- */
+.proof-quote{margin-top:2.6rem;max-width:40rem;}
+.proof-quote blockquote{
+  font-family:var(--font-serif);font-style:italic;font-weight:400;
+  font-size:clamp(1.2rem,3.9vw,1.55rem);line-height:1.5;color:var(--rose);
+}
+.proof-quote figcaption{margin-top:.7rem;}
+.proof-note{margin-top:2.4rem;}
+.gloss{display:block;margin-top:.5rem;font-style:italic;font-size:.85em;color:var(--flash-dim);}
+
+/* ---- price — Osmo-plain: mono numerals, quiet cards, information does not perform ---- */
+.tiers{display:grid;grid-template-columns:1fr;gap:1.4rem;margin-top:2.8rem;max-width:56rem;}
+.tier{
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.7rem 1.6rem 1.8rem;background:transparent;
+}
+.tier[hidden]{display:none;}   /* the BUNDLE-SLOT stays invisible until wired */
+.tier--founder{background:var(--night-2);border-color:var(--guava);box-shadow:var(--shadow-glow);}
+.tier__name{font-family:var(--v31-mono);font-variation-settings:'wght' 460,'wdth' 100;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--flash-dim);}
+.tier--founder .tier__name{color:var(--guava);}
+.tier__price{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 640,'wdth' 80;
+  font-feature-settings:'tnum' 1;font-size:clamp(2.6rem,7vw,3.6rem);
+  line-height:1;color:var(--flash);margin-top:1rem;
+}
+.tier__cuotas{margin-top:.45rem;font-size:var(--text-small);color:var(--flash-dim);}
+.tier__lines{margin-top:1.2rem;display:grid;gap:.45rem;}
+.tier__lines p{font-size:var(--text-small);color:var(--flash-90);max-width:34ch;}
+.tier__cta{margin-top:1.5rem;}
+.rails{margin-top:2.4rem;font-size:var(--text-small);color:var(--flash-dim);max-width:52ch;}
+.guarantee{margin-top:1.1rem;font-size:var(--text-small);color:var(--flash-90);max-width:52ch;border-left:2px solid var(--guava);padding-left:1rem;}
+.price-quote{margin-top:2.4rem;}
+.price-quote p{font-family:var(--font-serif);font-style:italic;color:var(--rose);font-size:1.06rem;line-height:1.55;max-width:38ch;}
+@media (min-width:720px){
+  .tiers{grid-template-columns:1fr 1fr;}
+}
+
+/* ---- faq ---- */
+.faq-list{margin-top:2.4rem;max-width:44rem;}
+.faq-item{border-top:1px solid var(--line-soft);padding:1.45rem 0 1.55rem;}
+.faq-item:last-child{border-bottom:1px solid var(--line-soft);}
+.faq-item h3{font-family:var(--font-sans);font-weight:600;font-size:1.04rem;letter-spacing:.005em;color:var(--flash);max-width:none;}
+.faq-item p{margin-top:.65rem;color:var(--flash-dim);max-width:var(--measure);}
+
+/* ---- final ---- */
+.final{text-align:left;}
+.final__price{margin-top:1.5rem;font-family:var(--font-body);font-size:.98rem;color:var(--flash);}
+.final__cta{margin-top:1.2rem;}
+
+/* ---- desktop right rail (v3.1 fix, Gate B D4): the mono apparatus extends
+   into the empty desktop column on the quiet chapters. Notes reuse ON-PAGE
+   facts only — no new claims. Hidden below 1024px (mobile flow unchanged). ---- */
+.v-rail{display:none;}
+@media (min-width:1024px){
+  .v-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,15rem);gap:4rem;align-items:start;}
+  .v-rail{display:grid;gap:1.1rem;align-content:start;justify-items:start;
+    position:sticky;top:7.5rem;padding-top:.5rem;
+    border-left:1px solid var(--line-soft);padding-left:1.5rem;}
+  .v-rail .v31-note{max-width:24ch;}
+  .final .v-cols{grid-template-columns:minmax(0,1fr) minmax(0,24rem);align-items:center;}
+  .final .postfaq{margin-top:0;max-width:none;}
+}
+
+/* ---- post-FAQ letter module ---- */
+.postfaq{
+  margin-top:3.6rem;border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.8rem 1.6rem 1.7rem;max-width:34rem;
+}
+/* Boska must not render on a v3.1 page (weight lever): every h3 falls back
+   to the sans voice; specific components re-voice on top. */
+main h3{font-family:var(--font-sans);}
+.postfaq h3{font-family:var(--font-sans);font-weight:600;letter-spacing:.005em;font-size:1.15rem;max-width:none;}
+.postfaq form{margin-top:1.3rem;display:flex;flex-wrap:wrap;gap:.7rem;}
+.postfaq input{flex:1 1 200px;}
+.postfaq .privacy{margin-top:1rem;font-size:var(--text-micro);letter-spacing:.02em;color:var(--flash-faint);line-height:1.6;}
+.postfaq .privacy a{color:var(--peri);text-decoration-color:var(--peri-dim);text-underline-offset:3px;}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ============ NAV — shared verbatim across all six pages.
+     aria-current="page" goes on THIS page's link (both menus). ============ -->
+<header class="site-head">
+  <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
+  <div class="site-head__right">
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="vault.html" data-i18n="nav.vault" aria-current="page">El Vault</a>
+      <a href="membership.html" data-i18n="nav.club">El Club</a>
+      <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+      <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+      <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    </nav>
+    <div class="lang-pill" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" data-i18n-attr="aria-label:a11y.menu" aria-label="Menú">
+      <svg class="ic-open" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 6h18M2 11h18M2 16h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="ic-close" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu-panel" id="menu-panel" aria-label="Principal (móvil)">
+  <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+  <a href="vault.html" data-i18n="nav.vault" aria-current="page">El Vault</a>
+  <a href="membership.html" data-i18n="nav.club">El Club</a>
+  <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+  <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+  <a href="carta.html" data-i18n="nav.carta">La carta</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- ============ 1 · FOLD — question-led, one mobile viewport:
+       kinetic headline (pattern #3) on the EXISTING fold line + price +
+       cuotas + CTA + epigraph (playbook §1.3). Copy unchanged. ============ -->
+  <section class="spot fold" data-spot="hero" data-hero style="--spot-x:36%;--spot-y:34%;">
+    <div class="fold__grid">
+      <div class="fold__text">
+        <p class="v31-tag" data-i18n="vault.fold.eyebrow">El Vault · La colección completa</p>
+        <h1 class="v31-kinetic" data-v31-kinetic="load" data-i18n="vault.fold.h1" style="margin-top:1rem;"><span class="qo">¿</span>Estás escogiendo desde quien eres — o desde quien tienes miedo de ser sin él?</h1>
+        <p class="lede fold__sub" data-i18n="vault.fold.sub">Doce capítulos — el Manifiesto y once guías — para responder esa pregunta con calma. Escritos para leerse en tu teléfono y quedarse contigo.</p>
+        <p class="fold__price ts" data-i18n="vault.fold.price">$97 precio fundador · primeras 100 · o en 3 cuotas</p>
+        <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+        <p class="fold__cta"><a class="btn" href="carta.html#lista-de-espera" data-i18n="vault.fold.cta">Avísame cuando abra</a></p>
+        <figure class="epigraph">
+          <blockquote class="intimate" data-i18n="vault.fold.epigraph">“estoy a punto de dejarlo por ver este video🥺😭”</blockquote>
+          <figcaption class="meta" data-i18n="vault.fold.epigraph.attribution">— seguidora, 2.371 ❤</figcaption>
+        </figure>
+      </div>
+      <figure class="fold__plate">
+        <div class="plate plate--vignette" style="aspect-ratio:1080/1288;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/vault_library_480.webp 480w, assets/img/vault_library_720.webp 720w, assets/img/vault_library_1080.webp 1080w" sizes="(min-width:900px) 26rem, 21rem">
+            <img src="assets/img/vault_library_720.jpg" srcset="assets/img/vault_library_480.jpg 480w, assets/img/vault_library_720.jpg 720w, assets/img/vault_library_1080.jpg 1080w" sizes="(min-width:900px) 26rem, 21rem" width="1080" height="1288" fetchpriority="high" alt="Alexandra en una biblioteca antigua — top rojo, falda de satén crema, sofá de terciopelo verde" data-i18n-attr="alt:vault.fold.plate.alt">
+          </picture>
+          <div class="veil"></div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 2 · WHAT'S INSIDE + reminder card ============ -->
+  <section class="spot" data-spot style="--spot-x:40%;--spot-y:30%;border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
+    <h2 data-split data-i18n="vault.what.h2"><span class="qo">¿</span>Qué hay dentro?</h2>
+    <p class="lede" style="margin-top:1.6rem;max-width:var(--measure);" data-i18n="vault.what.body">No es un curso. Es una colección de doce capítulos — el Manifiesto y once guías — más un índice maestro para navegarlo todo: trece archivos, tuyos desde el primer minuto. Cada guía se trabaja con cuaderno: preguntas que se contestan a mano, no consejos que se olvidan al cerrar la aplicación.</p>
+    <article class="reminder" style="margin-top:2.8rem;">
+      <p class="reminder__meta"><span data-i18n="vault.what.reminder.meta">Amable recordatorio 🤍</span></p>
+      <p class="reminder__body" data-i18n="vault.what.reminder.body">Los libros que subrayas te cambian más que los videos que guardas.</p>
+      <p class="reminder__sig" data-i18n="vault.what.reminder.sig">— Alexandra</p>
+    </article>
+  </section>
+
+  <!-- ============ 3 · THE INTERIOR DECK (pattern #7) — card fan of REAL
+       pages rendered from the shipped PDFs (pymupdf, anatomy-plates
+       convention extended): Guía 10 cuaderno · Guía 09 apertura · índice
+       del Manifiesto · Guía 12 fase · Guía 09 «Cuando hay que irse» (the
+       dark colophon card was swapped for this legible page — Gate B D1). Framed
+       "inside" stage + honest caption. Hover lift = pure CSS. ============ -->
+  <section class="spot" data-spot style="--spot-x:55%;--spot-y:36%;border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
+    <div class="anatomy-cols">
+      <div>
+        <h2 data-split data-i18n="vault.anatomy.h2"><span class="qo">¿</span>Cómo se trabaja una guía?</h2>
+        <div class="anatomy-grid">
+          <div><h3 data-i18n="vault.anatomy.item1.title">Capítulos cortos</h3><p data-i18n="vault.anatomy.item1.body">Escritos para leerse en el teléfono, en el bus, en la cama. Nada sobra.</p></div>
+          <div><h3 data-i18n="vault.anatomy.item2.title">Cuaderno de trabajo</h3><p data-i18n="vault.anatomy.item2.body">Ejercicios con espacio para escribir a mano. Lo que se escribe, se sostiene.</p></div>
+          <div><h3 data-i18n="vault.anatomy.item3.title">Scripts y frases</h3><p data-i18n="vault.anatomy.item3.body">Palabras listas para el momento en que las necesitas — una conversación difícil, un no que cuesta.</p></div>
+          <div><h3 data-i18n="vault.anatomy.item4.title">Bibliografía real</h3><p data-i18n="vault.anatomy.item4.body">Cada guía cierra citando a las autoridades que la sostienen — Brené Brown, Esther Perel, Marian Rojas Estapé, entre otras. Porque las que escogen sabiamente también leen.</p></div>
+        </div>
+      </div>
+      <div class="deck">
+        <div class="deck__stage">
+          <p class="v31-tag deck__corner deck__corner--l" data-i18n="vault.deck.corner1">el interior</p>
+          <p class="v31-tag deck__corner deck__corner--r" data-i18n="vault.deck.corner2">páginas reales</p>
+          <div class="v31-fan">
+            <div class="v31-fan__card"><img src="assets/img/anatomy_g10_workbook_es.webp" width="721" height="1020" loading="lazy" alt="Página real de la Guía 10: cuaderno de trabajo, el ejercicio de los dos valores" data-i18n-attr="src:vault.anatomy.img2.src;alt:vault.anatomy.img2.alt"></div>
+            <div class="v31-fan__card"><img src="assets/img/fan_g09_thirty_es.webp" width="721" height="1020" loading="lazy" alt="Página real de la Guía 09: apertura de la Parte I, «Señales de cuidado»" data-i18n-attr="src:vault.deck.img2.src;alt:vault.deck.img2.alt"></div>
+            <div class="v31-fan__card"><img src="assets/img/fan_manifesto_laws_es.webp" width="721" height="1020" loading="lazy" alt="Página real del Manifiesto: el índice de las siete leyes" data-i18n-attr="src:vault.deck.img3.src;alt:vault.deck.img3.alt"></div>
+            <div class="v31-fan__card"><img src="assets/img/fan_g12_phase_es.webp" width="721" height="1020" loading="lazy" alt="Página real de la Guía 12: apertura de la Fase Tercera, «Encarnación»" data-i18n-attr="src:vault.deck.img4.src;alt:vault.deck.img4.alt"></div>
+            <div class="v31-fan__card"><img src="assets/img/fan_g09_leave_es.webp" width="721" height="1020" loading="lazy" alt="Página real de la Guía 09: el capítulo «Cuando hay que irse»" data-i18n-attr="src:vault.deck.img5.src;alt:vault.deck.img5.alt"></div>
+          </div>
+        </div>
+        <p class="v31-tag deck__cap" data-i18n="vault.deck.cap">Páginas reales de la colección — el Manifiesto y las guías 09, 10 y 12.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · THE COLLECTION IN NUMBERS + REAL CHAPTER INDEX —
+       light polarity chapter (patterns #8+#13). NUMBERS GATE: 12 chapters,
+       11 guides, 437/440 pages — counted from the shipped complete PDFs
+       (ES 437 pp · EN 440 pp) on 2026-07-28. Titles VERBATIM; information
+       does not perform (no entrance animation on the list). ============ -->
+  <section class="v31-flip vault-flip">
+    <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
+    <div class="vault-nums">
+      <div>
+        <span class="v31-num" data-v31-num="12">12</span>
+        <p class="v31-tag vault-nums__cap" data-i18n="vault.nums.cap1">capítulos — el Manifiesto y once guías</p>
+      </div>
+      <div>
+        <span class="v31-num" data-v31-num="11">11</span>
+        <p class="v31-tag vault-nums__cap" data-i18n="vault.nums.cap2">guías, cada una con su cuaderno</p>
+      </div>
+      <div>
+        <span class="v31-num" data-i18n="vault.nums.pages">437</span>
+        <p class="v31-tag vault-nums__cap" data-i18n="vault.nums.cap3">páginas en la colección completa</p>
+      </div>
+    </div>
+    <h2 data-i18n="vault.index.h2">La colección, guía por guía.</h2>
+    <ol class="g-index">
+      <li><p class="g-title" data-i18n="vault.index.item01.title">01 · Manifiesto de la Mujer Magnética</p><p class="g-line" data-i18n="vault.index.item01.line">Las 7 leyes + ejercicios de cuaderno</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item02.title">02 · Energía Femenina: Ritual de 21 Días</p><p class="g-line" data-i18n="vault.index.item02.line">Práctica diaria de 15 min que construye una base</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item03.title">03 · Autoestima Inquebrantable</p><p class="g-line" data-i18n="vault.index.item03.line">30 ejercicios para reconstruir tu autoestima</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item04.title">04 · Estilo Magnético</p><p class="g-line" data-i18n="vault.index.item04.line">30 atuendos + ciencia de color y silueta</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item05.title">05 · Lenguaje Corporal Magnético</p><p class="g-line" data-i18n="vault.index.item05.line">25 posturas y gestos que comunican valor</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item06.title">06 · Cómo Hablar con Cualquier Hombre</p><p class="g-line" data-i18n="vault.index.item06.line">50 escenarios + líneas de partida para decirlo a tu manera</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item07.title">07 · El Arte de Decir No</p><p class="g-line" data-i18n="vault.index.item07.line">Límites sin culpa — 7 frases que sostienen tu palabra</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item08.title">08 · Citas Memorables</p><p class="g-line" data-i18n="vault.index.item08.line">De primera cita a exclusivo</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item09.title">09 · Banderas Rojas y Verdes</p><p class="g-line" data-i18n="vault.index.item09.line">30 señales de cuidado, 30 de coherencia</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item10.title">10 · Cómo Escoger Bien</p><p class="g-line" data-i18n="vault.index.item10.line">El protocolo de 6 fases para escoger pareja</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item11.title">11 · Rutinas de una Mujer Magnética</p><p class="g-line" data-i18n="vault.index.item11.line">Mañana, día, noche — adaptable a cualquier presupuesto</p></li>
+      <li><p class="g-title" data-i18n="vault.index.item12.title">12 · El Plan de 90 Días</p><p class="g-line" data-i18n="vault.index.item12.line">Tu proceso completo, semana a semana</p></li>
+    </ol>
+    <p class="g-foot small" data-i18n="vault.index.footnote">+ el Índice Maestro: el mapa de lectura de toda la colección.</p>
+  </section>
+
+  <!-- ============ 5 · A REAL PAGE, QUOTED — blur-focus device (pattern #4)
+       built from the guide's OWN words (both fragments are verbatim
+       substrings of the excerpt below), then the printed sheet (verbatim —
+       Guía 10, p. 6, re-confirmed against _FINAL_FOR_ALEX/Guide_10_es.pdf) ============ -->
+  <section class="spot" data-spot style="--spot-x:50%;--spot-y:40%;">
+    <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
+    <div class="v31-blurpair vault-blur" data-v31-blurpair>
+      <p class="v31-blurpair__q" data-i18n="vault.blur.q">«¿le gusto?»</p>
+      <p class="v31-blurpair__a" data-i18n="vault.blur.a">«¿puede esta persona vivir cerca de <em class="v31-accent">mis dos valores</em> sin pedirme que los apague?»</p>
+    </div>
+    <div class="v-cols">
+    <div>
+    <p class="meta" data-i18n="vault.excerpt.eyebrow">Una página, tal como la recibirás</p>
+    <div class="sheet">
+      <p data-i18n="vault.excerpt.text">Cuando ya tienes los dos valores escritos, algo cambia en la forma de mirar a las personas. Dejas de preguntarte «¿le gusto?» — la pregunta que te coloca en vitrina — y empiezas a preguntarte «¿puede esta persona vivir cerca de mis dos valores sin pedirme que los apague?». Esa pregunta no se contesta en una cita. Se contesta observando — y para observar hace falta saber qué estás mirando. Eso es exactamente lo que acabas de definir.</p>
+    </div>
+    <p class="meta excerpt-cite" data-i18n="vault.excerpt.citation">— El Vault · Guía 10, «Cómo Escoger Bien», página&nbsp;6</p>
+    </div>
+    <aside class="v-rail" aria-hidden="true">
+      <p class="v31-note" data-i18n="vault.rail.excerpt.n1">guía 10 · «cómo escoger bien»</p>
+      <p class="v31-note" data-i18n="vault.rail.excerpt.n2">página 6 · tal como la recibirás</p>
+      <p class="v31-note" data-i18n="vault.rail.excerpt.n3">el protocolo de 6 fases</p>
+    </aside>
+    </div>
+  </section>
+
+  <!-- ============ 6 · WHO WRITES THIS (3rd-person echo) ============ -->
+  <section class="spot" data-spot style="--spot-x:60%;--spot-y:38%;">
+    <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
+    <div class="author-cols">
+      <div>
+        <h2 data-split data-i18n="vault.author.h2"><span class="qo">¿</span>Quién lo escribe?</h2>
+        <p class="lede" data-i18n="vault.author.body">Alexandra Chávez. Las que la escuchan la llaman maestra; ella prefiere decir que recuerda en voz alta. El Vault es su trabajo más completo: lo que en un video de un minuto no entra.</p>
+        <p class="author-link"><a class="link-quiet" href="sobre-alex.html" data-i18n="vault.author.link">Conócela →</a></p>
+      </div>
+      <figure class="author-plate">
+        <div class="plate plate--frame" style="aspect-ratio:1080/1375;">
+          <picture>
+            <source type="image/webp" srcset="assets/img/vault_stairs_480.webp 480w, assets/img/vault_stairs_720.webp 720w, assets/img/vault_stairs_1080.webp 1080w" sizes="(min-width:900px) 21rem, 17rem">
+            <img src="assets/img/vault_stairs_720.jpg" srcset="assets/img/vault_stairs_480.jpg 480w, assets/img/vault_stairs_720.jpg 720w, assets/img/vault_stairs_1080.jpg 1080w" sizes="(min-width:900px) 21rem, 17rem" width="1080" height="1375" loading="lazy" alt="Alexandra bajando una escalera de mármol con barandas doradas, vestido de satén marrón" data-i18n-attr="alt:vault.author.plate.alt">
+          </picture>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 7 · MAIN PROOF (VERBATIM, honestly ellipsis-free) ============ -->
+  <section class="spot" data-spot style="--spot-x:35%;--spot-y:32%;border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 06 )</p>
+    <div class="v-cols">
+    <div>
+    <h2 data-split data-i18n="vault.proof.h2">Ellas ya lo escribieron.</h2>
+    <figure class="proof-quote">
+      <blockquote data-i18n="vault.proof.quote1">“yo te hice caso, deje de ir una relación de 5 años horrible me quedé soltera 3 y justo hoy estoy escribiendo esto desde el lugar donde será mi boda por favor váyanse de donde no deben de estar”</blockquote>
+      <figcaption class="meta" data-i18n="vault.proof.quote1.attribution">— seguidora, 4.024 ❤</figcaption>
+    </figure>
+    <figure class="proof-quote">
+      <blockquote data-i18n="vault.proof.quote2">“Renuncié a mi ex que no se quería casar conmigo… y que creen? El próximo mes me voy a casar!!!!”</blockquote>
+      <figcaption class="meta" data-i18n="vault.proof.quote2.attribution">— seguidora, 2.560 ❤</figcaption>
+    </figure>
+    <p class="proof-note small" style="color:var(--flash-faint);" data-i18n="vault.proof.note">Comentarios reales dejados bajo sus videos, citados tal cual fueron escritos.</p>
+    </div>
+    <aside class="v-rail" aria-hidden="true">
+      <p class="v31-note" data-i18n="vault.rail.proof.n1">dejados bajo sus videos</p>
+      <p class="v31-note" data-i18n="vault.rail.proof.n2">citados tal cual</p>
+      <p class="v31-note" data-i18n="vault.rail.proof.n3">4.024 ❤ · 2.560 ❤</p>
+    </aside>
+    </div>
+  </section>
+
+  <!-- ============ 8 · TWO QUIET EDITIONS (anchoring — $147 exists to sell $97;
+       Osmo-plain presentation; buying information does not perform) ============ -->
+  <section id="precio" style="border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 07 )</p>
+    <p class="v31-tag" data-i18n="vault.price.eyebrow">Precio fundador · primeras 100</p>
+    <h2 style="margin-top:1rem;" data-i18n="vault.price.h2">Tu precio fundador queda contigo.</h2>
+    <div class="tiers">
+      <article class="tier tier--founder">
+        <p class="tier__name" data-i18n="vault.price.tier1.name">Edición fundadora</p>
+        <p class="tier__price" data-i18n="vault.price.tier1.price">$97</p>
+        <p class="tier__cuotas ts" data-i18n="vault.price.tier1.cuotas">o en 3 cuotas</p>
+        <div class="tier__lines">
+          <p data-i18n="vault.price.tier1.line1">La colección completa: 12 capítulos (el Manifiesto + 11 guías) + Índice Maestro.</p>
+          <p data-i18n="vault.price.tier1.line2">Acceso inmediato y de por vida. Pagas una vez.</p>
+          <p data-i18n="vault.price.tier1.line3">Para las primeras 100.</p>
+        </div>
+        <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+        <p class="tier__cta"><a class="btn" href="carta.html#lista-de-espera" data-i18n="vault.price.tier1.cta">Lista de espera — precio fundador</a></p>
+      </article>
+      <article class="tier">
+        <p class="tier__name" data-i18n="vault.price.tier2.name">Edición estándar</p>
+        <p class="tier__price" data-i18n="vault.price.tier2.price">$147</p>
+        <p class="tier__cuotas ts" data-i18n="vault.price.tier2.cuotas">o 3 cuotas de $49</p>
+        <div class="tier__lines">
+          <p data-i18n="vault.price.tier2.line1">La misma colección, cuando cierre el precio fundador.</p>
+        </div>
+        <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+        <p class="tier__cta"><a class="btn btn--ghost" href="carta.html#lista-de-espera" data-i18n="vault.price.tier2.cta">Avísame cuando abra</a></p>
+      </article>
+      <!-- BUNDLE-SLOT: launch bundle (Vault + 3 months of the Club, systems-teardown #8) —
+           designed placeholder, HIDDEN until Conrad wires the bundle price + Hotmart
+           checkout. No invented bundle price is rendered anywhere. To activate:
+           remove the hidden attribute and add the price line. -->
+      <article class="tier" hidden data-bundle-slot>
+        <p class="tier__name" data-i18n="vault.bundle.name">Edición de lanzamiento</p>
+        <div class="tier__lines">
+          <p data-i18n="vault.bundle.line">El Vault y tres meses del Club, juntos.</p>
+        </div>
+        <!-- HOTMART URL: replace #hotmart-vault-bundle with the live Hotmart checkout URL for the launch bundle -->
+        <p class="tier__cta"><a class="btn btn--ghost" href="carta.html#lista-de-espera" data-i18n="vault.bundle.cta">Lo quiero</a></p>
+      </article>
+    </div>
+    <p class="rails" data-i18n="vault.price.rails">Tarjeta en cuotas, Pix, OXXO, Mercado Pago — pago seguro vía Hotmart, en tu moneda local. Precios en dólares (USD). El total final, con impuestos, se muestra en tu moneda antes de pagar.</p>
+    <p class="guarantee" data-i18n="vault.price.guarantee">Garantía de 7 días. Si no es para ti, escribes y se te devuelve el dinero. Sin preguntas. Si compras desde Europa, tu garantía es de 15 días — y esta garantía nunca reduce los derechos que te da la ley de tu país.</p>
+    <figure class="price-quote">
+      <p data-i18n="vault.price.proofquote">“Yo si te hice caso hermosa, me caso mañana 🙊🙊❤️‍🩹” — seguidora, 733 ❤</p>
+    </figure>
+  </section>
+
+  <!-- ============ 9 · FAQ — CONVERSION_PLAYBOOK §6 order, answers visible
+       (information does not perform) ============ -->
+  <section style="border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 08 )</p>
+    <div class="v-cols">
+    <div>
+    <h2 data-i18n="vault.faq.h2">Preguntas honestas.</h2>
+    <div class="faq-list">
+      <div class="faq-item"><h3 data-i18n="vault.faq.q1">¿Qué recibo exactamente y cómo accedo?</h3><p data-i18n="vault.faq.a1">Trece archivos PDF: doce capítulos — el Manifiesto y once guías — más el Índice Maestro. Llegan a tu correo al momento de pagar, se leen en cualquier teléfono, y son tuyos de por vida. El acceso es inmediato: al confirmar tu compra aceptas recibir el contenido digital al instante.</p></div>
+      <div class="faq-item"><h3 data-i18n="vault.faq.q2">¿Puedo pagar en cuotas? ¿Con qué métodos?</h3><p data-i18n="vault.faq.a2">Sí — tarjeta en 3 cuotas. También Pix, OXXO y Mercado Pago. El pago lo procesa Hotmart y verás el precio en tu moneda local.</p></div>
+      <div class="faq-item"><h3 data-i18n="vault.faq.q3">¿Es seguro? ¿Quién procesa el pago?</h3><p data-i18n="vault.faq.a3">Hotmart — la plataforma de pagos digitales que usan miles de creadoras en toda Latinoamérica y España. Nosotras nunca vemos ni guardamos tus datos de pago.</p></div>
+      <div class="faq-item"><h3 data-i18n="vault.faq.q4">¿Y si no es para mí?</h3><p data-i18n="vault.faq.a4">Tienes 7 días (15 si compras desde Europa). Si no es para ti, escribes y se te devuelve el dinero. Así de simple — la colección se sostiene sola. Esta garantía se suma a los derechos que te dé la ley de tu país.</p></div>
+      <div class="faq-item"><h3 data-i18n="vault.faq.q5">¿Cuánto tiempo tengo acceso?</h3><p data-i18n="vault.faq.a5">Para siempre. Pagas una vez y la colección es tuya — para releerla en otra etapa de tu vida y encontrar otra cosa.</p></div>
+      <div class="faq-item"><h3 data-i18n="vault.faq.q6">¿Es para mí si estoy soltera, en pareja, o saliendo de una relación?</h3><p data-i18n="vault.faq.a6">Cuando una mujer está aprendiendo a escoger — a alguien, o a sí misma — este trabajo es para ella. La etapa cambia el capítulo por el que empiezas, no la colección.</p></div>
+      <div class="faq-item"><h3 data-i18n="vault.faq.q7">¿Alguien verá que lo compré?</h3><p data-i18n="vault.faq.a7">No. La compra la procesa Hotmart, la colección llega a tu correo, y tu biblioteca es tuya. Lo que lees es asunto tuyo.</p></div>
+    </div>
+    </div>
+    <aside class="v-rail" aria-hidden="true">
+      <p class="v31-note" data-i18n="vault.rail.faq.n1">garantía de 7 días · 15 en europa</p>
+      <p class="v31-note" data-i18n="vault.rail.faq.n2">pago seguro vía hotmart</p>
+      <p class="v31-note" data-i18n="vault.rail.faq.n3">trece archivos pdf · tuyos de por vida</p>
+    </aside>
+    </div>
+  </section>
+
+  <!-- ============ 10 · FINAL CTA + post-FAQ quiet letter module
+       (playbook §5.3 — below every purchase prompt, no popups) ============ -->
+  <section class="final" style="border-top:1px solid var(--line-soft);">
+    <p class="v31-chapter chap" aria-hidden="true">( 09 )</p>
+    <div class="v-cols">
+    <div>
+    <h2 data-split data-i18n="vault.final.h2"><span class="qo">¿</span>Empezamos?</h2>
+    <p class="final__price ts" data-i18n="vault.final.price">$97 fundador · o en 3 cuotas · garantía de 7 días</p>
+    <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+    <p class="final__cta"><a class="btn" href="carta.html#lista-de-espera" data-i18n="vault.final.cta">Quiero entrar primero 🤍</a></p>
+    </div>
+
+    <div class="postfaq">
+      <h3 data-i18n="vault.postfaq.h3">¿Todavía no? La carta de los lunes es gratis.</h3>
+      <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
+      <form action="#" method="post">
+        <label class="sr-only" for="postfaq-email" data-i18n="vault.postfaq.form.label">Tu correo</label>
+        <input type="email" id="postfaq-email" name="email" required placeholder="tu@correo.com" data-i18n-attr="placeholder:vault.postfaq.form.placeholder">
+        <button class="btn btn--small" type="submit" data-i18n="vault.postfaq.form.button">Quiero la carta</button>
+      </form>
+      <!-- LEGAL PAGE: privacidad.html is a pending build item (COMPLIANCE_AUDIT M5, entity name = Conrad decision C1) -->
+      <p class="privacy" data-i18n="vault.postfaq.form.privacy">Te llegará un correo para confirmar tu suscripción. Un clic para salir, cuando quieras. Más en la <a href="privacidad.html">Política de Privacidad</a>.</p>
+    </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+<div class="cta-bar" data-cta-bar>
+  <p class="cta-bar__line ts" data-i18n="ctabar.line">El Vault · llega en septiembre</p>
+  <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+  <a class="btn btn--small" href="carta.html#lista-de-espera" data-i18n="ctabar.btn">Lista de espera</a>
+</div>
+
+<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+<footer class="site-foot">
+  <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
+  <nav aria-label="Redes y páginas">
+    <a href="https://instagram.com/alexchavez.23" rel="noopener">@alexchavez.23</a>
+    <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+    <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    <a href="terminos.html" data-i18n="footer.legal.terms">Términos y garantía</a>
+    <a href="privacidad.html" data-i18n="footer.legal.privacy">Privacidad</a>
+  </nav>
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+
+<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
+     ES here MUST equal the ES text in the markup above (no-JS parity).
+     EN written fresh in her voice (never machine-translated).
+     Compliance MUST-CHANGE wording (M1/M2/M4/M6/M7) applied exactly. ============ -->
+<script type="application/json" id="i18n">
+{
+  "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
+  "a11y.menu":  {"es":"Menú","en":"Menu"},
+  "nav.inicio": {"es":"Inicio","en":"Home"},
+  "nav.vault":  {"es":"El Vault","en":"The Vault"},
+  "nav.club":   {"es":"El Club","en":"The Club"},
+  "nav.sobre":  {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "nav.empieza":{"es":"Empieza aquí","en":"Start here"},
+  "nav.carta":  {"es":"La carta","en":"The letter"},
+
+  "vault.fold.eyebrow": {"es":"El Vault · La colección completa","en":"The Vault · The complete collection"},
+  "vault.fold.h1": {"es":"<span class=\"qo\">¿</span>Estás escogiendo desde quien eres — o desde quien tienes miedo de ser sin él?","en":"Are you choosing from who you are — or from who you’re afraid to be without him?"},
+  "vault.fold.sub": {"es":"Doce capítulos — el Manifiesto y once guías — para responder esa pregunta con calma. Escritos para leerse en tu teléfono y quedarse contigo.","en":"Twelve chapters — the Manifesto and eleven guides — for answering that question calmly. Written to be read on your phone — and to stay with you."},
+  "vault.fold.price": {"es":"$97 precio fundador · primeras 100 · o en 3 cuotas","en":"$97 founder price · first 100 · or in 3 payments"},
+  "vault.fold.cta": {"es":"Avísame cuando abra","en":"Tell me when it opens"},
+  "vault.fold.epigraph": {"es":"“estoy a punto de dejarlo por ver este video🥺😭”","en":"“estoy a punto de dejarlo por ver este video🥺😭” <span class=\"gloss\">(translation: “I’m about to leave him because of this video”)</span>"},
+  "vault.fold.epigraph.attribution": {"es":"— seguidora, 2.371 ❤","en":"— a follower, 2,371 ❤"},
+  "vault.fold.plate.alt": {"es":"Alexandra en una biblioteca antigua — top rojo, falda de satén crema, sofá de terciopelo verde","en":"Alexandra in an antique library — red top, cream satin skirt, green velvet sofa"},
+
+  "vault.what.h2": {"es":"<span class=\"qo\">¿</span>Qué hay dentro?","en":"What’s inside?"},
+  "vault.what.body": {"es":"No es un curso. Es una colección de doce capítulos — el Manifiesto y once guías — más un índice maestro para navegarlo todo: trece archivos, tuyos desde el primer minuto. Cada guía se trabaja con cuaderno: preguntas que se contestan a mano, no consejos que se olvidan al cerrar la aplicación.","en":"It isn’t a course. It’s a collection of twelve chapters — the Manifesto and eleven guides — plus a master index to navigate it all: thirteen files, yours from the first minute. Every guide works like a notebook: questions you answer by hand, not advice you forget when you close the app."},
+  "vault.what.reminder.meta": {"es":"Amable recordatorio 🤍","en":"A friendly reminder 🤍"},
+  "vault.what.reminder.body": {"es":"Los libros que subrayas te cambian más que los videos que guardas.","en":"The books you underline change you more than the videos you save."},
+  "vault.what.reminder.sig": {"es":"— Alexandra","en":"— Alexandra"},
+
+  "vault.index.h2": {"es":"La colección, guía por guía.","en":"The collection, guide by guide."},
+  "vault.index.item01.title": {"es":"01 · Manifiesto de la Mujer Magnética","en":"01 · The Magnetic Woman Manifesto"},
+  "vault.index.item01.line": {"es":"Las 7 leyes + ejercicios de cuaderno","en":"The 7 laws + notebook exercises"},
+  "vault.index.item02.title": {"es":"02 · Energía Femenina: Ritual de 21 Días","en":"02 · Feminine Energy: 21-Day Ritual"},
+  "vault.index.item02.line": {"es":"Práctica diaria de 15 min que construye una base","en":"A daily 15-minute practice that builds a foundation"},
+  "vault.index.item03.title": {"es":"03 · Autoestima Inquebrantable","en":"03 · Unbreakable Self-Worth"},
+  "vault.index.item03.line": {"es":"30 ejercicios para reconstruir tu autoestima","en":"30 exercises to rebuild your self-worth"},
+  "vault.index.item04.title": {"es":"04 · Estilo Magnético","en":"04 · Magnetic Style"},
+  "vault.index.item04.line": {"es":"30 atuendos + ciencia de color y silueta","en":"30 outfits + the craft of color and silhouette"},
+  "vault.index.item05.title": {"es":"05 · Lenguaje Corporal Magnético","en":"05 · Magnetic Body Language"},
+  "vault.index.item05.line": {"es":"25 posturas y gestos que comunican valor","en":"25 postures and gestures that communicate worth"},
+  "vault.index.item06.title": {"es":"06 · Cómo Hablar con Cualquier Hombre","en":"06 · How to Talk to Any Man"},
+  "vault.index.item06.line": {"es":"50 escenarios + líneas de partida para decirlo a tu manera","en":"50 scenarios + starting lines you make your own"},
+  "vault.index.item07.title": {"es":"07 · El Arte de Decir No","en":"07 · The Art of Saying No"},
+  "vault.index.item07.line": {"es":"Límites sin culpa — 7 frases que sostienen tu palabra","en":"Boundaries without guilt — 7 phrases that hold"},
+  "vault.index.item08.title": {"es":"08 · Citas Memorables","en":"08 · Memorable Dates"},
+  "vault.index.item08.line": {"es":"De primera cita a exclusivo","en":"From first date to exclusive"},
+  "vault.index.item09.title": {"es":"09 · Banderas Rojas y Verdes","en":"09 · Red Flags &amp; Green Flags"},
+  "vault.index.item09.line": {"es":"30 señales de cuidado, 30 de coherencia","en":"30 signs of caution, 30 of coherence"},
+  "vault.index.item10.title": {"es":"10 · Cómo Escoger Bien","en":"10 · How to Choose Well"},
+  "vault.index.item10.line": {"es":"El protocolo de 6 fases para escoger pareja","en":"The 6-phase protocol for choosing a partner"},
+  "vault.index.item11.title": {"es":"11 · Rutinas de una Mujer Magnética","en":"11 · Routines of a Magnetic Woman"},
+  "vault.index.item11.line": {"es":"Mañana, día, noche — adaptable a cualquier presupuesto","en":"Morning, day, night — adaptable to any budget"},
+  "vault.index.item12.title": {"es":"12 · El Plan de 90 Días","en":"12 · The 90-Day Plan"},
+  "vault.index.item12.line": {"es":"Tu proceso completo, semana a semana","en":"Your whole becoming, week by week"},
+  "vault.index.footnote": {"es":"+ el Índice Maestro: el mapa de lectura de toda la colección.","en":"+ the Master Index: the reading map for the whole collection."},
+
+  "vault.nums.cap1": {"es":"capítulos — el Manifiesto y once guías","en":"chapters — the Manifesto and eleven guides"},
+  "vault.nums.cap2": {"es":"guías, cada una con su cuaderno","en":"guides, each with its workbook"},
+  "vault.nums.pages": {"es":"437","en":"440"},
+  "vault.nums.cap3": {"es":"páginas en la colección completa","en":"pages in the complete collection"},
+
+  "vault.blur.q": {"es":"«¿le gusto?»","en":"“does he like me?”"},
+  "vault.blur.a": {"es":"«¿puede esta persona vivir cerca de <em class=\"v31-accent\">mis dos valores</em> sin pedirme que los apague?»","en":"“can this person live close to <em class=\"v31-accent\">my two values</em> without asking me to switch them off?”"},
+
+  "vault.excerpt.eyebrow": {"es":"Una página, tal como la recibirás","en":"One page, exactly as you’ll receive it"},
+  "vault.excerpt.text": {"es":"Cuando ya tienes los dos valores escritos, algo cambia en la forma de mirar a las personas. Dejas de preguntarte «¿le gusto?» — la pregunta que te coloca en vitrina — y empiezas a preguntarte «¿puede esta persona vivir cerca de mis dos valores sin pedirme que los apague?». Esa pregunta no se contesta en una cita. Se contesta observando — y para observar hace falta saber qué estás mirando. Eso es exactamente lo que acabas de definir.","en":"Once your two values are written down, something changes in the way you look at people. You stop asking yourself “does he like me?” — the question that puts you in the shop window — and start asking “can this person live close to my two values without asking me to switch them off?”. That question does not get answered on a date. It gets answered by observing — and to observe, you need to know what you are looking for. Which is exactly what you have just defined."},
+  "vault.excerpt.citation": {"es":"— El Vault · Guía 10, «Cómo Escoger Bien», página&nbsp;6","en":"— The Vault · Guide 10, “How to Choose Well”, page&nbsp;6"},
+
+  "vault.anatomy.h2": {"es":"<span class=\"qo\">¿</span>Cómo se trabaja una guía?","en":"How does a guide work?"},
+  "vault.anatomy.item1.title": {"es":"Capítulos cortos","en":"Short chapters"},
+  "vault.anatomy.item1.body": {"es":"Escritos para leerse en el teléfono, en el bus, en la cama. Nada sobra.","en":"Written to be read on your phone, on the bus, in bed. Nothing wasted."},
+  "vault.anatomy.item2.title": {"es":"Cuaderno de trabajo","en":"Workbook pages"},
+  "vault.anatomy.item2.body": {"es":"Ejercicios con espacio para escribir a mano. Lo que se escribe, se sostiene.","en":"Exercises with room to write by hand. What you write down, you can stand on."},
+  "vault.anatomy.item3.title": {"es":"Scripts y frases","en":"Scripts and phrases"},
+  "vault.anatomy.item3.body": {"es":"Palabras listas para el momento en que las necesitas — una conversación difícil, un no que cuesta.","en":"Words ready for the moment you need them — a hard conversation, a no that costs you."},
+  "vault.anatomy.item4.title": {"es":"Bibliografía real","en":"A real bibliography"},
+  "vault.anatomy.item4.body": {"es":"Cada guía cierra citando a las autoridades que la sostienen — Brené Brown, Esther Perel, Marian Rojas Estapé, entre otras. Porque las que escogen sabiamente también leen.","en":"Every guide closes by citing the authorities that hold it up — Brené Brown, Esther Perel, Marian Rojas Estapé, among others. Because women who choose wisely also read."},
+  "vault.anatomy.img2.src": {"es":"assets/img/anatomy_g10_workbook_es.webp","en":"assets/img/anatomy_g10_workbook_en.webp"},
+  "vault.anatomy.img2.alt": {"es":"Página real de la Guía 10: cuaderno de trabajo, el ejercicio de los dos valores","en":"A real page of Guide 10: the two-values workbook exercise"},
+
+  "vault.deck.corner1": {"es":"el interior","en":"inside"},
+  "vault.deck.corner2": {"es":"páginas reales","en":"real pages"},
+  "vault.deck.cap": {"es":"Páginas reales de la colección — el Manifiesto y las guías 09, 10 y 12.","en":"Real pages from the collection — the Manifesto and guides 09, 10 and 12."},
+  "vault.deck.img2.src": {"es":"assets/img/fan_g09_thirty_es.webp","en":"assets/img/fan_g09_thirty_en.webp"},
+  "vault.deck.img2.alt": {"es":"Página real de la Guía 09: apertura de la Parte I, «Señales de cuidado»","en":"A real page of Guide 09: the opening of Part I, “Signals of care”"},
+  "vault.deck.img3.src": {"es":"assets/img/fan_manifesto_laws_es.webp","en":"assets/img/fan_manifesto_laws_en.webp"},
+  "vault.deck.img3.alt": {"es":"Página real del Manifiesto: el índice de las siete leyes","en":"A real page of the Manifesto: the index of the seven laws"},
+  "vault.deck.img4.src": {"es":"assets/img/fan_g12_phase_es.webp","en":"assets/img/fan_g12_phase_en.webp"},
+  "vault.deck.img4.alt": {"es":"Página real de la Guía 12: apertura de la Fase Tercera, «Encarnación»","en":"A real page of Guide 12: the opening of Phase Three, “Embodiment”"},
+  "vault.deck.img5.src": {"es":"assets/img/fan_g09_leave_es.webp","en":"assets/img/fan_g09_leave_en.webp"},
+  "vault.deck.img5.alt": {"es":"Página real de la Guía 09: el capítulo «Cuando hay que irse»","en":"A real page of Guide 09: the chapter “When you have to go”"},
+
+  "vault.author.h2": {"es":"<span class=\"qo\">¿</span>Quién lo escribe?","en":"Who writes it?"},
+  "vault.author.body": {"es":"Alexandra Chávez. Las que la escuchan la llaman maestra; ella prefiere decir que recuerda en voz alta. El Vault es su trabajo más completo: lo que en un video de un minuto no entra.","en":"Alexandra Chávez. The women who listen to her call her a teacher; she prefers to say she remembers out loud. The Vault is her most complete work — everything a one-minute video can’t hold."},
+  "vault.author.link": {"es":"Conócela →","en":"Meet her →"},
+  "vault.author.plate.alt": {"es":"Alexandra bajando una escalera de mármol con barandas doradas, vestido de satén marrón","en":"Alexandra descending a marble staircase with gold rails, brown satin dress"},
+
+  "vault.proof.h2": {"es":"Ellas ya lo escribieron.","en":"They already wrote it."},
+  "vault.proof.quote1": {"es":"“yo te hice caso, deje de ir una relación de 5 años horrible me quedé soltera 3 y justo hoy estoy escribiendo esto desde el lugar donde será mi boda por favor váyanse de donde no deben de estar”","en":"“yo te hice caso, deje de ir una relación de 5 años horrible me quedé soltera 3 y justo hoy estoy escribiendo esto desde el lugar donde será mi boda por favor váyanse de donde no deben de estar” <span class=\"gloss\">(translation: “I listened to you, I left an awful 5-year relationship, stayed single for 3 — and today I’m writing this from the place where my wedding will be. Please, leave where you shouldn’t be.”)</span>"},
+  "vault.proof.quote1.attribution": {"es":"— seguidora, 4.024 ❤","en":"— a follower, 4,024 ❤"},
+  "vault.proof.quote2": {"es":"“Renuncié a mi ex que no se quería casar conmigo… y que creen? El próximo mes me voy a casar!!!!”","en":"“Renuncié a mi ex que no se quería casar conmigo… y que creen? El próximo mes me voy a casar!!!!” <span class=\"gloss\">(translation: “I gave up my ex who didn’t want to marry me… and guess what? Next month I’m getting married!!!!”)</span>"},
+  "vault.proof.quote2.attribution": {"es":"— seguidora, 2.560 ❤","en":"— a follower, 2,560 ❤"},
+  "vault.proof.note": {"es":"Comentarios reales dejados bajo sus videos, citados tal cual fueron escritos.","en":"Real comments left under her videos, quoted exactly as they were written."},
+
+  "vault.price.eyebrow": {"es":"Precio fundador · primeras 100","en":"Founder price · first 100"},
+  "vault.price.h2": {"es":"Tu precio fundador queda contigo.","en":"Your founder price stays with you."},
+  "vault.price.tier1.name": {"es":"Edición fundadora","en":"Founder edition"},
+  "vault.price.tier1.price": {"es":"$97","en":"$97"},
+  "vault.price.tier1.cuotas": {"es":"o en 3 cuotas","en":"or in 3 payments"},
+  "vault.price.tier1.line1": {"es":"La colección completa: 12 capítulos (el Manifiesto + 11 guías) + Índice Maestro.","en":"The complete collection: 12 chapters (the Manifesto + 11 guides) + Master Index."},
+  "vault.price.tier1.line2": {"es":"Acceso inmediato y de por vida. Pagas una vez.","en":"Immediate, lifetime access. You pay once."},
+  "vault.price.tier1.line3": {"es":"Para las primeras 100.","en":"For the first 100."},
+  "vault.price.tier1.cta": {"es":"Lista de espera — precio fundador","en":"Waiting list — founder price"},
+  "vault.price.tier2.name": {"es":"Edición estándar","en":"Standard edition"},
+  "vault.price.tier2.price": {"es":"$147","en":"$147"},
+  "vault.price.tier2.cuotas": {"es":"o 3 cuotas de $49","en":"or 3 payments of $49"},
+  "vault.price.tier2.line1": {"es":"La misma colección, cuando cierre el precio fundador.","en":"The same collection, once the founder price closes."},
+  "vault.price.tier2.cta": {"es":"Avísame cuando abra","en":"Tell me when it opens"},
+  "vault.bundle.name": {"es":"Edición de lanzamiento","en":"Launch edition"},
+  "vault.bundle.line": {"es":"El Vault y tres meses del Club, juntos.","en":"The Vault and three months of the Club, together."},
+  "vault.bundle.cta": {"es":"Lo quiero","en":"I want it"},
+  "vault.price.rails": {"es":"Tarjeta en cuotas, Pix, OXXO, Mercado Pago — pago seguro vía Hotmart, en tu moneda local. Precios en dólares (USD). El total final, con impuestos, se muestra en tu moneda antes de pagar.","en":"Card in installments, Pix, OXXO, Mercado Pago — secure payment via Hotmart, in your local currency. Prices in US dollars (USD). Your final total, including any taxes, is shown in your currency before you pay."},
+  "vault.price.guarantee": {"es":"Garantía de 7 días. Si no es para ti, escribes y se te devuelve el dinero. Sin preguntas. Si compras desde Europa, tu garantía es de 15 días — y esta garantía nunca reduce los derechos que te da la ley de tu país.","en":"7-day guarantee. If it isn’t for you, write to us and your money comes back. No questions. Buying from Europe? Your guarantee is 15 days — and this guarantee never reduces your statutory rights."},
+  "vault.price.proofquote": {"es":"“Yo si te hice caso hermosa, me caso mañana 🙊🙊❤️‍🩹” — seguidora, 733 ❤","en":"“Yo si te hice caso hermosa, me caso mañana 🙊🙊❤️‍🩹” — a follower, 733 ❤ <span class=\"gloss\">(translation: “I did listen to you, beautiful — I’m getting married tomorrow”)</span>"},
+
+  "vault.faq.h2": {"es":"Preguntas honestas.","en":"Honest questions."},
+  "vault.faq.q1": {"es":"¿Qué recibo exactamente y cómo accedo?","en":"What exactly do I receive, and how do I access it?"},
+  "vault.faq.a1": {"es":"Trece archivos PDF: doce capítulos — el Manifiesto y once guías — más el Índice Maestro. Llegan a tu correo al momento de pagar, se leen en cualquier teléfono, y son tuyos de por vida. El acceso es inmediato: al confirmar tu compra aceptas recibir el contenido digital al instante.","en":"Thirteen PDF files: twelve chapters — the Manifesto and eleven guides — plus the Master Index. They arrive by email the moment you pay, read beautifully on any phone, and are yours for life. Access is immediate: by confirming your purchase you agree to receive the digital content straight away."},
+  "vault.faq.q2": {"es":"¿Puedo pagar en cuotas? ¿Con qué métodos?","en":"Can I pay in installments? Which methods work?"},
+  "vault.faq.a2": {"es":"Sí — tarjeta en 3 cuotas. También Pix, OXXO y Mercado Pago. El pago lo procesa Hotmart y verás el precio en tu moneda local.","en":"Yes — card in 3 payments. Pix, OXXO and Mercado Pago also work. Payment runs through Hotmart and you’ll see the price in your local currency."},
+  "vault.faq.q3": {"es":"¿Es seguro? ¿Quién procesa el pago?","en":"Is it safe? Who processes the payment?"},
+  "vault.faq.a3": {"es":"Hotmart — la plataforma de pagos digitales que usan miles de creadoras en toda Latinoamérica y España. Nosotras nunca vemos ni guardamos tus datos de pago.","en":"Hotmart — the digital payments platform used by thousands of creators across Latin America and Spain. We never see or store your payment details."},
+  "vault.faq.q4": {"es":"¿Y si no es para mí?","en":"And if it isn’t for me?"},
+  "vault.faq.a4": {"es":"Tienes 7 días (15 si compras desde Europa). Si no es para ti, escribes y se te devuelve el dinero. Así de simple — la colección se sostiene sola. Esta garantía se suma a los derechos que te dé la ley de tu país.","en":"You have 7 days (15 if you’re buying from Europe). If it isn’t for you, write to us and your money comes back. That simple — the collection stands on its own. This guarantee sits on top of whatever rights your local law gives you."},
+  "vault.faq.q5": {"es":"¿Cuánto tiempo tengo acceso?","en":"How long do I have access?"},
+  "vault.faq.a5": {"es":"Para siempre. Pagas una vez y la colección es tuya — para releerla en otra etapa de tu vida y encontrar otra cosa.","en":"Forever. You pay once and the collection is yours — to reread at another stage of your life and find something new in it."},
+  "vault.faq.q6": {"es":"¿Es para mí si estoy soltera, en pareja, o saliendo de una relación?","en":"Is it for me if I’m single, in a relationship, or just out of one?"},
+  "vault.faq.a6": {"es":"Cuando una mujer está aprendiendo a escoger — a alguien, o a sí misma — este trabajo es para ella. La etapa cambia el capítulo por el que empiezas, no la colección.","en":"When a woman is learning to choose — someone else, or herself — this work is for her. Your stage changes the chapter you start with, not the collection."},
+  "vault.faq.q7": {"es":"¿Alguien verá que lo compré?","en":"Will anyone see that I bought it?"},
+  "vault.faq.a7": {"es":"No. La compra la procesa Hotmart, la colección llega a tu correo, y tu biblioteca es tuya. Lo que lees es asunto tuyo.","en":"No. The purchase runs through Hotmart, the collection arrives in your inbox, and your library is your own. What you read is your business."},
+
+  "vault.final.h2": {"es":"<span class=\"qo\">¿</span>Empezamos?","en":"Shall we begin?"},
+  "vault.final.price": {"es":"$97 fundador · o en 3 cuotas · garantía de 7 días","en":"$97 founder · or in 3 payments · 7-day guarantee"},
+  "vault.final.cta": {"es":"Quiero entrar primero 🤍","en":"I want in first 🤍"},
+
+  "vault.rail.excerpt.n1": {"es":"guía 10 · «cómo escoger bien»","en":"guide 10 · “how to choose well”"},
+  "vault.rail.excerpt.n2": {"es":"página 6 · tal como la recibirás","en":"page 6 · exactly as you’ll receive it"},
+  "vault.rail.excerpt.n3": {"es":"el protocolo de 6 fases","en":"the 6-phase protocol"},
+  "vault.rail.proof.n1": {"es":"dejados bajo sus videos","en":"left under her videos"},
+  "vault.rail.proof.n2": {"es":"citados tal cual","en":"quoted exactly as written"},
+  "vault.rail.proof.n3": {"es":"4.024 ❤ · 2.560 ❤","en":"4,024 ❤ · 2,560 ❤"},
+  "vault.rail.faq.n1": {"es":"garantía de 7 días · 15 en europa","en":"7-day guarantee · 15 in europe"},
+  "vault.rail.faq.n2": {"es":"pago seguro vía hotmart","en":"secure payment via hotmart"},
+  "vault.rail.faq.n3": {"es":"trece archivos pdf · tuyos de por vida","en":"thirteen pdf files · yours for life"},
+
+  "vault.postfaq.h3": {"es":"¿Todavía no? La carta de los lunes es gratis.","en":"Not yet? The Monday letter is&nbsp;free."},
+  "vault.postfaq.form.label": {"es":"Tu correo","en":"Your email"},
+  "vault.postfaq.form.placeholder": {"es":"tu@correo.com","en":"you@email.com"},
+  "vault.postfaq.form.button": {"es":"Quiero la carta","en":"I want the letter"},
+  "vault.postfaq.form.privacy": {"es":"Te llegará un correo para confirmar tu suscripción. Un clic para salir, cuando quieras. Más en la <a href=\"privacidad.html\">Política de Privacidad</a>.","en":"You’ll get one email to confirm your subscription. One click to leave, whenever you want. More in the <a href=\"privacidad.html\">Privacy Policy</a>."},
+
+  "footer.legal.terms": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "footer.legal.privacy": {"es":"Privacidad","en":"Privacy"},
+  "ctabar.line": {"es":"El Vault · llega en septiembre","en":"The Vault · coming in September"},
+  "ctabar.btn":  {"es":"Lista de espera","en":"Waiting list"}
+}
+</script>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/CustomEase.min.js"></script>
+<script src="assets/js/DrawSVGPlugin.min.js"></script>
+<script src="assets/js/lenis.min.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/v31.js"></script>
+</body>
+</html>

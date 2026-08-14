@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexandra Chávez · Privacidad</title>
+<meta name="description" content="Qué datos recoge este sitio, para qué se usan y cómo salir cuando quieras.">
+<!-- Legal stub page: noindex until the controller entity (C1) is confirmed and the
+     page graduates from summary to full notice. No og block by design. -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#170F18">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
+<!-- v3.1 token coherence (Stage 4, LIGHT TOUCH): display duty on Anybody
+     (Boska preload dropped, Boska no longer renders), section headers in the
+     Martian mono apparatus voice with auto-numbered ( 0N ) marks (pure CSS —
+     no copy changes, no motion, no patterns). Everything else untouched. -->
+<link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/v31.css">
+<style>
+/* ============ legal pages (terminos / privacidad) — quiet typographic,
+   v3.1 token coherence (identical block on both legal pages) ============ */
+.legal{padding-top:9.5rem;padding-bottom:var(--section-y);}
+.legal__inner{max-width:var(--measure);counter-reset:lg;}
+.legal h1{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);  /* type-rest rule 2026-07-30 */
+  font-size:clamp(1.55rem,4.3vw,2.4rem);line-height:1.04;
+  letter-spacing:var(--v31-rest-track);text-transform:uppercase;max-width:none;
+}
+.legal h2{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 460,'wdth' 100;
+  font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--flash);max-width:none;margin-top:var(--space-xl);
+  display:flex;gap:.8rem;align-items:baseline;counter-increment:lg;
+}
+.legal h2::before{
+  content:"( 0" counter(lg) " )";
+  font-variation-settings:'wght' 380,'wdth' 100;
+  letter-spacing:.22em;color:var(--flash-faint);
+  white-space:nowrap;flex:none;   /* the mark itself must never wrap */
+}
+.legal p{color:var(--flash-90);margin-top:var(--space-s);max-width:var(--measure);}
+.legal .intimate{font-size:1.05rem;margin-bottom:1rem;}
+.legal__updated{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--rose-70);margin-top:var(--space-m);
+}
+/* pending-value marker: quietly but visibly unresolved */
+.tbc{color:var(--peri);border-bottom:1px dashed var(--peri-dim);}
+/* v3.1 fix (Gate C #3): <strong> must use a REAL weight — Switzer has no 600
+   file, so the browser was synthesising bold (smeared glyphs at 2x zoom).
+   Switzer-500 exists as a real file; use it. */
+.legal strong{font-weight:500;}
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<!-- ============ NAV — shared verbatim across all pages (legal pages carry no
+     aria-current: they are footer pages, not nav destinations). ============ -->
+<header class="site-head">
+  <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
+  <div class="site-head__right">
+    <nav class="nav-links" aria-label="Principal">
+      <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+      <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+      <a href="membership.html" data-i18n="nav.club">El Club</a>
+      <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+      <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+      <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    </nav>
+    <div class="lang-pill" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang-btn="es" aria-pressed="true">ES</button>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" data-i18n-attr="aria-label:a11y.menu" aria-label="Menú">
+      <svg class="ic-open" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M2 6h18M2 11h18M2 16h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <svg class="ic-close" viewBox="0 0 22 22" fill="none" aria-hidden="true"><path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu-panel" id="menu-panel" aria-label="Principal (móvil)">
+  <a href="index.html" data-i18n="nav.inicio">Inicio</a>
+  <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+  <a href="membership.html" data-i18n="nav.club">El Club</a>
+  <a href="sobre-alex.html" data-i18n="nav.sobre">Sobre Alexandra</a>
+  <a href="empieza-aqui.html" data-i18n="nav.empieza">Empieza aquí</a>
+  <a href="carta.html" data-i18n="nav.carta">La carta</a>
+</nav>
+
+<main id="contenido">
+
+  <!-- Quiet typographic page: no spotlight sections, no CTA bar, no media.
+       Content = ONLY what we can truthfully state today (COMPLIANCE_AUDIT
+       P5/P6/P7 + M5 + P12; site runs no cookies/analytics by design).
+       ⚠ C1 — LAUNCH-BLOCKING (Conrad decision): the data controller (seller
+       legal entity) and its contact email are NOT yet decided. Every
+       "[ … por confirmar]" span below must be replaced before launch;
+       UK GDPR Arts 12–13 require controller identity at collection.
+       Do not launch this site while they remain. -->
+  <section class="legal">
+    <div class="legal__inner">
+      <p class="intimate" data-i18n="priv.eyebrow">tus datos, claros</p>
+      <h1 data-i18n="priv.h1">Privacidad</h1>
+      <p class="legal__updated" data-i18n="priv.updated">Resumen · se completará antes del lanzamiento</p>
+
+      <h2 data-i18n="priv.controller.h2">Quién responde por tus datos</h2>
+      <p data-i18n="priv.controller.body">La responsable del tratamiento es <span class="tbc">[Entidad vendedora — por confirmar]</span>. Contacto: <span class="tbc">[Correo de contacto — por confirmar]</span>.</p>
+
+      <h2 data-i18n="priv.collect.h2">Qué recogemos</h2>
+      <p data-i18n="priv.collect.body">El formulario de la carta pide una sola cosa: tu correo. Nada más. Tu correo se usa para la carta y nada más — sin listas paralelas, sin sorpresas.</p>
+
+      <h2 data-i18n="priv.optin.h2">Confirmación doble</h2>
+      <p data-i18n="priv.optin.body">Te llegará un correo para confirmar tu suscripción. Nada llega hasta que confirmes — si no confirmas, tu correo no se usa.</p>
+
+      <h2 data-i18n="priv.leave.h2">Salir</h2>
+      <p data-i18n="priv.leave.body">Un clic para salir, cuando quieras. Cada carta lleva su enlace para darte de baja.</p>
+
+      <h2 data-i18n="priv.cookies.h2">Cookies y analítica</h2>
+      <p data-i18n="priv.cookies.body">Este sitio no usa cookies ni analítica. Lo único que guarda tu navegador es tu idioma elegido (ES/EN), en tu propio dispositivo — nunca se envía a ningún lado.</p>
+
+      <h2 data-i18n="priv.payment.h2">Si compras algo</h2>
+      <p data-i18n="priv.payment.body">Las compras se procesan en Hotmart, que trata tus datos de pago bajo su propia política de privacidad. Nosotras nunca vemos ni guardamos tus datos de pago.</p>
+
+      <h2 data-i18n="priv.rights.h2">Tus derechos</h2>
+      <p data-i18n="priv.rights.body">Puedes pedir ver, corregir o borrar tus datos cuando quieras, escribiendo al correo de contacto de arriba.</p>
+
+      <p data-i18n="priv.termslink">Las condiciones de compra están en <a href="terminos.html">Términos y garantía</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER — shared verbatim across all pages ============ -->
+<footer class="site-foot">
+  <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
+  <nav aria-label="Redes y páginas">
+    <a href="https://instagram.com/alexchavez.23" rel="noopener">@alexchavez.23</a>
+    <a href="vault.html" data-i18n="nav.vault">El Vault</a>
+    <a href="carta.html" data-i18n="nav.carta">La carta</a>
+    <a href="terminos.html" data-i18n="footer.legal.terms">Términos y garantía</a>
+    <a href="privacidad.html" data-i18n="footer.legal.privacy">Privacidad</a>
+  </nav>
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+
+<!-- ============ i18n DICTIONARY ============ -->
+<script type="application/json" id="i18n">
+{
+  "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
+  "a11y.menu":  {"es":"Menú","en":"Menu"},
+  "nav.inicio": {"es":"Inicio","en":"Home"},
+  "nav.vault":  {"es":"El Vault","en":"The Vault"},
+  "nav.club":   {"es":"El Club","en":"The Club"},
+  "nav.sobre":  {"es":"Sobre Alexandra","en":"About Alexandra"},
+  "nav.empieza":{"es":"Empieza aquí","en":"Start here"},
+  "nav.carta":  {"es":"La carta","en":"The letter"},
+  "priv.eyebrow": {"es":"tus datos, claros","en":"your data, plainly"},
+  "priv.h1": {"es":"Privacidad","en":"Privacy"},
+  "priv.updated": {"es":"Resumen · se completará antes del lanzamiento","en":"Summary · to be completed before launch"},
+  "priv.controller.h2": {"es":"Quién responde por tus datos","en":"Who answers for your data"},
+  "priv.controller.body": {"es":"La responsable del tratamiento es <span class=\"tbc\">[Entidad vendedora — por confirmar]</span>. Contacto: <span class=\"tbc\">[Correo de contacto — por confirmar]</span>.","en":"The data controller is <span class=\"tbc\">[Selling entity — to be confirmed]</span>. Contact: <span class=\"tbc\">[Contact email — to be confirmed]</span>."},
+  "priv.collect.h2": {"es":"Qué recogemos","en":"What we collect"},
+  "priv.collect.body": {"es":"El formulario de la carta pide una sola cosa: tu correo. Nada más. Tu correo se usa para la carta y nada más — sin listas paralelas, sin sorpresas.","en":"The letter form asks for one thing: your email. Nothing else. Your email is used for the letter and nothing else — no side lists, no surprises."},
+  "priv.optin.h2": {"es":"Confirmación doble","en":"Double confirmation"},
+  "priv.optin.body": {"es":"Te llegará un correo para confirmar tu suscripción. Nada llega hasta que confirmes — si no confirmas, tu correo no se usa.","en":"You'll get one email to confirm your subscription. Nothing arrives until you confirm — and if you don't, your email isn't used."},
+  "priv.leave.h2": {"es":"Salir","en":"Leaving"},
+  "priv.leave.body": {"es":"Un clic para salir, cuando quieras. Cada carta lleva su enlace para darte de baja.","en":"One click to leave, whenever you want. Every letter carries its own unsubscribe link."},
+  "priv.cookies.h2": {"es":"Cookies y analítica","en":"Cookies &amp; analytics"},
+  "priv.cookies.body": {"es":"Este sitio no usa cookies ni analítica. Lo único que guarda tu navegador es tu idioma elegido (ES/EN), en tu propio dispositivo — nunca se envía a ningún lado.","en":"This site uses no cookies and no analytics. The only thing your browser stores is your chosen language (ES/EN), on your own device — it is never sent anywhere."},
+  "priv.payment.h2": {"es":"Si compras algo","en":"If you buy something"},
+  "priv.payment.body": {"es":"Las compras se procesan en Hotmart, que trata tus datos de pago bajo su propia política de privacidad. Nosotras nunca vemos ni guardamos tus datos de pago.","en":"Purchases are processed by Hotmart, which handles your payment data under its own privacy policy. We never see or store your payment details."},
+  "priv.rights.h2": {"es":"Tus derechos","en":"Your rights"},
+  "priv.rights.body": {"es":"Puedes pedir ver, corregir o borrar tus datos cuando quieras, escribiendo al correo de contacto de arriba.","en":"You can ask to see, correct or delete your data whenever you want, by writing to the contact email above."},
+  "priv.termslink": {"es":"Las condiciones de compra están en <a href=\"terminos.html\">Términos y garantía</a>.","en":"The purchase terms live in <a href=\"terminos.html\">Terms &amp; guarantee</a>."},
+  "footer.legal.terms": {"es":"Términos y garantía","en":"Terms &amp; guarantee"},
+  "footer.legal.privacy": {"es":"Privacidad","en":"Privacy"}
+}
+</script>
+
+<!-- v3.1 fix lane (Gate C #6): zero motion on legal pages, so the GSAP stack
+     is not shipped at all — site.js detects the absence and runs static mode
+     (mobile menu + language toggle work in every mode). -->
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

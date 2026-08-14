@@ -1,0 +1,314 @@
+/* ============================================================
+   ALEX v3.1 — AMAZEMENT LAYER (additive; requires tokens.css + base.css first)
+   Source contract: _intel/V31_BRIEF.md · patterns 1–14 from
+   _research/17_award_references/DESIGN_TEARDOWNS_2026-07.md.
+   Grammar stolen, never sentences. This file NEVER overrides v3
+   base components — it only adds the v31-* pattern modules.
+
+   TYPE ROLES (all OFL, self-hosted VF woff2, subset latin+es):
+   · display  — Anybody VF        (wght 100–900 · wdth 50–150)  kinetic catchphrases
+   · mono     — Martian Mono VF   (wght 100–800 · wdth 75–112.5) apparatus/counters
+   · serif    — Bodoni Moda VF    (wght 400–900 · opsz 6–96 + true italic) counter-voice
+
+   SIGNATURE COLOUR DISCIPLINE (pattern #6 — ≤5 selectors, enforced):
+   --alex appears in EXACTLY these five selectors, nowhere else:
+     1. .v31-accent                (the accent word inline)
+     2. .v31-flip .v31-accent     (AA tone on light polarity)
+     3. .v31-marquee              (the ticker band)
+     4. .v31-sig path             (flourish stroke)
+     5. .v31-room__cue            (the [ VER ] cue)
+   Do not add a sixth. Legacy guava tokens remain for v3 base
+   components only — --alex is the same family, deepened one step.
+   ============================================================ */
+
+/* ---------- FONTS ---------- */
+@font-face{font-family:'Anybody VF';src:url('../fonts/v31/Anybody-VF.woff2') format('woff2-variations');font-weight:100 900;font-stretch:50% 150%;font-style:normal;font-display:swap;}
+@font-face{font-family:'Martian VF';src:url('../fonts/v31/MartianMono-VF.woff2') format('woff2-variations');font-weight:100 800;font-stretch:75% 112.5%;font-style:normal;font-display:swap;}
+@font-face{font-family:'Bodoni VF';src:url('../fonts/v31/BodoniModa-VF.woff2') format('woff2-variations');font-weight:400 900;font-style:normal;font-display:swap;}
+@font-face{font-family:'Bodoni VF';src:url('../fonts/v31/BodoniModa-Italic-VF.woff2') format('woff2-variations');font-weight:400 900;font-style:italic;font-display:swap;}
+
+/* ---------- TOKEN EXTENSIONS ---------- */
+:root{
+  /* families */
+  --v31-display: 'Anybody VF','General Sans',sans-serif;
+  --v31-mono:    'Martian VF',ui-monospace,monospace;
+  --v31-serif:   'Bodoni VF',Georgia,serif;
+
+  /* signature — deepened guava; AA on --night (5.9:1) */
+  --alex:      #FF5364;
+  --alex-deep: #C21B30;   /* same voice on light polarity (7.4:1 on --v31-day) */
+
+  /* monochrome light polarity (pattern #8) — plum-tinted, NOT the banned cream family */
+  --v31-day:      #F2EAEE;
+  --v31-day-ink:  #1A1016;
+  --v31-day-dim:  rgba(26,16,22,.64);
+  --v31-day-faint:rgba(26,16,22,.4);
+  --v31-day-line: rgba(26,16,22,.14);
+
+  /* display-tier scale (base scale stays in tokens.css)
+     2026-07-30 readability recalibration (Conrad ruling): the display face now
+     RESTS at near-normal width (see --v31-rest-*) — the giant tier is sized for
+     wdth 97 glyphs, not the old condensed 62. */
+  --v31-text-giant: clamp(2.4rem, 11.9vw, 10rem);  /* kinetic catchphrase */
+  --v31-text-huge:  clamp(2.1rem, 9.5vw, 6.75rem); /* assembly / blur statements */
+  --v31-text-num:   clamp(4rem, 18vw, 15rem);      /* giant numerals */
+
+  /* TYPE-REST RULE (2026-07-30, binding): Anybody in all-caps is hairline-narrow
+     below ~wdth 90 — Conrad ruled the condensed resting state unreadable.
+     Display text must REST at these values; condensed/extended extremes are
+     TRANSIENT (motion only). Caps at rest also carry positive tracking. */
+  --v31-rest-wght: 700;
+  --v31-rest-wdth: 97;
+  --v31-rest-track: .02em;
+
+  /* rhythm */
+  --v31-stage-y: clamp(5.5rem, 16vh, 11rem);
+
+  /* the house curve, CSS twin of GSAP alexEase (soft, warm, ~2.5% overshoot) */
+  --ease-alex: cubic-bezier(.26,.9,.34,1.025);
+}
+
+/* ---------- SHARED APPARATUS VOICES (pattern #9) ---------- */
+.v31-display{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' var(--v31-rest-wght),'wdth' var(--v31-rest-wdth);
+  line-height:.96;letter-spacing:var(--v31-rest-track);
+  color:var(--flash);text-transform:uppercase;
+}
+.v31-serif{font-family:var(--v31-serif);font-variation-settings:'wght' 560,'opsz' 96;color:var(--flash);}
+.v31-serif i,.v31-serif em{font-style:italic;font-variation-settings:'wght' 520,'opsz' 96;}
+.v31-accent{color:var(--alex);font-style:italic;}
+.v31-flip .v31-accent{color:var(--alex-deep);}
+.v31-tag{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--flash-faint);
+}
+.v31-flip .v31-tag{color:var(--v31-day-faint);}
+.v31-chapter{                                 /* ( 02 ) chapter mark */
+  font-family:var(--v31-mono);font-variation-settings:'wght' 380,'wdth' 100;
+  font-size:.78rem;letter-spacing:.22em;color:var(--flash-faint);
+}
+.v31-counter{                                 /* 2/5 progress */
+  font-family:var(--v31-mono);font-variation-settings:'wght' 500,'wdth' 88;
+  font-size:.78rem;letter-spacing:.14em;color:var(--flash-dim);
+  font-feature-settings:'tnum' 1;
+}
+.v31-flip .v31-counter{color:var(--v31-day-dim);}
+.v31-flip .v31-chapter{color:var(--v31-day-faint);}
+.v31-flip .v31-note{color:var(--v31-day-faint);}
+.v31-note{                                    /* margin bullet annotation */
+  display:flex;gap:.55rem;align-items:baseline;
+  font-family:var(--v31-mono);font-variation-settings:'wght' 380,'wdth' 100;
+  font-size:.7rem;letter-spacing:.12em;color:var(--flash-faint);max-width:22ch;
+}
+.v31-note::before{content:'●';font-size:.5em;transform:translateY(-.2em);}
+@media (max-width:400px){.v31-note{display:none;}}   /* teardown rule: drop margin notes <400px */
+
+/* ---------- #3 KINETIC HEADLINE ----------
+   Rest = readable (type-rest rule): the squash-stretch is MOTION ONLY —
+   chars animate wdth 150→97 / wght 260→700 and SETTLE at the rest values.
+   A static screenshot (and reduced-motion/no-JS) always shows the rest state. */
+.v31-kinetic{
+  font-family:var(--v31-display);
+  font-size:var(--v31-text-giant);
+  font-variation-settings:'wght' var(--kw,700),'wdth' var(--kd,97);
+  line-height:.98;letter-spacing:var(--v31-rest-track);text-transform:uppercase;
+  color:var(--flash);max-width:none;
+  font-kerning:none;text-rendering:optimizeSpeed;   /* SplitText char-split stability */
+}
+.v31-kinetic .v31-k{
+  display:inline-block;
+  font-variation-settings:'wght' var(--kw,700),'wdth' var(--kd,97);
+  transform-origin:50% 88%;
+}
+.v31-kinetic .qo{font-size:.8em;line-height:0;}
+
+/* ---------- #2 WORD ASSEMBLY (manifesto) ---------- */
+.v31-assembly{
+  font-family:var(--v31-serif);font-variation-settings:'wght' 540,'opsz' 72;
+  font-size:var(--v31-text-huge);line-height:1.14;letter-spacing:-.01em;
+  color:var(--flash);max-width:18ch;
+}
+.v31-assembly .v31-w{display:inline-block;will-change:transform;}
+
+/* ---------- #4 BLUR / FOCUS PAIRED STATEMENT ---------- */
+.v31-blurpair{display:grid;gap:.4em;}
+.v31-blurpair__q{
+  font-family:var(--v31-display);
+  font-variation-settings:'wght' 660,'wdth' 96;   /* type-rest rule: never rests condensed */
+  font-size:clamp(1.6rem,7vw,5rem);line-height:1.04;letter-spacing:var(--v31-rest-track);
+  text-transform:uppercase;
+  color:var(--flash);
+  filter:blur(5px);opacity:.32;             /* final state: the forgotten thing, ghosted */
+}
+.v31-blurpair__a{
+  font-family:var(--v31-serif);font-style:italic;
+  font-variation-settings:'wght' 540,'opsz' 96;
+  font-size:calc(var(--v31-text-huge) * 1.06);line-height:1.05;
+  color:var(--flash);
+}
+
+/* ---------- #1 SPOTLIGHT ROOM ---------- */
+.v31-room{position:relative;background:var(--night-deep);}
+.v31-room__stage{position:relative;display:grid;gap:var(--space-xl);}
+.v31-room__item{position:relative;max-width:34rem;margin-inline:auto;text-align:center;
+  display:grid;gap:var(--space-s);justify-items:center;}
+.v31-room__item h3{max-width:16ch;}
+.v31-room__cue{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 500,'wdth' 100;
+  font-size:.78rem;letter-spacing:.26em;color:var(--alex);
+  text-decoration:none;padding:.6rem .9rem;
+}
+.v31-room__counter{position:absolute;top:1.2rem;right:var(--pad);z-index:3;}
+/* live mode (JS adds .is-live in motion only): one item under the light at a time */
+.v31-room.is-live{min-height:100svh;display:grid;align-items:center;}
+.v31-room.is-live .v31-room__stage{min-height:72svh;align-items:center;}
+.v31-room.is-live .v31-room__item{position:absolute;inset:0;display:grid;align-content:center;justify-items:center;opacity:0;visibility:hidden;}
+.v31-room.is-live .v31-room__stage::before{      /* the light: beam + pool — pure CSS */
+  content:'';position:absolute;inset:-18% -8%;pointer-events:none;
+  background:
+    radial-gradient(ellipse 44% 36% at 50% 60%, rgba(255,248,245,.13), transparent 70%),
+    conic-gradient(from 180deg at 50% -14%, transparent 42.5%, rgba(255,248,245,.075) 50%, transparent 57.5%);
+}
+.v31-room.is-live::after{                        /* vignette walls */
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 88% 78% at 50% 46%, transparent 42%, rgba(16,10,17,.9) 100%);
+  /* feathered at the room's thresholds — same one-room rule as .spot::after */
+  -webkit-mask:linear-gradient(180deg,transparent 0,
+    #000 clamp(2.5rem,7vh,4.5rem),
+    #000 calc(100% - clamp(2.5rem,7vh,4.5rem)),transparent 100%);
+  mask:linear-gradient(180deg,transparent 0,
+    #000 clamp(2.5rem,7vh,4.5rem),
+    #000 calc(100% - clamp(2.5rem,7vh,4.5rem)),transparent 100%);
+}
+
+/* ---------- #5 SCRAPBOOK (personal archive) ---------- */
+.v31-scrap{
+  position:relative;display:grid;gap:clamp(1.2rem,4vw,2.6rem);
+  grid-template-columns:repeat(2,1fr);align-items:start;
+  max-width:64rem;margin-inline:auto;
+}
+.v31-scrap__item{transform:rotate(var(--tilt,0deg));display:grid;gap:.6rem;}
+.v31-scrap__item:nth-child(even){margin-top:clamp(1.4rem,6vw,4rem);}
+.v31-scrap__tag{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--flash-faint);
+}
+.v31-sig{width:min(340px,70%);margin-top:.5rem;justify-self:end;}
+.v31-sig path{stroke:var(--alex);fill:none;stroke-width:2.6;stroke-linecap:round;}
+@media (min-width:760px){
+  .v31-scrap{grid-template-columns:repeat(3,1fr);}
+  .v31-scrap__item:nth-child(3n+2){margin-top:3.2rem;}
+  .v31-scrap__item:nth-child(3n){margin-top:1.4rem;}
+}
+
+/* ---------- #7 CARD FAN (vault interior deck) ---------- */
+.v31-fan{
+  position:relative;height:clamp(300px,52vw,460px);
+  perspective:1200px;max-width:56rem;margin-inline:auto;
+}
+.v31-fan__card{
+  position:absolute;left:50%;top:8%;width:clamp(150px,26vw,230px);
+  aspect-ratio:3/4;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);background:var(--night-2);
+  box-shadow:var(--shadow-plate);
+  transform:translateX(-50%) translateX(var(--fx,0)) rotate(var(--fr,0deg)) translateY(var(--fy,0));
+  transition:transform .5s var(--ease-alex),box-shadow .5s var(--ease-alex);
+  will-change:transform;
+}
+.v31-fan__card img{width:100%;height:100%;object-fit:cover;object-position:top;filter:saturate(.96) contrast(1.04);}
+.v31-fan__card:hover{transform:translateX(-50%) translateX(var(--fx,0)) rotate(0deg) translateY(calc(var(--fy,0) - 18px));box-shadow:var(--shadow-page);}
+.v31-fan__card:nth-child(1){--fx:calc(-1 * clamp(56px,15vw,190px));--fr:-9deg;--fy:26px;}
+.v31-fan__card:nth-child(2){--fx:calc(-1 * clamp(28px,7.5vw,95px));--fr:-4deg;--fy:6px;z-index:2;}
+.v31-fan__card:nth-child(3){--fx:0px;--fr:0deg;--fy:0px;z-index:3;}
+.v31-fan__card:nth-child(4){--fx:clamp(28px,7.5vw,95px);--fr:4deg;--fy:6px;z-index:2;}
+.v31-fan__card:nth-child(5){--fx:clamp(56px,15vw,190px);--fr:9deg;--fy:26px;}
+
+/* ---------- #8 POLARITY FLIP ---------- */
+.v31-flip{background:var(--v31-day);color:var(--v31-day-ink);}
+.v31-flip h1,.v31-flip h2,.v31-flip h3,
+.v31-flip .v31-display,.v31-flip .v31-serif,
+.v31-flip .v31-kinetic,.v31-flip .v31-assembly,
+.v31-flip .v31-blurpair__q,.v31-flip .v31-blurpair__a{color:var(--v31-day-ink);}
+.v31-flip .lede{color:var(--v31-day-dim);}
+/* nav inversion while a flip chapter is on stage (JS toggles html.v31-light) */
+html.v31-light .site-head{background:linear-gradient(180deg,rgba(242,234,238,.94) 55%,rgba(242,234,238,0));}
+html.v31-light .site-head .wordmark{color:var(--v31-day-ink);}
+html.v31-light .site-head .nav-links a{color:var(--v31-day-dim);}
+html.v31-light .site-head .lang-pill{border-color:var(--v31-day-line);}
+html.v31-light .site-head .lang-pill button{color:var(--v31-day-faint);}
+html.v31-light .site-head .lang-pill button.is-on{background:var(--v31-day-ink);color:var(--v31-day);}
+
+/* ---------- #11 MARQUEE TICKER ---------- */
+.v31-marquee{
+  overflow:clip;background:var(--alex);color:var(--night-deep);
+  padding-block:.5rem;user-select:none;
+}
+.v31-marquee__track{
+  display:inline-flex;gap:2.4rem;white-space:nowrap;width:max-content;
+  font-family:var(--v31-mono);font-variation-settings:'wght' 520,'wdth' 100;
+  font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+  animation:v31-marquee 26s linear infinite;
+  padding-right:2.4rem;
+}
+.v31-marquee:hover .v31-marquee__track{animation-play-state:paused;}
+@keyframes v31-marquee{to{transform:translateX(-50%);}}
+
+/* ---------- #12 KEYWORD PILLS ---------- */
+.v31-pill{
+  display:inline-flex;align-items:center;
+  font-family:var(--v31-mono);font-variation-settings:'wght' 460,'wdth' 96;
+  font-size:.76rem;letter-spacing:.1em;text-transform:lowercase;
+  padding:.34rem .78rem;border-radius:999px;    /* deliberate pill exception to the 2px house radius */
+  border:1px solid var(--line);color:var(--flash-dim);background:rgba(255,248,245,.05);
+  white-space:nowrap;
+}
+.v31-flip .v31-pill{border-color:var(--v31-day-line);color:var(--v31-day-dim);background:rgba(26,16,22,.05);}
+
+/* ---------- #13 GIANT NUMERAL (odometer) ---------- */
+.v31-num{
+  display:inline-flex;align-items:baseline;
+  font-family:var(--v31-mono);font-variation-settings:'wght' 640,'wdth' 80;
+  font-size:var(--v31-text-num);line-height:1;color:var(--flash);
+  font-feature-settings:'tnum' 1;
+}
+.v31-flip .v31-num{color:var(--v31-day-ink);}
+.v31-num__col{display:inline-block;overflow:clip;height:1em;}
+.v31-num__strip{display:grid;}
+.v31-num__strip span{display:block;height:1em;line-height:1;}
+.v31-num__sep{display:inline-block;}
+
+/* ---------- #10 LOADER-AS-SIGNATURE (JS-built; motion mode only) ---------- */
+.v31-loader{
+  position:fixed;inset:0;z-index:120;display:grid;place-items:center;
+  background:var(--night-deep);
+}
+.v31-loader svg{width:min(300px,64vw);height:auto;overflow:visible;}
+.v31-loader text{
+  font-family:var(--v31-mono);font-variation-settings:'wght' 420,'wdth' 100;
+  font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;
+  fill:var(--flash-dim);
+}
+.v31-loader__mark{
+  position:absolute;font-family:var(--v31-serif);font-style:italic;
+  font-variation-settings:'wght' 540,'opsz' 28;
+  font-size:1.15rem;color:var(--flash);
+}
+
+/* ---------- #14 LENIS (damped scroll; JS inits desktop/fine-pointer only) ---------- */
+html.lenis,html.lenis body{height:auto;}
+.lenis.lenis-smooth{scroll-behavior:auto !important;}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain;}
+.lenis.lenis-stopped{overflow:clip;}
+
+/* ---------- HARNESS FORCE-REVEAL ---------- */
+html.fr .v31-room.is-live{min-height:0;}
+html.fr .v31-loader{display:none;}
+
+/* ---------- REDUCED MOTION (every pattern degrades to its final CSS state) ---------- */
+@media (prefers-reduced-motion:reduce){
+  .v31-marquee__track{animation:none;}
+  .v31-loader{display:none;}
+  .v31-fan__card,.v31-fan__card:hover{transition:none;}
+}
