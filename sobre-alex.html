@@ -15,10 +15,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="theme-color" content="#170F18">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
-<!-- v3.1 weight lever (V31_STAGE1 §6): display duty moved to Anybody VF — Boska
-     preload dropped (no longer renders on this page; shared mobile menu loads
-     it on demand). Laws use Bodoni roman; glosses stay Gambetta italic (her
-     intimate register) so Bodoni italic never downloads here. -->
+
 <link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -133,8 +130,7 @@ main h2{
 
 <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
 
-<!-- ============ NAV — shared verbatim across all six pages.
-     aria-current="page" goes on THIS page's link (both menus). ============ -->
+
 <header class="site-head">
   <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
   <div class="site-head__right">
@@ -167,12 +163,7 @@ main h2{
 
 <main id="contenido">
 
-  <!-- ============ HERO · scrapbook-led (pattern #5): studio portrait 03 +
-       supporting archive (club_06, carta_07 — alts reused verbatim from their
-       home pages). Kinetic h1 on the existing line (pattern #3). Archive tags
-       carry HONEST per-photo descriptors from _intel/IMAGE_INVENTORY.md
-       (studio shoot / champagne + rose bear / Dubai night terrace) — nothing
-       invented; nbsp binding stops the mid-token orphan wrap (Gate A #5). ============ -->
+  
   <section class="spot about-hero" data-spot="hero" data-hero style="--spot-y:38%;">
     <div>
       <p class="v31-tag" data-i18n="about.hero.eyebrow">Sobre Alexandra</p>
@@ -209,7 +200,7 @@ main h2{
     </div>
   </section>
 
-  <!-- ============ STORY · three truths + the trust shot (photo 10) ============ -->
+  
   <section class="spot about-story" data-spot style="--spot-y:30%;">
     <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
     <div class="about-story__grid">
@@ -229,8 +220,7 @@ main h2{
     </div>
   </section>
 
-  <!-- ============ THE SEVEN LAWS · scroll-assembly beats (pattern #2 —
-       each law assembles under the thumb; titles + glosses VERBATIM) ============ -->
+  
   <section class="spot law-intro" data-spot>
     <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
     <h2 data-split data-i18n="about.laws.h2">Las 7 leyes del Manifiesto.</h2>
@@ -263,8 +253,7 @@ main h2{
     <p data-rise><a class="link-quiet" href="vault.html" data-i18n="about.laws.cta">El Manifiesto completo vive en el Vault&nbsp;→</a></p>
   </section>
 
-  <!-- ============ BLUR → FOCUS · the "quién es" statement (pattern #4):
-       the page's question ghosts, the answer comes into focus. ============ -->
+  
   <section class="about-blur">
     <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
     <div class="v31-blurpair" data-v31-blurpair>
@@ -273,9 +262,7 @@ main h2{
     </div>
   </section>
 
-  <!-- ============ THE WORK IN NUMBERS · light polarity chapter (patterns #8+#13).
-       NUMBERS GATE: real figures only — 7 laws, 11 guides, 12 chapters.
-       No member/follower claims. ============ -->
+  
   <section class="v31-flip about-nums">
     <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
     <h2 class="sr-only" data-i18n="about.nums.sr">El trabajo en números</h2>
@@ -295,7 +282,7 @@ main h2{
     </div>
   </section>
 
-  <!-- ============ THE LIBRARY · bibliography plates (real works, same list both languages) ============ -->
+  
   <section class="spot about-library" data-spot style="--spot-y:32%;">
     <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
     <h2 data-split data-i18n="about.library.h2">La biblioteca detrás del trabajo.</h2>
@@ -315,7 +302,7 @@ main h2{
     <p class="about-library__note" data-rise data-i18n="about.library.note">La lista completa está en el Índice Maestro del Vault.</p>
   </section>
 
-  <!-- ============ CLOSE · first-time path (about.close) ============ -->
+  
   <section class="spot about-close" data-spot style="--spot-y:40%;">
     <p class="v31-chapter chap" aria-hidden="true">( 06 )</p>
     <p class="about-close__body" data-split data-i18n="about.close.body">Si es tu primera vez aquí: empieza por la carta de los lunes. Es gratis, es corta, y es la mejor forma de saber si esta voz es para ti. 🤍</p>
@@ -327,13 +314,13 @@ main h2{
 
 </main>
 
-<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+
 <div class="cta-bar" data-cta-bar>
   <p class="cta-bar__line" data-i18n="ctabar.line">El Vault abre a su ritmo, no al tuyo.</p>
   <a class="btn btn--small" href="vault.html" data-i18n="ctabar.btn">Quiero mi ejemplar</a>
 </div>
 
-<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+
 <footer class="site-foot">
   <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
   <nav aria-label="Redes y páginas">
@@ -346,9 +333,7 @@ main h2{
   <p>© 2026 Alexandra Chávez</p>
 </footer>
 
-<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
-     ES here MUST equal the ES text in the markup above (no-JS parity).
-     EN is written fresh in her voice, never machine-translated. ============ -->
+
 <script type="application/json" id="i18n">
 {
   "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},

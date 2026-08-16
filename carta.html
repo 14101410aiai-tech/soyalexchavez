@@ -3,17 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- carta — the capture ENGINE (v3.1 AMAZEMENT PASS, Stage 4).
-     Kinetic hero on the existing h1 · the Sunday-letter promise restyled with
-     the week-strip motif from membership (lunes cell only — consistent values)
-     as the light polarity chapter (#8) · blur-focus device (#4) built from the
-     hero line's OWN words · the existing form + GDPR microcopy kept VERBATIM ·
-     two hidden launch slots: WAITLIST-SLOT (systems #1, launch-cohort capture
-     variant) + TRAINING-SLOT (systems #2, free 2-part training + cuaderno) —
-     both designed, both hidden until real, no dates/counts invented.
-     Bodoni ITALIC only on this page (blur answer + the three truths + accent);
-     the roman never downloads — per-page roman-or-italic rule. Boska preload
-     dropped (display duty on Anybody). -->
+
 <title data-i18n="letter.meta.title">La carta de los lunes — Alexandra Chávez</title>
 <meta name="description" content="Una carta corta cada lunes, gratis: un recordatorio para empezar la semana escogiendo mejor. Sin ruido. Un clic para salir cuando quieras." data-i18n-attr="content:letter.meta.description">
 <link rel="canonical" href="https://soyalexchavez.com/carta.html">
@@ -166,7 +156,7 @@ html.fr .carta-hero{min-height:0;}
 
 <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
 
-<!-- ============ NAV — shared verbatim across all six pages. ============ -->
+
 <header class="site-head">
   <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
   <div class="site-head__right">
@@ -199,8 +189,7 @@ html.fr .carta-hero{min-height:0;}
 
 <main id="contenido">
 
-  <!-- ============ HERO · the question as kinetic catchphrase (pattern #3)
-       + the sunday-evening plate (photo 07). Copy unchanged. ============ -->
+  
   <section class="spot carta-hero" data-spot="hero" data-hero style="--spot-y:38%;">
     <div class="carta-hero__grid">
       <div class="carta-hero__copy">
@@ -211,8 +200,7 @@ html.fr .carta-hero{min-height:0;}
       <figure class="carta-hero__fig">
         <div class="plate plate--vignette" style="aspect-ratio:4/5;">
           <picture>
-            <!-- v3.1 fix lane: 480w candidate added so throttled phones fetch ~40KB
-                 for the LCP plate instead of the 720w file (display ≈343px at 390) -->
+            
             <source type="image/webp" srcset="assets/img/carta_07_480.webp 480w, assets/img/carta_07_720.webp 720w, assets/img/carta_07_1080.webp 1080w" sizes="(min-width:900px) 400px, 88vw">
             <img src="assets/img/carta_07_1080.jpg" alt="Alexandra en una cena al aire libre de noche, vestido floral, luz de vela y la ciudad de fondo" width="1080" height="1254" fetchpriority="high" data-i18n-attr="alt:letter.plate1.alt">
           </picture>
@@ -223,8 +211,7 @@ html.fr .carta-hero{min-height:0;}
     </div>
   </section>
 
-  <!-- ============ WHAT IT IS / IS NOT · three quiet truths, in the letter's
-       own voice (Bodoni italic — the page's serif stays italic-only) ============ -->
+  
   <section class="spot carta-what" data-spot style="border-top:1px solid var(--line);">
     <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
     <ul class="carta-what__list">
@@ -234,10 +221,7 @@ html.fr .carta-hero{min-height:0;}
     </ul>
   </section>
 
-  <!-- ============ THE PROMISE · the Sunday-letter rhythm made visible —
-       week-strip motif from membership (lunes cell ONLY, values consistent
-       with membership's lunes cell) on the light polarity chapter (#8).
-       Heading is a VERBATIM fragment of the hero sub — no new claims. ============ -->
+  
   <section class="v31-flip carta-week">
     <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
     <h2 data-i18n="carta.week.h2">Cada lunes, una carta corta.</h2>
@@ -255,8 +239,7 @@ html.fr .carta-hero{min-height:0;}
     </div>
   </section>
 
-  <!-- ============ THE QUESTION, RESOLVED · blur-focus device (pattern #4) —
-       both fragments are the hero line's OWN words, verbatim. ============ -->
+  
   <section class="carta-blur">
     <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
     <div class="v31-blurpair" data-v31-blurpair>
@@ -265,37 +248,29 @@ html.fr .carta-hero{min-height:0;}
     </div>
   </section>
 
-  <!-- ============ CAPTURE · the form + the sunday moon (photo 08) ============
-       Compliance microcopy below is BINDING (copy/COMPLIANCE_AUDIT.md P5 + M5):
-       double-opt-in stated plainly; privacy line carries the Privacy Policy link.
-       Microcopy is deliberately static — information does not perform.
-       Below the form: the two HIDDEN launch slots (waitlist + training). ============ -->
+  
   <section class="spot carta-form-sec" data-spot id="carta-form" style="--spot-x:38%;--spot-y:42%;border-top:1px solid var(--line);">
     <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
     <div class="carta-form-sec__grid">
       <div>
-        <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
+        
         <form class="carta-form" method="post" action="https://app.kit.com/forms/9803782/subscriptions" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
           <label class="carta-form__label" for="carta-email" data-i18n="letter.form.label">Tu correo</label>
           <div class="carta-form__row">
             <input type="email" id="carta-email" name="email_address" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:letter.form.placeholder">
             <button type="submit" class="btn" data-i18n="letter.form.button">Quiero la carta</button>
           </div>
-          <!-- Success/error states are unhidden by the form wiring at launch (endpoint above). -->
+          
           <div aria-live="polite">
             <p class="carta-form__msg" hidden data-i18n="letter.form.success">Revisa tu correo — hay una confirmación esperándote. Nos vemos el lunes. 🤍</p>
             <p class="carta-form__msg carta-form__msg--err" hidden data-i18n="letter.form.error">Revisa el correo — algo no cuadra.</p>
           </div>
           <p class="carta-form__note" data-i18n="letter.form.doubleoptin">Te llegará un correo para confirmar tu suscripción — es la única forma de saber que eres tú. Nada llega hasta que confirmes.</p>
-          <!-- LEGAL PAGE: privacidad.html is a site build item (COMPLIANCE_AUDIT M3/M5); controller name pending C1. -->
+          
           <p class="carta-form__note" data-i18n="letter.form.privacy">Tu correo se usa para la carta y nada más. Un clic para salir, cuando quieras. <a href="privacidad.html">Más en la Política de Privacidad.</a></p>
         </form>
 
-        <!-- WAITLIST-SLOT: launch-cohort capture variant (systems teardown #1,
-             Rhode waitlist mechanic) — designed placeholder, HIDDEN until the
-             vault launch window is real. No dates, no counts, no scarcity
-             theatre. To activate: remove the hidden attribute and replace
-             action="#" with the waitlist endpoint (separate Kit tag/segment). -->
+        
         <form class="carta-slot" id="lista-de-espera" method="post" action="https://app.kit.com/forms/9803791/subscriptions" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma — cuando el Vault abra, entras primero." data-waitlist-slot>
           <p class="v31-tag" data-i18n="carta.wait.tag">la lista de espera</p>
           <h3 data-i18n="carta.wait.h3">El Vault, antes que nadie.</h3>
@@ -307,17 +282,12 @@ html.fr .carta-hero{min-height:0;}
           </div>
         </form>
 
-        <!-- TRAINING-SLOT: the free 2-part training + cuaderno capture spike
-             (systems teardown #2, Mel Robbins mechanic) — designed placeholder,
-             HIDDEN until the training genuinely exists. Nothing here renders
-             today; no claim that it exists is made anywhere visible. To
-             activate: remove the hidden attribute and point the CTA at the
-             training signup (separate Kit tag/segment). -->
+        
         <aside class="carta-slot" hidden data-training-slot>
           <p class="v31-tag" data-i18n="carta.training.tag">entrenamiento gratuito</p>
           <h3 data-i18n="carta.training.h3">Un entrenamiento gratuito en dos partes, con su cuaderno.</h3>
           <p data-i18n="carta.training.line">Dos videos cortos y un cuaderno PDF para trabajarlos, directo a tu correo.</p>
-          <!-- SIGNUP ENDPOINT: replace #kit-training-form with the live training signup URL/anchor at activation -->
+          
           <a class="btn btn--ghost" href="#kit-training-form" data-i18n="carta.training.cta">Quiero el entrenamiento</a>
         </aside>
       </div>
@@ -335,7 +305,7 @@ html.fr .carta-hero{min-height:0;}
     </div>
   </section>
 
-  <!-- ============ CLOSE · one reminder-card, then quiet ============ -->
+  
   <section class="spot carta-close" data-spot style="--spot-y:32%;border-top:1px solid var(--line);">
     <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
     <article class="reminder">
@@ -349,13 +319,13 @@ html.fr .carta-hero{min-height:0;}
 
 </main>
 
-<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+
 <div class="cta-bar" data-cta-bar>
   <p class="cta-bar__line" data-i18n="ctabar.line">La carta de los lunes es gratis.</p>
   <a class="btn btn--small" href="#carta-form" data-i18n="ctabar.btn">Quiero la carta</a>
 </div>
 
-<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+
 <footer class="site-foot">
   <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
   <nav aria-label="Redes y páginas">
@@ -368,12 +338,7 @@ html.fr .carta-hero{min-height:0;}
   <p>© 2026 Alexandra Chávez</p>
 </footer>
 
-<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
-     ES here MUST equal the ES text in the markup above (no-JS parity).
-     EN is written fresh in her voice, never machine-translated.
-     carta.week.* day values are IDENTICAL to membership's club.week.* values;
-     carta.week.h2 + carta.blur.* are VERBATIM fragments of this page's own
-     hero strings. ============ -->
+
 <script type="application/json" id="i18n">
 {
   "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},

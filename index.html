@@ -15,9 +15,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="theme-color" content="#170F18">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
-<!-- v3.1 weight lever (V31_STAGE1 §6): display duty moved to Anybody VF — Boska
-     preload dropped (Boska no longer renders on this page; it stays available
-     for the shared mobile menu, loading on demand). -->
+
 <link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -169,8 +167,7 @@ main h2{
 
 <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
 
-<!-- ============ NAV — shared verbatim across all six pages.
-     aria-current="page" goes on THIS page's link (both menus). ============ -->
+
 <header class="site-head">
   <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
   <div class="site-head__right">
@@ -203,13 +200,10 @@ main h2{
 
 <main id="contenido">
 
-  <!-- ============ HERO · spotlight video (DNt2entWkak — night dinner satin)
-       v3.1: the existing hero line becomes the kinetic catchphrase (pattern #3).
-       Copy unchanged — presentation only. ============ -->
+  
   <section class="spot hero" data-spot="hero" data-hero style="--spot-y:38%;">
     <div class="hero__media" aria-hidden="true">
-      <!-- desktop sources = the v3.1 re-cut: native 720×832 crop of the source
-           reel (caption band excluded), ~1000kbps — no upscale at any width -->
+      
       <div class="plate plate--frame hero__plate">
         <video data-video muted loop playsinline autoplay preload="metadata"
           poster="assets/video/hero_DNt2entWkak_v_poster.jpg" width="720" height="1080"
@@ -233,9 +227,7 @@ main h2{
     <p class="hero__hint" data-i18n="home.hero.scrollhint">Baja despacio.</p>
   </section>
 
-  <!-- ============ MARQUEE TICKER (pattern #11) — REAL facts only.
-       POLICY (Stage 2, per Stage-1 caveat §7): stays Spanish in both languages
-       as brand texture; decorative, aria-hidden. ============ -->
+  
   <div class="v31-marquee" aria-hidden="true">
     <div class="v31-marquee__track">
       <span>doce capítulos</span><span>una carta cada lunes</span><span>un recordatorio nuevo cada semana</span><span>el manifiesto y once guías</span>
@@ -243,8 +235,7 @@ main h2{
     </div>
   </div>
 
-  <!-- ============ BLUR → FOCUS RECORDATORIO DEVICE (pattern #4) —
-       Stage-1 strings (blur.q / blur.a, fragments of the hero line). ============ -->
+  
   <section class="blur-sec">
     <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
     <div class="v31-blurpair" data-v31-blurpair>
@@ -253,10 +244,7 @@ main h2{
     </div>
   </section>
 
-  <!-- ============ THE THREE PATHS (free letter FIRST per funnel lock) —
-       v3.1: staged as the SPOTLIGHT ROOM (pattern #1). Same copy, links,
-       prices; the intro h2 keeps its own spot section so the pinned room
-       owns the full stage. ============ -->
+  
   <section class="spot paths-intro" data-spot style="--spot-y:32%;">
     <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
     <h2 data-split data-i18n="home.paths.h2">Tres formas de empezar.</h2>
@@ -287,12 +275,9 @@ main h2{
     </ol>
   </section>
 
-  <!-- (roses divider removed 2026-07-30 — Conrad ruling: "useless and tacky".
-       Room → notebook both sit on the dark polarity; the section paddings
-       carry the rhythm without a divider. Asset files stay on disk.) -->
+  
 
-  <!-- ============ DE SU CUADERNO — reminder-card rhythm (verified caption lines;
-       labels 01/02/03 per copy — NO invented dates or times) + spotlight plate 05 ============ -->
+  
   <section class="spot notebook" data-spot style="--spot-x:38%;--spot-y:36%;">
     <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
     <p class="meta" data-i18n="home.reminders.eyebrow">De su cuaderno</p>
@@ -323,12 +308,7 @@ main h2{
     </div>
   </section>
 
-  <!-- ============ DEL ARCHIVO — scrapbook band (pattern #5) on the light
-       polarity (pattern #8). Real photos only. Archive tags carry HONEST
-       per-photo descriptors sourced from _intel/IMAGE_INVENTORY.md (staircase /
-       crescent-moon lounge / rooftop terrace — nothing invented); alts reused
-       verbatim from their home pages.
-       Flourish = abstract stroke, NEVER a fake handwriting signature. ============ -->
+  
   <section class="v31-flip scrapband">
     <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
     <h2 class="sr-only" data-i18n="home.scrap.sr">Del archivo</h2>
@@ -369,7 +349,7 @@ main h2{
     </div>
   </section>
 
-  <!-- ============ PROOF EPIGRAPH (VERBATIM — do not touch a character) ============ -->
+  
   <section class="spot proof" data-spot style="--spot-y:44%;">
     <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
     <p class="meta" data-i18n="home.proof.eyebrow">Lo que ellas escriben</p>
@@ -379,34 +359,32 @@ main h2{
     </blockquote>
   </section>
 
-  <!-- ============ LETTER CAPTURE — LAST section before footer (playbook §5: quiet,
-       below every purchase prompt; no popups anywhere) ============ -->
+  
   <section class="spot letter" data-spot style="--spot-y:30%;">
     <p class="v31-chapter chap" aria-hidden="true">( 06 )</p>
     <h2 data-split data-i18n="home.letter.h2"><span class="qo">¿</span>Todavía no? La carta de los lunes es gratis.</h2>
     <p class="lede" data-i18n="home.letter.body">Una carta corta cada lunes. Sin ruido, sin promesas — un recordatorio.</p>
-    <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
+    
     <form class="letter__form" action="https://app.kit.com/forms/9803782/subscriptions" method="post" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
       <label class="sr-only" for="letter-email" data-i18n="home.letter.form.label">Tu correo</label>
       <input type="email" id="letter-email" name="email_address" required autocomplete="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:home.letter.form.placeholder">
       <button class="btn" type="submit" data-i18n="home.letter.form.button">Quiero la carta</button>
     </form>
     <p class="letter__privacy" data-i18n="home.letter.form.privacy">Te llegará un correo para confirmar tu suscripción. Un clic para salir, cuando quieras. <a href="privacidad.html">Más en la Política de Privacidad.</a></p>
-    <!-- Success/error strings for the wiring day — shown/hidden by the form endpoint integration -->
+    
     <p class="letter__privacy" hidden data-form-success data-i18n="home.letter.form.success">Revisa tu correo — hay una confirmación esperándote. 🤍</p>
     <p class="letter__privacy" hidden data-form-error data-i18n="home.letter.form.error">Revisa el correo — algo no cuadra.</p>
   </section>
 
 </main>
 
-<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+
 <div class="cta-bar" data-cta-bar>
   <p class="cta-bar__line" data-i18n="ctabar.line">El Vault abre a su ritmo, no al tuyo.</p>
   <a class="btn btn--small" href="vault.html" data-i18n="ctabar.btn">Descubre el Vault</a>
 </div>
 
-<!-- ============ FOOTER — shared verbatim + compliance M3/M5 legal links
-     (terms + privacy pages are build items; targets pending site integration) ============ -->
+
 <footer class="site-foot">
   <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
   <nav aria-label="Redes y páginas">
@@ -419,8 +397,7 @@ main h2{
   <p>© 2026 Alexandra Chávez</p>
 </footer>
 
-<!-- video source picker: mobile _v / desktop _d; reduced-motion = poster only.
-     Not an animation system — a one-shot source/poster selector. -->
+
 <script>
 (function(){
   var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -440,9 +417,7 @@ main h2{
 })();
 </script>
 
-<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
-     ES here MUST equal the ES text in the markup above (no-JS parity).
-     EN is written fresh in her voice, never machine-translated. ============ -->
+
 <script type="application/json" id="i18n">
 {
   "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},

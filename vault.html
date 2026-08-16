@@ -15,10 +15,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta name="theme-color" content="#170F18">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23170F18'/%3E%3Ccircle cx='8' cy='8' r='3' fill='%23FF5C69'/%3E%3C/svg%3E">
-<!-- v3.1 weight lever (V31_STAGE1 §6): display duty moved to Anybody VF — Boska
-     preload dropped (Boska no longer renders on this page; the shared mobile
-     menu loads it on demand). Bodoni ITALIC only on this page (the blur-focus
-     answer); the roman never downloads here — per-page roman-or-italic rule. -->
+
 <link rel="preload" href="assets/fonts/v31/Anybody-VF.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -207,8 +204,7 @@ main h3{font-family:var(--font-sans);}
 
 <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
 
-<!-- ============ NAV — shared verbatim across all six pages.
-     aria-current="page" goes on THIS page's link (both menus). ============ -->
+
 <header class="site-head">
   <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
   <div class="site-head__right">
@@ -241,9 +237,7 @@ main h3{font-family:var(--font-sans);}
 
 <main id="contenido">
 
-  <!-- ============ 1 · FOLD — question-led, one mobile viewport:
-       kinetic headline (pattern #3) on the EXISTING fold line + price +
-       cuotas + CTA + epigraph (playbook §1.3). Copy unchanged. ============ -->
+  
   <section class="spot fold" data-spot="hero" data-hero style="--spot-x:36%;--spot-y:34%;">
     <div class="fold__grid">
       <div class="fold__text">
@@ -251,7 +245,7 @@ main h3{font-family:var(--font-sans);}
         <h1 class="v31-kinetic" data-v31-kinetic="load" data-i18n="vault.fold.h1" style="margin-top:1rem;"><span class="qo">¿</span>Estás escogiendo desde quien eres — o desde quien tienes miedo de ser sin él?</h1>
         <p class="lede fold__sub" data-i18n="vault.fold.sub">Doce capítulos — el Manifiesto y once guías — para responder esa pregunta con calma. Escritos para leerse en tu teléfono y quedarse contigo.</p>
         <p class="fold__price ts" data-i18n="vault.fold.price">Precio fundador · primeras 100 · se anuncia al abrir</p>
-        <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+        
         <p class="fold__cta"><a class="btn" href="carta.html#lista-de-espera" data-i18n="vault.fold.cta">Avísame cuando abra</a></p>
         <figure class="epigraph">
           <blockquote class="intimate" data-i18n="vault.fold.epigraph">“estoy a punto de dejarlo por ver este video🥺😭”</blockquote>
@@ -270,7 +264,7 @@ main h3{font-family:var(--font-sans);}
     </div>
   </section>
 
-  <!-- ============ 2 · WHAT'S INSIDE + reminder card ============ -->
+  
   <section class="spot" data-spot style="--spot-x:40%;--spot-y:30%;border-top:1px solid var(--line-soft);">
     <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
     <h2 data-split data-i18n="vault.what.h2"><span class="qo">¿</span>Qué hay dentro?</h2>
@@ -282,12 +276,7 @@ main h3{font-family:var(--font-sans);}
     </article>
   </section>
 
-  <!-- ============ 3 · THE INTERIOR DECK (pattern #7) — card fan of REAL
-       pages rendered from the shipped PDFs (pymupdf, anatomy-plates
-       convention extended): Guía 10 cuaderno · Guía 09 apertura · índice
-       del Manifiesto · Guía 12 fase · Guía 09 «Cuando hay que irse» (the
-       dark colophon card was swapped for this legible page — Gate B D1). Framed
-       "inside" stage + honest caption. Hover lift = pure CSS. ============ -->
+  
   <section class="spot" data-spot style="--spot-x:55%;--spot-y:36%;border-top:1px solid var(--line-soft);">
     <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
     <div class="anatomy-cols">
@@ -317,11 +306,7 @@ main h3{font-family:var(--font-sans);}
     </div>
   </section>
 
-  <!-- ============ 4 · THE COLLECTION IN NUMBERS + REAL CHAPTER INDEX —
-       light polarity chapter (patterns #8+#13). NUMBERS GATE: 12 chapters,
-       11 guides, 437/440 pages — counted from the shipped complete PDFs
-       (ES 437 pp · EN 440 pp) on 2026-07-28. Titles VERBATIM; information
-       does not perform (no entrance animation on the list). ============ -->
+  
   <section class="v31-flip vault-flip">
     <p class="v31-chapter chap" aria-hidden="true">( 03 )</p>
     <div class="vault-nums">
@@ -356,10 +341,7 @@ main h3{font-family:var(--font-sans);}
     <p class="g-foot small" data-i18n="vault.index.footnote">+ el Índice Maestro: el mapa de lectura de toda la colección.</p>
   </section>
 
-  <!-- ============ 5 · A REAL PAGE, QUOTED — blur-focus device (pattern #4)
-       built from the guide's OWN words (both fragments are verbatim
-       substrings of the excerpt below), then the printed sheet (verbatim —
-       Guía 10, p. 6, re-confirmed against _FINAL_FOR_ALEX/Guide_10_es.pdf) ============ -->
+  
   <section class="spot" data-spot style="--spot-x:50%;--spot-y:40%;">
     <p class="v31-chapter chap" aria-hidden="true">( 04 )</p>
     <div class="v31-blurpair vault-blur" data-v31-blurpair>
@@ -382,7 +364,7 @@ main h3{font-family:var(--font-sans);}
     </div>
   </section>
 
-  <!-- ============ 6 · WHO WRITES THIS (3rd-person echo) ============ -->
+  
   <section class="spot" data-spot style="--spot-x:60%;--spot-y:38%;">
     <p class="v31-chapter chap" aria-hidden="true">( 05 )</p>
     <div class="author-cols">
@@ -402,7 +384,7 @@ main h3{font-family:var(--font-sans);}
     </div>
   </section>
 
-  <!-- ============ 7 · MAIN PROOF (VERBATIM, honestly ellipsis-free) ============ -->
+  
   <section class="spot" data-spot style="--spot-x:35%;--spot-y:32%;border-top:1px solid var(--line-soft);">
     <p class="v31-chapter chap" aria-hidden="true">( 06 )</p>
     <div class="v-cols">
@@ -426,8 +408,7 @@ main h3{font-family:var(--font-sans);}
     </div>
   </section>
 
-  <!-- ============ 8 · TWO QUIET EDITIONS (anchoring — $147 exists to sell $97;
-       Osmo-plain presentation; buying information does not perform) ============ -->
+  
   <section id="precio" style="border-top:1px solid var(--line-soft);">
     <p class="v31-chapter chap" aria-hidden="true">( 07 )</p>
     <p class="v31-tag" data-i18n="vault.price.eyebrow">Precio fundador · primeras 100</p>
@@ -442,7 +423,7 @@ main h3{font-family:var(--font-sans);}
           <p data-i18n="vault.price.tier1.line2">Acceso inmediato y de por vida. Pagas una vez.</p>
           <p data-i18n="vault.price.tier1.line3">Para las primeras 100.</p>
         </div>
-        <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+        
         <p class="tier__cta"><a class="btn" href="carta.html#lista-de-espera" data-i18n="vault.price.tier1.cta">Lista de espera — precio fundador</a></p>
       </article>
       <article class="tier">
@@ -452,19 +433,16 @@ main h3{font-family:var(--font-sans);}
         <div class="tier__lines">
           <p data-i18n="vault.price.tier2.line1">La misma colección, cuando cierre el precio fundador.</p>
         </div>
-        <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+        
         <p class="tier__cta"><a class="btn btn--ghost" href="carta.html#lista-de-espera" data-i18n="vault.price.tier2.cta">Avísame cuando abra</a></p>
       </article>
-      <!-- BUNDLE-SLOT: launch bundle (Vault + 3 months of the Club, systems-teardown #8) —
-           designed placeholder, HIDDEN until Conrad wires the bundle price + Hotmart
-           checkout. No invented bundle price is rendered anywhere. To activate:
-           remove the hidden attribute and add the price line. -->
+      
       <article class="tier" hidden data-bundle-slot>
         <p class="tier__name" data-i18n="vault.bundle.name">Edición de lanzamiento</p>
         <div class="tier__lines">
           <p data-i18n="vault.bundle.line">El Vault y tres meses del Club, juntos.</p>
         </div>
-        <!-- HOTMART URL: replace #hotmart-vault-bundle with the live Hotmart checkout URL for the launch bundle -->
+        
         <p class="tier__cta"><a class="btn btn--ghost" href="carta.html#lista-de-espera" data-i18n="vault.bundle.cta">Lo quiero</a></p>
       </article>
     </div>
@@ -475,8 +453,7 @@ main h3{font-family:var(--font-sans);}
     </figure>
   </section>
 
-  <!-- ============ 9 · FAQ — CONVERSION_PLAYBOOK §6 order, answers visible
-       (information does not perform) ============ -->
+  
   <section style="border-top:1px solid var(--line-soft);">
     <p class="v31-chapter chap" aria-hidden="true">( 08 )</p>
     <div class="v-cols">
@@ -500,27 +477,26 @@ main h3{font-family:var(--font-sans);}
     </div>
   </section>
 
-  <!-- ============ 10 · FINAL CTA + post-FAQ quiet letter module
-       (playbook §5.3 — below every purchase prompt, no popups) ============ -->
+  
   <section class="final" style="border-top:1px solid var(--line-soft);">
     <p class="v31-chapter chap" aria-hidden="true">( 09 )</p>
     <div class="v-cols">
     <div>
     <h2 data-split data-i18n="vault.final.h2"><span class="qo">¿</span>Empezamos?</h2>
     <p class="final__price ts" data-i18n="vault.final.price">Precio fundador al abrir · garantía de 7 días</p>
-    <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+    
     <p class="final__cta"><a class="btn" href="carta.html#lista-de-espera" data-i18n="vault.final.cta">Quiero entrar primero 🤍</a></p>
     </div>
 
     <div class="postfaq">
       <h3 data-i18n="vault.postfaq.h3">¿Todavía no? La carta de los lunes es gratis.</h3>
-      <!-- FORM ENDPOINT: replace action="#" with the Kit/ConvertKit or FormSubmit endpoint before launch -->
+      
       <form action="https://app.kit.com/forms/9803782/subscriptions" method="post" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
         <label class="sr-only" for="postfaq-email" data-i18n="vault.postfaq.form.label">Tu correo</label>
         <input type="email" id="postfaq-email" name="email_address" required placeholder="tu@correo.com" data-i18n-attr="placeholder:vault.postfaq.form.placeholder">
         <button class="btn btn--small" type="submit" data-i18n="vault.postfaq.form.button">Quiero la carta</button>
       </form>
-      <!-- LEGAL PAGE: privacidad.html is a pending build item (COMPLIANCE_AUDIT M5, entity name = Conrad decision C1) -->
+      
       <p class="privacy" data-i18n="vault.postfaq.form.privacy">Te llegará un correo para confirmar tu suscripción. Un clic para salir, cuando quieras. Más en la <a href="privacidad.html">Política de Privacidad</a>.</p>
     </div>
     </div>
@@ -528,14 +504,14 @@ main h3{font-family:var(--font-sans);}
 
 </main>
 
-<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+
 <div class="cta-bar" data-cta-bar>
   <p class="cta-bar__line ts" data-i18n="ctabar.line">El Vault · llega en septiembre</p>
-  <!-- HOTMART URL: replace #hotmart-vault with the live Hotmart checkout URL -->
+  
   <a class="btn btn--small" href="carta.html#lista-de-espera" data-i18n="ctabar.btn">Lista de espera</a>
 </div>
 
-<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+
 <footer class="site-foot">
   <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
   <nav aria-label="Redes y páginas">
@@ -548,10 +524,7 @@ main h3{font-family:var(--font-sans);}
   <p>© 2026 Alexandra Chávez</p>
 </footer>
 
-<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
-     ES here MUST equal the ES text in the markup above (no-JS parity).
-     EN written fresh in her voice (never machine-translated).
-     Compliance MUST-CHANGE wording (M1/M2/M4/M6/M7) applied exactly. ============ -->
+
 <script type="application/json" id="i18n">
 {
   "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},

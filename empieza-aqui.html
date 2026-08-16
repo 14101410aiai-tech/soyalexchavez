@@ -3,19 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- empieza-aqui — bio-link router (v3.1 AMAZEMENT PASS, Stage 4).
-     THE FASTEST page of the six: it takes viral-spike traffic straight from the
-     bio link. Budget ≤250KB initial code+fonts — Bodoni is dropped ENTIRELY on
-     this page (no serif element renders, neither VF downloads), Boska preload
-     dropped (display duty on Anybody), Gambetta re-voiced out (the eyebrow is
-     mono apparatus here, so no serif file downloads at all). Loader-signature
-     deliberately SKIPPED (spike traffic gets content immediately); blur-focus
-     skipped (it would pull Bodoni — not free). v3.1 fix lane: CustomEase /
-     DrawSVG / Lenis script tags dropped too (v31.js soft-requires them);
-     JS on this page = gsap + ScrollTrigger + SplitText + lang/site/v31 only.
-     Router copy/order UNCHANGED.
-     Title/description verbatim from copy/COPY_MASTER.md §start.meta.
-     Keep soyalexchavez.com EXACTLY (post-launch swap token). -->
+
 <title data-i18n="start.meta.title">Empieza aquí — Alexandra Chávez</title>
 <meta name="description" data-i18n-attr="content:start.meta.description" content="La carta de los lunes, El Vault y el Club Recordatorio — todo lo de Alexandra Chávez, en un solo lugar.">
 <link rel="canonical" href="https://soyalexchavez.com/empieza-aqui.html">
@@ -134,8 +122,7 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
 
 <a class="skip-link" href="#contenido" data-i18n="a11y.skip">Saltar al contenido</a>
 
-<!-- ============ NAV — shared verbatim across all six pages.
-     aria-current="page" goes on THIS page's link (both menus). ============ -->
+
 <header class="site-head">
   <a class="wordmark" href="index.html" aria-label="Alexandra Chávez — inicio"><span aria-hidden="true">Alexandra Chávez</span></a>
   <div class="site-head__right">
@@ -168,9 +155,7 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
 
 <main id="contenido">
 
-  <!-- ============ HERO — the light lifts on load; compact, no video.
-       Kinetic catchphrase (pattern #3) on the EXISTING h1; eyebrow re-voiced
-       to mono apparatus (copy unchanged) so no serif file downloads. ============ -->
+  
   <section class="spot start-hero" data-spot="hero" data-hero style="--spot-y:30%;">
     <div class="start-avatar" data-rise>
       <div class="plate plate--disc">
@@ -185,11 +170,7 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
     <p class="lede" data-rise data-i18n="start.hero.sub">Todo lo que buscabas del video, en un solo lugar.</p>
   </section>
 
-  <!-- ============ ROUTER — locked order: carta · vault · club · DM keyword ·
-       [brand-code slot, hidden until a deal is authorised] · sobre.
-       Copy + hrefs UNCHANGED; the sorting is strengthened visually only:
-       CSS-counter mono index per card (skips hidden slots automatically)
-       + arrows in the spotlight-cue voice. ============ -->
+  
   <section class="spot start-router" data-spot data-spot-start="top 98%" data-spot-end="top 72%" style="--spot-y:30%;">
     <p class="v31-chapter chap" aria-hidden="true">( 01 )</p>
     <nav class="router" aria-label="Caminos" data-i18n-attr="aria-label:start.router.a11y">
@@ -226,9 +207,7 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
         <span class="rlink__arrow v31-room__cue" aria-hidden="true">↗</span>
       </a>
 
-      <!-- Rotating brand-code slot (COPY_MASTER start.router.btn5) — stays
-           hidden until a real deal is authorised; swap href for the real
-           brand URL and remove [CODE]/@[brand] tokens at activation. -->
+      
       <a class="rlink" href="#" hidden data-rise>
         <span class="rlink__copy">
           <span class="rlink__title" data-i18n="start.router.btn5">Con mi código [CODE] @[brand]</span>
@@ -247,25 +226,20 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
     <p class="start-close" data-i18n="start.footer.line">🤍</p>
   </section>
 
-  <!-- ============ CAPTURE — last-but-present (systems #6, Mel Robbins routing
-       pattern): the letter form at the end of the page. Heading + sub reuse
-       the router card's own strings VERBATIM (no new claims); form microcopy
-       verbatim from carta.html (double opt-in + privacy are BINDING,
-       COMPLIANCE_AUDIT P5+M5). Information does not perform. ============ -->
+  
   <section class="spot start-capture" data-spot style="--spot-y:34%;border-top:1px solid var(--line);">
     <div class="start-capture__inner">
       <p class="v31-chapter chap" aria-hidden="true">( 02 )</p>
       <h2 data-i18n="start.capture.h2">La carta de los lunes — gratis</h2>
       <p class="lede" data-i18n="start.capture.sub">Un recordatorio corto cada lunes, en tu correo.</p>
-      <!-- FORM ENDPOINT: replace action="#" with the same Kit/ConvertKit or
-           FormSubmit endpoint as carta.html before launch -->
+      
       <form class="start-form" method="post" action="https://app.kit.com/forms/9803782/subscriptions" data-kit data-kit-success="Listo 🤍 Revisa tu correo y confirma tu suscripción — la carta llega los lunes.">
         <label class="start-form__label" for="start-email" data-i18n="start.form.label">Tu correo</label>
         <div class="start-form__row">
           <input type="email" id="start-email" name="email_address" required autocomplete="email" inputmode="email" placeholder="tu@correo.com" data-i18n-attr="placeholder:start.form.placeholder">
           <button type="submit" class="btn" data-i18n="start.form.button">Quiero la carta</button>
         </div>
-        <!-- Success/error states are unhidden by the form wiring at launch (endpoint above). -->
+        
         <div aria-live="polite">
           <p class="start-form__msg" hidden data-i18n="start.form.success">Revisa tu correo — hay una confirmación esperándote. Nos vemos el lunes. 🤍</p>
           <p class="start-form__msg start-form__msg--err" hidden data-i18n="start.form.error">Revisa el correo — algo no cuadra.</p>
@@ -278,13 +252,13 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
 
 </main>
 
-<!-- ============ STICKY QUIET CTA BAR (mobile) ============ -->
+
 <div class="cta-bar" data-cta-bar>
   <p class="cta-bar__line" data-i18n="ctabar.line">El Vault abre a su ritmo, no al tuyo.</p>
   <a class="btn btn--small" href="vault.html" data-i18n="ctabar.btn">Quiero mi ejemplar</a>
 </div>
 
-<!-- ============ FOOTER — shared verbatim across all six pages ============ -->
+
 <footer class="site-foot">
   <p class="f-name"><span aria-hidden="true">Alexandra Chávez</span><span class="sr-only">Alexandra Chávez</span></p>
   <nav aria-label="Redes y páginas">
@@ -297,11 +271,7 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
   <p>© 2026 Alexandra Chávez</p>
 </footer>
 
-<!-- ============ i18n DICTIONARY — every key holds BOTH languages.
-     ES here MUST equal the ES text in the markup above (no-JS parity).
-     EN verbatim from copy/COPY_MASTER.md §PAGE 5 (written fresh, never
-     machine-translated). start.capture.* reuses the btn1 strings VERBATIM;
-     start.form.* reuses carta's letter.form.* strings VERBATIM. ============ -->
+
 <script type="application/json" id="i18n">
 {
   "a11y.skip":  {"es":"Saltar al contenido","en":"Skip to content"},
@@ -346,10 +316,7 @@ html.motion .rlink--vault::after{animation:pulse 3.4s ease-in-out infinite;}
 }
 </script>
 
-<!-- v3.1 fix lane (Gate C #1): the optional plugins are NOT shipped on the
-     fastest page — v31.js soft-requires them (ease falls back to a stock warm
-     arrival, no flourish exists here, native scroll). Kinetic h1 + spotlight
-     scrubs need only gsap + ScrollTrigger + SplitText. -->
+
 <script src="assets/js/gsap.min.js"></script>
 <script src="assets/js/ScrollTrigger.min.js"></script>
 <script src="assets/js/SplitText.min.js"></script>
