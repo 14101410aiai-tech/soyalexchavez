@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bienvenida a la lista de espera · Alexandra Chávez</title>
+<meta name="description" content="Para quienes eligen ser amadas, valoradas y respetadas. Únete con tu correo a la lista de espera de la comunidad de Alexandra Chávez.">
+<link rel="canonical" href="https://soyalexchavez.com/comunidad.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alexandra Chávez">
+<meta property="og:title" content="Bienvenida a la lista de espera 🤍">
+<meta property="og:description" content="Para quienes eligen ser amadas, valoradas y respetadas.">
+<meta property="og:url" content="https://soyalexchavez.com/comunidad.html">
+<meta property="og:image" content="https://soyalexchavez.com/assets/img/og_lista.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alexandra Chávez. Bienvenida a la lista de espera.">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FBF2EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FBF2EF'/%3E%3Cpath d='M16 26.2c-.4 0-.7-.1-1-.4C10.4 22 5.4 17.7 5.4 12.6c0-3.4 2.6-6.1 5.9-6.1 2 0 3.7 1 4.7 2.6 1-1.6 2.7-2.6 4.7-2.6 3.3 0 5.9 2.7 5.9 6.1 0 5.1-5 9.4-9.6 13.2-.3.3-.6.4-1 .4z' fill='%23741A26'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/cormorant/CormorantGaramond-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.className+=' js';</script>
+<style>
+/* Lista de espera (26 Oct 2026). Alex's own text, in her look: pale pink
+   paper, wine letters, the hand-laid pink wash and her photo in a white-edged
+   arch. No flowers. Self-contained styles; the email form uses the site's
+   shared Kit handler in assets/js/site.js (same form, same fields).
+   PHOTO: one file, assets/img/alex-lista.jpg (portrait, 4:5, 1080x1350). */
+@font-face{font-family:'Cormorant Garamond';src:url('assets/fonts/cormorant/CormorantGaramond-600-latin.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Cormorant Garamond';src:url('assets/fonts/cormorant/CormorantGaramond-500i-latin.woff2') format('woff2');font-weight:500;font-style:italic;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('assets/fonts/switzer-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('assets/fonts/switzer-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('assets/fonts/switzer-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+
+:root{
+  --paper:#FBF2EF;
+  --blush:#F6E1E0;
+  --wine:#741A26;
+  --wine-deep:#56111D;
+  --wine-soft:#83394A;
+  --wash-a:#E9B1BF;
+  --wash-b:#E2A4B4;
+  --rim:#FFFCFB;
+  --field:#FFFBFA;
+  --field-line:rgba(116,26,38,.42);
+  --serif:'Cormorant Garamond','Gambetta',Georgia,'Times New Roman',serif;
+  --sans:'Switzer',-apple-system,'Segoe UI','Helvetica Neue',sans-serif;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --col:min(100%,36rem);
+  --pad:clamp(1.25rem,5.6vw,2.5rem);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{
+  background-color:var(--paper);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .35 0 0 0 0 .38 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E"),
+    radial-gradient(120% 52rem at 50% -14rem,var(--blush) 0%,rgba(246,225,224,0) 70%);
+  background-repeat:repeat,no-repeat;
+  color:var(--wine);
+  -webkit-text-size-adjust:100%;text-size-adjust:100%;
+}
+body{
+  margin:0;min-height:100vh;min-height:100svh;overflow-x:hidden;
+  font-family:var(--sans);font-size:1.125rem;line-height:1.62;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  font-kerning:normal;
+}
+@supports (overflow-x:clip){body{overflow-x:clip;}}
+.skip{position:absolute;left:-999px;top:0;}
+.skip:focus{left:1rem;top:1rem;background:var(--wine);color:var(--paper);padding:.6rem 1rem;border-radius:8px;z-index:10;}
+:focus-visible{outline:3px solid var(--wine-deep);outline-offset:3px;}
+strong{font-weight:600;color:var(--wine-deep);}
+p{margin:0;}
+
+.page{
+  width:100%;margin:0 auto;
+  padding:max(2.25rem,calc(env(safe-area-inset-top) + 1.4rem)) var(--pad) 0;
+  text-align:center;
+}
+.page > *{max-width:var(--col);margin-left:auto;margin-right:auto;}
+.intro > *{margin-left:auto;margin-right:auto;}
+.page{overflow-x:hidden;}
+@supports (overflow-x:clip){.page{overflow-x:clip;}}
+
+/* the white heart (her 🤍), drawn the same on every phone */
+.hrt{display:inline-block;width:.8em;height:.8em;margin-left:.2em;vertical-align:-.04em;overflow:visible;
+  fill:var(--rim);stroke:currentColor;stroke-width:1.55;stroke-linejoin:round;}
+.nb{white-space:nowrap;}
+
+/* opening */
+.eyebrow{
+  font-size:.75rem;font-weight:500;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--wine-soft);margin-right:-.34em;line-height:1.4;
+}
+h1{
+  margin:1.15rem auto 0;max-width:12ch;
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(2.85rem,12.4vw,5.4rem);line-height:.98;letter-spacing:-.012em;
+  text-wrap:balance;
+}
+h1 .ln{display:block;}
+h1 .hrt{stroke-width:1.15;width:.74em;height:.74em;margin-left:.16em;}
+.tagline{
+  margin-top:1.15rem;max-width:19ch;
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:clamp(1.5rem,6.4vw,2.05rem);line-height:1.22;color:var(--wine);
+  text-wrap:balance;
+}
+.tagline em,.hinge em{font-style:italic;}
+.rule{display:block;width:44px;height:1.5px;margin:1.6rem auto;background:rgba(116,26,38,.45);border-radius:1px;}
+.lede{max-width:31ch;text-wrap:pretty;}
+
+/* her photo: the pause before the next lines, no text on it */
+.portrait{
+  position:relative;margin:2.7rem auto 0;
+  width:min(86%,25.5rem);
+}
+.portrait__wash{
+  position:absolute;z-index:0;left:-8%;right:-8%;top:9%;bottom:-6%;
+  isolation:isolate;
+  background:linear-gradient(135deg,var(--wash-a),var(--wash-b));
+  border-radius:46% 54% 44% 56% / 40% 42% 58% 60%;
+  transform:rotate(-3deg);
+}
+.arch{
+  position:relative;z-index:1;
+  aspect-ratio:4/5;overflow:hidden;
+  border:6px solid var(--rim);border-radius:999px 999px 22px 22px;
+  background:var(--wash-a);
+  box-shadow:0 2px 0 rgba(255,255,255,.6) inset,0 30px 60px -26px rgba(86,17,29,.5),0 10px 24px -12px rgba(86,17,29,.25);
+}
+.arch img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%;}
+
+/* her lines after the photo */
+.story{margin-top:3.6rem;}
+.story p{max-width:31ch;margin-left:auto;margin-right:auto;text-wrap:pretty;}
+.story p + p{margin-top:1.15rem;}
+.hinge{
+  margin-top:3rem;
+  font-family:var(--serif);font-weight:500;font-style:italic;
+  font-size:clamp(1.95rem,8.6vw,2.7rem);line-height:1.12;
+  text-wrap:balance;
+}
+.hinge .hrt{stroke-width:1.35;}
+.join{margin-top:3rem;}
+.join > p{max-width:31ch;margin-left:auto;margin-right:auto;text-wrap:pretty;}
+
+/* the wash box with the form: plain rounded fallback; the script draws the hand-laid edge */
+.wash{
+  position:relative;isolation:isolate;
+  margin:2.2rem auto 0;max-width:30rem;
+  padding:2.1rem 1.4rem 1.6rem;
+  background:linear-gradient(135deg,var(--wash-a),var(--wash-b));
+  border-radius:30px 34px 28px 36px / 34px 28px 36px 30px;
+}
+.wash.is-drawn,.portrait__wash.is-drawn{background:none;}
+.wash__svg{position:absolute;z-index:-1;pointer-events:none;overflow:visible;opacity:0;transition:opacity .4s var(--ease-out);}
+.wash__svg.on{opacity:1;}
+.wash__lead{font-weight:500;font-size:1.0625rem;line-height:1.55;max-width:30ch;margin:0 auto;text-wrap:pretty;color:var(--wine-deep);}
+
+.form{margin-top:1.35rem;text-align:left;}
+.field{position:relative;}
+.field label{
+  position:absolute;left:1.05rem;top:.62rem;z-index:1;pointer-events:none;
+  font-size:.78rem;font-weight:500;letter-spacing:.02em;color:var(--wine);
+}
+.field input{
+  display:block;width:100%;height:4rem;padding:1.45rem 1.05rem .5rem;
+  font:inherit;font-size:1.0625rem;line-height:1.3;color:var(--wine-deep);
+  background:var(--field);border:1.5px solid var(--field-line);border-radius:16px;
+  box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 8px 20px -14px rgba(86,17,29,.35);
+  -webkit-appearance:none;appearance:none;
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.field input::placeholder{color:#9A5F6C;opacity:1;}
+.field input:focus{outline:none;border-color:var(--wine);box-shadow:0 0 0 4px rgba(116,26,38,.16),0 8px 20px -14px rgba(86,17,29,.35);}
+.field input:focus-visible{outline:none;}
+.form button{
+  display:block;width:100%;min-height:3.65rem;margin-top:.7rem;padding:.8rem 1rem;
+  font:inherit;font-size:1.0625rem;font-weight:600;letter-spacing:.015em;line-height:1.2;
+  color:var(--rim);border:0;border-radius:16px;cursor:pointer;
+  background:linear-gradient(180deg,#842431 0%,var(--wine) 55%,#691622 100%);
+  box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 14px 26px -14px rgba(86,17,29,.75);
+  transition:transform .16s var(--ease-out),box-shadow .2s ease,filter .2s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+@media (hover:hover) and (pointer:fine){.form button:hover{filter:brightness(1.07);}}
+.form button:active{transform:scale(.98);}
+.form button[disabled]{opacity:.75;cursor:progress;}
+.form__note{margin-top:.95rem;font-size:.875rem;line-height:1.5;text-align:center;}
+.fine{
+  margin:1.15rem auto 0;padding-top:1rem;max-width:34ch;
+  border-top:1px solid rgba(116,26,38,.2);
+  font-size:.8125rem;line-height:1.5;text-align:center;text-wrap:pretty;
+}
+.fine a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;padding:.35rem 0;}
+/* messages written into the form after sign-up (override site.js inline styles) */
+.wash .kit-ok{
+  margin:.4rem auto 0;max-width:22ch;text-align:center;
+  font-family:var(--serif);font-weight:600;
+  font-size:1.5rem!important;line-height:1.22!important;color:var(--wine)!important;
+}
+.wash .kit-ok::before{
+  content:"";display:block;width:34px;height:30px;margin:0 auto .7rem;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22'%3E%3Cpath d='M12 20.4c-.3 0-.6-.1-.8-.3C7.6 17.1 2.5 12.9 2.5 8.4 2.5 5.6 4.7 3.3 7.4 3.3c1.9 0 3.6 1.1 4.6 2.7 1-1.6 2.7-2.7 4.6-2.7 2.7 0 4.9 2.3 4.9 5.1 0 4.5-5.1 8.7-8.7 11.7-.2.2-.5.3-.8.3z' fill='%23FFFCFB' stroke='%23741A26' stroke-width='1.4' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.wash .kit-err{margin-top:.7rem!important;text-align:center;color:var(--wine-deep)!important;font-weight:600;font-size:.94rem!important;}
+
+/* her closing line */
+.closing{
+  margin-top:3.3rem;
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(1.85rem,8vw,2.55rem);line-height:1.12;
+  text-wrap:balance;
+}
+.closing strong{font-weight:600;color:var(--wine);}
+.closing .hrt{stroke-width:1.3;}
+
+.foot{
+  margin-top:2.2rem;padding:2rem var(--pad) max(1.6rem,env(safe-area-inset-bottom));
+  text-align:center;color:var(--wine-soft);
+}
+.foot__name{font-family:var(--serif);font-weight:600;font-size:1.35rem;line-height:1.2;color:var(--wine);}
+.foot__handle{margin-top:.2rem;font-size:.875rem;letter-spacing:.04em;}
+.foot__copy{margin-top:.9rem;font-size:.75rem;}
+.foot::before{content:"";display:block;width:44px;height:1.5px;margin:0 auto 1.8rem;background:rgba(116,26,38,.3);}
+
+/* first screen: one quiet entrance (CSS only, nothing waits for a script) */
+@keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.intro > *{animation:rise 1s var(--ease-out) both;}
+.intro > :nth-child(2){animation-delay:.08s;}
+.intro > :nth-child(3){animation-delay:.18s;}
+.intro > :nth-child(4){animation-delay:.26s;}
+.intro > :nth-child(5){animation-delay:.32s;}
+.portrait{animation:rise 1.2s .38s var(--ease-out) both;}
+/* further down: the script hides only what is still off screen, then lets it rise in */
+[data-reveal]{transition:opacity .95s var(--ease-out),transform 1.1s var(--ease-out);}
+[data-reveal].pre{opacity:0;transform:translateY(20px);}
+.portrait.pre{transform:translateY(28px) scale(.985);}
+
+@media (min-width:900px){
+  :root{--col:40rem;}
+  body{font-size:1.25rem;line-height:1.6;}
+  .lede,.story p,.join > p{max-width:36ch;}
+  .tagline{max-width:22ch;}
+  .page{padding-top:5.2rem;}
+  h1{margin-top:1.6rem;}
+  .portrait{width:27rem;margin-top:4.6rem;}
+  .story{margin-top:4.6rem;}
+  .hinge,.join{margin-top:3.8rem;}
+  .wash{padding:2.6rem 2.6rem 2rem;}
+  .closing{margin-top:4.2rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .intro > *,.portrait{animation:none;}
+  [data-reveal],[data-reveal].pre{transition:none;opacity:1;transform:none;}
+  .wash__svg,.form button,.field input{transition:none;}
+  .form button:active{transform:none;}
+}
+@media print{[data-reveal].pre{opacity:1;transform:none;}}
+</style>
+</head>
+<body>
+<a class="skip" href="#lista">Ir a la lista</a>
+
+<main class="page">
+  <header class="intro">
+    <p class="eyebrow">Alexandra Chávez</p>
+    <h1 id="titulo"><span class="ln">Bienvenida</span> <span class="ln">a la lista</span> <span class="ln nb">de espera<svg class="hrt" viewBox="0 0 24 22" aria-hidden="true" focusable="false"><path d="M12 20.4c-.3 0-.6-.1-.8-.3C7.6 17.1 2.5 12.9 2.5 8.4 2.5 5.6 4.7 3.3 7.4 3.3c1.9 0 3.6 1.1 4.6 2.7 1-1.6 2.7-2.7 4.6-2.7 2.7 0 4.9 2.3 4.9 5.1 0 4.5-5.1 8.7-8.7 11.7-.2.2-.5.3-.8.3z"/></svg></span></h1>
+    <p class="tagline"><em>Para quienes eligen ser amadas, valoradas y respetadas.</em></p>
+    <span class="rule" aria-hidden="true"></span>
+    <p class="lede">Estoy preparando un espacio para mujeres que están dispuestas <strong>a elevar su autoestima</strong>, crear relaciones saludables con ellas mismas y <strong>dejar de aceptar el esfuerzo mínimo de parte del&nbsp;resto.</strong></p>
+  </header>
+
+  <figure class="portrait" data-reveal>
+    <div class="portrait__wash" data-wash="photo" aria-hidden="true"></div>
+    <div class="arch">
+      <img src="assets/img/alex-lista.jpg" width="1080" height="1350" alt="Alexandra Chávez" decoding="async">
+    </div>
+  </figure>
+
+  <section class="story" aria-label="Para ti">
+    <p data-reveal>Antes de atraer a un hombre ideal, primero debes convertirte en <strong>la mujer que todo hombre desearía tener a&nbsp;su&nbsp;lado.</strong></p>
+    <p data-reveal>¿Tiendes a compararte con otras mujeres? ¿Sientes que no encontrarás a un hombre que te ame lo suficiente como para comprometerse? <strong>Tus dudas son válidas.</strong></p>
+    <p data-reveal>Pero únicamente encontrarás al hombre correcto, uno que se sienta motivado a amarte y a cuidar siempre de ti, si aprendes a reconocer el valor que habita dentro de&nbsp;ti.</p>
+  </section>
+
+  <p class="hinge" data-reveal><em>Y para eso estoy yo <span class="nb">aquí<svg class="hrt" viewBox="0 0 24 22" aria-hidden="true" focusable="false"><path d="M12 20.4c-.3 0-.6-.1-.8-.3C7.6 17.1 2.5 12.9 2.5 8.4 2.5 5.6 4.7 3.3 7.4 3.3c1.9 0 3.6 1.1 4.6 2.7 1-1.6 2.7-2.7 4.6-2.7 2.7 0 4.9 2.3 4.9 5.1 0 4.5-5.1 8.7-8.7 11.7-.2.2-.5.3-.8.3z"/></svg></span></em></p>
+
+  <section class="join" aria-label="La lista">
+    <p data-reveal>Estoy creando una comunidad donde tendrás material, lecciones y acompañamiento semanal de mi parte. También crearás amistades de valor junto a las demás participantes.</p>
+
+    <div class="wash" id="lista" data-wash data-reveal>
+      <p class="wash__lead">Únete con tu correo electrónico para recibir las próximas novedades y el primer descuento por lanzamiento.</p>
+      <form class="form" method="post" action="https://app.kit.com/forms/9803782/subscriptions" data-kit data-kit-success="Listo. Revisa tu correo y confirma. Si no lo ves en tu bandeja, búscalo en Promociones o en Spam.">
+        <div class="field">
+          <label for="correo">Tu correo electrónico</label>
+          <input type="email" id="correo" name="email_address" required autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" placeholder="tu@correo.com">
+        </div>
+        <button type="submit">Unirme a la lista</button>
+        <p class="form__note">Te llega un correo para confirmar. Si no lo ves, búscalo en Promociones o en Spam.</p>
+      </form>
+      <p class="fine">Solo para mayores de 18 años. Esto no reserva un lugar. Puedes salir de la lista con un clic, cuando quieras. <a href="privacidad-comunidad.html">Privacidad</a></p>
+    </div>
+  </section>
+
+  <p class="closing" data-reveal><strong>Estoy emocionada de vernos <span class="nb">pronto<svg class="hrt" viewBox="0 0 24 22" aria-hidden="true" focusable="false"><path d="M12 20.4c-.3 0-.6-.1-.8-.3C7.6 17.1 2.5 12.9 2.5 8.4 2.5 5.6 4.7 3.3 7.4 3.3c1.9 0 3.6 1.1 4.6 2.7 1-1.6 2.7-2.7 4.6-2.7 2.7 0 4.9 2.3 4.9 5.1 0 4.5-5.1 8.7-8.7 11.7-.2.2-.5.3-.8.3z"/></svg></span></strong></p>
+</main>
+
+<footer class="foot">
+  <p class="foot__name">Alexandra Chávez</p>
+  <p class="foot__handle">@alexchavez.23</p>
+  <p class="foot__copy">© 2026 Alexandra Chávez</p>
+</footer>
+
+<script>
+/* Arriving with ?confirmada=1 (after she confirms her email): show the
+   "you're on the list" line instead of the form, and bring the box into view. */
+(function(){
+  if(!/[?&]confirmada=1(&|$)/.test(location.search))return;
+  var f=document.querySelector('form[data-kit]');
+  if(!f)return;
+  var p=document.createElement('p');
+  p.className='kit-ok';p.setAttribute('role','status');
+  p.textContent='Listo, ya estás en la lista. Te escribo cuando abra.';
+  f.replaceChildren(p);
+  var box=document.getElementById('lista');
+  if(box&&box.scrollIntoView){
+    var go=function(){box.scrollIntoView({block:'center'});};
+    if(document.readyState==='complete')go();else window.addEventListener('load',go);
+  }
+})();
+
+/* The hand-laid wash (from her carousels): a rounded shape traced with a soft
+   wobble and a watercolour edge, scaled to its box and redrawn on resize.
+   Used twice: behind her photo and under the form. */
+(function(){
+  var boxes=document.querySelectorAll('[data-wash]');
+  if(!boxes.length||!document.createElementNS)return;
+  var NS='http://www.w3.org/2000/svg',PAD=12,n=0;
+  function rand(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;var t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+  function trace(rng,x0,y0,x1,y1,r,steps,wob){
+    var w=x1-x0,h=y1-y0,per=2*(w+h),ph=[rng()*6.28,rng()*6.28,rng()*6.28],d='';
+    for(var i=0;i<steps;i++){
+      var t=i/steps*per,px,py;
+      if(t<w){px=x0+t;py=y0;}
+      else if(t<w+h){px=x1;py=y0+(t-w);}
+      else if(t<2*w+h){px=x1-(t-w-h);py=y1;}
+      else{px=x0;py=y1-(t-2*w-h);}
+      var cx=Math.min(Math.max(px,x0+r),x1-r),cy=Math.min(Math.max(py,y0+r),y1-r);
+      var dx=px-cx,dy=py-cy,dist=Math.hypot(dx,dy);
+      if(dist>0){px=cx+dx*r/dist;py=cy+dy*r/dist;}
+      var u=i/steps*6.283,off=wob*(Math.sin(3*u+ph[0])*.5+Math.sin(7*u+ph[1])*.3+Math.sin(13*u+ph[2])*.2);
+      var ox=px-cx,oy=py-cy,dd=Math.hypot(ox,oy)||1;
+      d+=(i?' L':'M')+(px+ox/dd*off).toFixed(1)+','+(py+oy/dd*off).toFixed(1);
+    }
+    return d+' Z';
+  }
+  Array.prototype.forEach.call(boxes,function(box){
+    var id='cw'+(n++),photo=box.getAttribute('data-wash')==='photo',last='';
+    var svg=document.createElementNS(NS,'svg');
+    svg.setAttribute('class','wash__svg');svg.setAttribute('aria-hidden','true');svg.setAttribute('focusable','false');
+    svg.style.left=-PAD+'px';svg.style.top=-PAD+'px';
+    box.insertBefore(svg,box.firstChild);
+    function draw(){
+      var w=box.offsetWidth,h=box.offsetHeight;
+      if(!w||!h)return;
+      var key=w+'x'+h;if(key===last)return;last=key;
+      var k=Math.max(.34,Math.min(.7,w/920));
+      var r=photo?Math.min(w,h)*.42:Math.max(26,Math.min(64,120*k)),wob=(photo?22:16)*k,rng=rand(photo?37:101);
+      var W=w+2*PAD,H=h+2*PAD;
+      svg.setAttribute('width',W);svg.setAttribute('height',H);svg.setAttribute('viewBox','0 0 '+W+' '+H);
+      svg.innerHTML=
+        '<defs><filter id="'+id+'f" x="-10%" y="-10%" width="120%" height="120%">'+
+        '<feTurbulence type="fractalNoise" baseFrequency="'+(0.018/k).toFixed(4)+'" numOctaves="4" seed="'+(photo?7:3)+'" result="n"/>'+
+        '<feDisplacementMap in="SourceGraphic" in2="n" scale="'+(12*k).toFixed(2)+'" xChannelSelector="R" yChannelSelector="G" result="d"/>'+
+        '<feGaussianBlur in="d" stdDeviation="'+(3.2*k).toFixed(2)+'" result="b"/>'+
+        '<feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="11" result="g"/>'+
+        '<feColorMatrix in="g" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.07 0" result="gw"/>'+
+        '<feComposite in="gw" in2="b" operator="in" result="gin"/>'+
+        '<feMerge><feMergeNode in="b"/><feMergeNode in="gin"/></feMerge></filter>'+
+        '<linearGradient id="'+id+'g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9B1BF"/><stop offset="1" stop-color="#E2A4B4"/></linearGradient></defs>'+
+        '<path d="'+trace(rng,PAD,PAD,PAD+w,PAD+h,r,220,wob)+'" fill="url(#'+id+'g)" fill-opacity="'+(photo?'.9':'.95')+'" filter="url(#'+id+'f)"/>'+
+        '<path d="'+trace(rng,PAD+6*k,PAD+6*k,PAD+w-6*k,PAD+h-6*k,r,220,14*k)+'" fill="none" stroke="#E2A4B4" stroke-width="'+(7*k).toFixed(2)+'" stroke-opacity=".28" filter="url(#'+id+'f)"/>';
+      svg.classList.add('on');box.classList.add('is-drawn');
+    }
+    draw();
+    if(document.fonts&&document.fonts.ready)document.fonts.ready.then(draw);
+    if('ResizeObserver' in window)new ResizeObserver(draw).observe(box);
+    else window.addEventListener('resize',draw);
+  });
+})();
+
+/* Quiet rise for the lines further down. Only what is still off screen is
+   hidden, and only once this script runs; without it everything just shows. */
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(location.hash.indexOf('force-reveal')!==-1||/[?&]confirmada=1(&|$)/.test(location.search))return;
+  var vh=window.innerHeight||document.documentElement.clientHeight;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -6% 0px'});
+  Array.prototype.forEach.call(document.querySelectorAll('[data-reveal]'),function(el){
+    if(el.getBoundingClientRect().top>vh*.94){el.classList.add('pre');io.observe(el);}
+  });
+})();
+</script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

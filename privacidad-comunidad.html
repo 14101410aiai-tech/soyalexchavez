@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacidad · Lista de espera · Alexandra Chávez</title>
+<meta name="description" content="Lo que pasa con tu correo cuando te unes a la lista de espera de la comunidad de Alexandra.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FBF2EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FBF2EF'/%3E%3Cpath d='M16 26.2c-.4 0-.7-.1-1-.4C10.4 22 5.4 17.7 5.4 12.6c0-3.4 2.6-6.1 5.9-6.1 2 0 3.7 1 4.7 2.6 1-1.6 2.7-2.6 4.7-2.6 3.3 0 5.9 2.7 5.9 6.1 0 5.1-5 9.4-9.6 13.2-.3.3-.6.4-1 .4z' fill='%23741A26'/%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/cormorant/CormorantGaramond-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/switzer-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Privacy notice for comunidad.html only. Same paper, wine letters and fonts
+   as the community page; no menu and no links out except back to the page and
+   the contact address (her ask of 22 Oct: nothing she hasn't talked about). */
+@font-face{font-family:'Cormorant Garamond';src:url('assets/fonts/cormorant/CormorantGaramond-600-latin.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('assets/fonts/switzer-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Switzer';src:url('assets/fonts/switzer-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+
+:root{
+  --paper:#FBF2EF;
+  --wine:#741A26;
+  --wine-deep:#56111D;
+  --wine-soft:#83394A;
+  --serif:'Cormorant Garamond','Gambetta',Georgia,'Times New Roman',serif;
+  --sans:'Switzer',-apple-system,'Segoe UI','Helvetica Neue',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{
+  background-color:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .35 0 0 0 0 .38 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23p)'/%3E%3C/svg%3E");
+  color:var(--wine);
+  -webkit-text-size-adjust:100%;text-size-adjust:100%;
+}
+body{
+  margin:0;min-height:100vh;min-height:100svh;
+  display:flex;flex-direction:column;
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.page{
+  flex:1 0 auto;width:100%;max-width:34rem;margin:0 auto;
+  padding:max(1.1rem,env(safe-area-inset-top)) 1.25rem 1.5rem;
+}
+a{color:inherit;text-decoration:underline;text-underline-offset:2px;}
+:focus-visible{outline:3px solid var(--wine-deep);outline-offset:3px;}
+.back{display:inline-block;padding:.5rem 0;font-size:.92rem;font-weight:500;}
+h1{
+  margin:1.4rem 0 0;font-family:var(--serif);font-weight:600;
+  font-size:clamp(2.2rem,9.6vw,3.2rem);line-height:1.02;letter-spacing:-.01em;
+}
+.lead{margin:.8rem 0 0;max-width:36ch;text-wrap:pretty;}
+.updated{margin:.7rem 0 0;font-size:.8rem;letter-spacing:.04em;color:var(--wine-soft);}
+.rule{display:block;width:56px;height:2px;margin:1.3rem 0 .2rem;background:rgba(116,26,38,.55);}
+h2{margin:1.5rem 0 0;font-size:.98rem;font-weight:500;letter-spacing:.01em;}
+h2+p{margin:.3rem 0 0;}
+p{text-wrap:pretty;}
+.again{margin:2rem 0 0;}
+.foot{padding:0 1.25rem max(1.1rem,env(safe-area-inset-bottom));text-align:center;font-size:.75rem;color:var(--wine-soft);}
+.foot p{margin:0;}
+@media (min-width:900px){
+  .page{padding:3rem 2.5rem 2rem;}
+  h1{font-size:3.4rem;}
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <a class="back" href="comunidad.html">← Volver</a>
+
+  <h1>Privacidad</h1>
+  <p class="lead">Lo que pasa con tu correo cuando te unes a la lista de espera de la comunidad de Alexandra.</p>
+  <p class="updated">Resumen</p>
+  <span class="rule" aria-hidden="true"></span>
+
+  <h2>Quién responde por tus datos</h2>
+  <p>El responsable del tratamiento es Understudy. Contacto: <a href="mailto:hello@understudy.uk">hello@understudy.uk</a>.</p>
+
+  <h2>Qué recogemos</h2>
+  <p>La página pide una sola cosa: tu correo. Lo usamos solo para escribirte sobre la comunidad: sus novedades, cuándo abre y el descuento de lanzamiento. Nada más.</p>
+
+  <h2>Confirmación</h2>
+  <p>Te llega un correo para confirmar. Si no confirmas, no te escribimos y tu correo no se usa.</p>
+
+  <h2>Salir</h2>
+  <p>Cada correo lleva un enlace para darte de baja. Con un clic sales de la lista, cuando quieras.</p>
+
+  <h2>Cookies</h2>
+  <p>Esta página no usa cookies ni analítica, y no guarda nada en tu navegador.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes pedir ver, corregir o borrar tus datos cuando quieras. Escribe a <a href="mailto:hello@understudy.uk">hello@understudy.uk</a>.</p>
+
+  <p class="again"><a href="comunidad.html">Volver a la página</a></p>
+</main>
+
+<footer class="foot">
+  <p>© 2026 Alexandra Chávez</p>
+</footer>
+</body>
+</html>
